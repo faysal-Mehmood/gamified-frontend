@@ -3,6 +3,16 @@ import Image from "next/image";
 const WorkWithUsSection = () => {
   return (
     <section className="overflow-hidden relative gap-5 px-[50px] md:px-16 lg:px-24 lg:border-none border-t border-[#FFFFFF] ">
+      <div className="absolute left-[4%] top-[-25%] z-10">
+        <div className="relative top-0 left-0 md:w-[581px] w-[320px] h-[153px]">
+          <Image
+            src="/images/WNRVector.svg"
+            alt="footer-vector"
+            fill
+            className="absolute"
+          />
+        </div>
+      </div>
       <div className="flex lg:flex-row flex-col lg:items-start items-center 2xl:gap-[100px] xl:gap-[80px] gap-[50px] md:pt-[56px] pt-[25px] md:pb-[76px] pb-10 lg:border-t border-[#FFFFFF] w-full">
         {/* Navigation Links */}
         <div className="2xl:max-w-[29%] xl:max-w-[36%] lg:max-w-[35%] w-full uppercase flex flex-col space-y-2 lg:items-start items-center">
