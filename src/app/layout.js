@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/views/shared/layout/header";
+import Footer from "@/views/shared/layout/footer";
 import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
         <main className='w-full h-full relative'>
           <Header />
           {children}
+          <Footer/>
         </main>
       </body>
     </html>
