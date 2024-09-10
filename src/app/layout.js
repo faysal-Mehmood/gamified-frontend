@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
           className='object-cover '
         />
         <main className='w-full h-full relative'>
-          <Header />
+          {/* <Header /> */}
           {children}
           <Footer/>
         </main>
