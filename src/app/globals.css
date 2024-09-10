@@ -1,6 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
 
 body {
   background: #000000;
@@ -20,5 +40,5 @@ body {
 }
 
 .xxl-max-screen {
-  @apply 'max-w-[1440px] mx-auto';
+  max-width: 1440px;
 }
