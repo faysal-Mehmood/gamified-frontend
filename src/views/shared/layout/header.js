@@ -1,14 +1,17 @@
 import React from "react";
 import Image from "next/image";
-
-import WebLogo from "@/app/images/owinr-logo.svg";
 import Link from "next/link";
 
 const Header = () => {
   return (
     <nav className='w-full absolute left-0 top-0'>
       <div className='xxl-max-screen mx-auto  pt-[35px] pl-[110px] pr-[100px] flex items-center justify-between'>
-        <Image src={WebLogo} width={156} height={56} alt='logo' />
+        <Image
+          src={"/images/owinr-logo.svg"}
+          width={156}
+          height={56}
+          alt='logo'
+        />
         <div className='flex items-center gap-[50px]'>
           <Link
             href='#'

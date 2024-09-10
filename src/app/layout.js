@@ -2,7 +2,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/views/shared/layout/header";
 import Image from "next/image";
-import BackgroundImage from "@/app/images/owinr-background.png";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +15,7 @@ export default function RootLayout({ children }) {
     <html lang='en'>
       <body className={`${inter.className} relative bg-brand-black`}>
         <Image
-          src={BackgroundImage}
+          src={"/images/owinr-background.svg"}
           fill
           alt='logo'
           className='object-cover '
