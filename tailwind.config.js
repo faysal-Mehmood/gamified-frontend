@@ -47,6 +47,9 @@ module.exports = {
         transparent: "transparent",
       },
     },
+    letterSpacing: {
+      normal: "-0.22px",
+    },
   },
   plugins: [
     function ({ addUtilities }) {

@@ -41,4 +41,5 @@ body {
 
 .xxl-max-screen {
   max-width: 1440px;
+  margin: auto;
 }
