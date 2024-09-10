@@ -1,10 +1,27 @@
 /* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
 import React from "react";
 
 const Hero = () => {
   return (
-    <section className='w-full min-h-[963px] xxl-max-screen mx-auto  pb-[69px] pl-[100px] pr-[118px] relative'>
-      <div className=''></div>
+    <section className='w-full min-h-[963px] xxl-max-screen mx-auto flex flex-col  justify-end pb-[69px] pl-[100px] pr-[65px] relative'>
+      <div className='w-full flex items-end justify-between'>
+        <div className=''></div>
+
+        <div className='w-[630px] h-[843px] relative flex flex-col justify-end '>
+          <h1 className='font-bold text-hero-large leading-[166px] bg-main-gradient bg-clip-text text-fill-transparent tracking-[-1.8px] uppercase relative z-10'>
+            Free
+          </h1>
+          <h1 className='font-bold text-hero-large leading-[166px] bg-main-gradient bg-clip-text text-fill-transparent tracking-[-1.8px] uppercase relative z-10'>
+            Win Big
+          </h1>
+          <Image
+            src='/images/ET-WINR.svg' //blue
+            alt='ET-WINR'
+            fill
+          />
+        </div>
+      </div>
 
       {/* money image */}
       <img

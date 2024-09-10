@@ -37,6 +37,12 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      textShadow: {
+        custom: "0px 4px 4px rgba(0, 0, 0, 0.50)",
+      },
+      webkitTextStroke: {
+        custom: "5px #000",
+      },
       backgroundImage: {
         "main-gradient": "linear-gradient(90deg, #4D89F0 0%, #9184EA 100%)",
       },
@@ -61,13 +67,14 @@ module.exports = {
         ".text-fill-transparent": {
           "-webkit-text-fill-color": "transparent",
         },
+        ".text-shadow-custom": {
+          "text-shadow": "0px 2px 2px rgba(0, 0, 0, 0.50)",
+        },
+        ".stroke-custom": {
+          "-webkit-text-stroke-width": "5px",
+          "-webkit-text-stroke-color": "#000",
+        },
       });
     },
   ],
 };
-
-{
-  /* <div class="bg-main-gradient bg-clip-text text-fill-transparent">
-  Gradient Text Example
-</div> */
-}
