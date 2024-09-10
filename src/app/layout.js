@@ -2,6 +2,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/views/shared/layout/header";
 import Footer from "@/views/shared/layout/footer";
+import Image from "next/image";
+import BackgroundImage from "@/app/images/owinr-background.png";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,10 +15,18 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
-      <body className={`${inter.className} antialiased bg-brand-black`}>
-        <Header />
-        {children}
-        <Footer/>
+      <body className={`${inter.className} relative bg-brand-black`}>
+        <Image
+          src={BackgroundImage}
+          fill
+          alt='logo'
+          className='object-cover '
+        />
+        <main className='w-full h-full relative'>
+          <Header />
+          {children}
+          <Footer/>
+        </main>
       </body>
     </html>
   );
