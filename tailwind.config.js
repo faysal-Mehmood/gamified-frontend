@@ -34,6 +34,8 @@ module.exports = {
         "brand-black": "#000000",
         "brand-white": "rgba(255, 255, 255, 0.9)",
         "brand-white-grey": "rgba(255, 255, 255, 0.6)",
+        "brand-blue": "#4D89F0",
+        "brand-dark-blur": "#191D37",
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
@@ -45,6 +47,8 @@ module.exports = {
       },
       backgroundImage: {
         "main-gradient": "linear-gradient(90deg, #4D89F0 0%, #9184EA 100%)",
+        "circle-gradient":
+          "linear-gradient(90deg, rgba(77, 137, 240, 0.20) 0%, rgba(145, 132, 234, 0.20) 100%)",
       },
       backgroundClip: {
         text: "text",
@@ -72,8 +76,24 @@ module.exports = {
           "text-shadow": "0px 2px 2px rgba(0, 0, 0, 0.50)",
         },
         ".stroke-custom": {
-          "-webkit-text-stroke-width": "5px",
-          "-webkit-text-stroke-color": "#000",
+          "-webkit-text-stroke": "4px transparent",
+        },
+        ".stroke-custom-0": {
+          "-webkit-text-stroke": "0 transparent",
+        },
+        ".text-stroke-outline": {
+          " background":
+            "-webkit-linear-gradient(90deg, #4D89F0 0%, #9184EA 100%)",
+          "-webkit-background-clip": "text",
+          "background-clip": "text",
+          "-webkit-text-stroke": "4px transparent",
+        },
+        ".linear-solid-border": {
+          "border-image": "linear-gradient(90deg, #4D89F0 0%, #9184EA 100%)",
+          "border-image-slice": "1",
+        },
+        "blur-bg": {
+          "backdrop-filter": "blur(20px)",
         },
       });
     },
