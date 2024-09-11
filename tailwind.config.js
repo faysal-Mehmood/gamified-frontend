@@ -55,6 +55,7 @@ module.exports = {
     },
     letterSpacing: {
       normal: "-0.22px",
+      medium: " -0.16px;",
     },
   },
   plugins: [

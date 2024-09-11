@@ -2,20 +2,10 @@ import Image from "next/image";
 
 const WorkWithUsSection = () => {
   return (
-    <section className="overflow-hidden relative gap-5 px-[50px] md:px-16 lg:px-24 lg:border-none border-t border-[#FFFFFF] ">
-      <div className="absolute left-[4%] top-[-25%] z-10">
-        <div className="relative top-0 left-0 md:w-[581px] w-[320px] h-[153px]">
-          <Image
-            src="/images/WNRVector.svg"
-            alt="footer-vector"
-            fill
-            className="absolute"
-          />
-        </div>
-      </div>
+    <section className="xxl-max-screen overflow-hidden relative gap-5 px-[50px] md:px-16 lg:px-24 lg:border-none border-t border-[#FFFFFF] ">
       <div className="flex lg:flex-row flex-col lg:items-start items-center 2xl:gap-[100px] xl:gap-[80px] gap-[50px] md:pt-[56px] pt-[25px] md:pb-[76px] pb-10 lg:border-t border-[#FFFFFF] w-full">
         {/* Navigation Links */}
-        <div className="2xl:max-w-[29%] xl:max-w-[36%] lg:max-w-[35%] w-full uppercase flex flex-col space-y-2 lg:items-start items-center">
+        <div className="2xl:max-w-[29%] xl:max-w-[36%] lg:max-w-[35%] w-full uppercase flex flex-col  lg:items-start items-center">
           {["Home", "How It Works", "Our Games", "Work With Us"].map(
             (text, index) => (
               <a
@@ -32,8 +22,7 @@ const WorkWithUsSection = () => {
             )
           )}
         </div>
-        {/* <div className="md:w-[115%] sm:w-[117%] w-[145%] h-[1px] bg-[#FFFFFF] lg:hidden block"/> */}
-        {/* Contact Section */}
+
         <div className="w-full flex flex-col space-y-2 lg:items-start items-center">
           <p className="text-small-paragraph leading-[29.06px] font-light tracking-[-1%] text-[#ffffff]">
             Contact Us at
@@ -85,7 +74,8 @@ const WorkWithUsSection = () => {
         {/* Footer Section */}
         <div className="2xl:max-w-[29%] xl:max-w-[36%] lg:max-w-[35%] w-full lg:text-start text-center">
           <p className="text-caption text-[16px] leading-[24.2px] font-semibold tracking-[-1%] text-[#ffffff]">
-            © 2014 <span className="text-[#4D89F0]">WINR Games®.</span> All Rights Reserved
+            © 2014 <span className="text-[#4D89F0]">WINR Games®.</span> All
+            Rights Reserved
           </p>
         </div>
 
