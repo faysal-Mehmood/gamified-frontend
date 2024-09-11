@@ -1,9 +1,9 @@
 "use client";
 import React, { useState, useRef } from "react";
 import Slider from "react-slick";
+import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Image from "next/image";
 
 const Reviews = () => {
   const [currentSlide, setCurrentSlider] = useState([]);
@@ -86,7 +86,7 @@ export default Reviews;
 
 const Circle = () => {
   return (
-    <div className='w-[752px] h-[752px] flex flex-col justify-start gap-[50px] items-center rounded-full pt-[70px] px-[129px] pb-[170px] border-2 bg-circle-gradient blur-bg  border-brand-blue flex-shrink-0'>
+    <div className='w-[752px] h-[752px] flex flex-col justify-start gap-[46px] items-center rounded-full pt-[70px] px-[129px] pb-[170px] border-2 bg-circle-gradient blur-bg  border-brand-blue flex-shrink-0 relative'>
       <div className='w-[98px] h-[98px]  p-[18px] flex items-center justify-center relative flex-shrink-0  border-2  border-solid border-transparent  rounded-full '>
         <Image
           src='/images/user.svg'
@@ -108,6 +108,33 @@ const Circle = () => {
             <Image src='/images/icon-bg.svg' alt='user' fill />
           </div>
         </div>
+      </div>
+
+      <div className='flex items-center gap-[5px] mt-1'>
+        <p className='!font-Oswald font-semibold text-caption text-white tracking-[-0.2px]'>
+          4.8
+        </p>
+        {Array(1, 2, 3, 4, 5).map((i) => (
+          <Image
+            key={i}
+            src='/images/outline-star.svg'
+            alt='user'
+            width={30}
+            height={30}
+          />
+        ))}
+      </div>
+
+      <h6 className='font-semibold  text-secondary-heading tracking-[-0.32px] text-brand-white text-center relative z-[2]'>
+        Nerve rocking mind bugling..thrill of the game is what makes this app
+        standout. Especially anticipates all the surprises it has inside.
+      </h6>
+      <p className='font-bold text-small-text tracking-[-0.22px] text-center stroke-custom-0 bg-main-gradient bg-clip-text text-fill-transparent relative z-[2]'>
+        Dan Ed Esguerra <br /> Reviewing XXX GAME
+      </p>
+
+      <div className='w-max h-max absolute left-[128px] bottom-[170px] z-[1]'>
+        <Image src='/images/coma.svg' alt='user' width={92} height={76} />
       </div>
     </div>
   );
