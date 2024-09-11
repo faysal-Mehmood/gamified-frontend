@@ -3,7 +3,7 @@ import Image from "next/image";
 const Ourgames = () => {
   return (
     <section className="xxl-max-screen w-full flex flex-col gap-4 py-10">
-      <div className="w-full flex gap-4">
+      <div className="w-full flex flex-wrap gap-3">
         {[
           "/images/game1.svg",
           "/images/game2.png",
@@ -26,6 +26,7 @@ const Ourgames = () => {
           alt="Our game"
           width={276}
           height={458}
+          className="hidden md:block"
         />
         <div className="p-5">
           <h2
@@ -46,10 +47,11 @@ const Ourgames = () => {
           alt="Our game"
           width={276}
           height={458}
+          className="hidden md:block"
         />
       </div>
 
-      <div className=" w-full flex gap-4">
+      <div className=" w-full flex flex-wrap gap-3 ">
         {[
           "/images/game1.svg",
           "/images/game2.png",
