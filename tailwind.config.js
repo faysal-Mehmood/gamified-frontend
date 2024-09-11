@@ -24,7 +24,7 @@ module.exports = {
         "small-paragraph": ["24px"],
         "secondary-heading": ["32px"],
         "button-text": ["22px"],
-        "banner-large": ["175px"],
+        "banner-large": ["174px"],
         "big-title": ["50px"],
         "default-title": ["40px"],
         caption: ["20px"],
@@ -38,6 +38,7 @@ module.exports = {
         "brand-dark-blur": "#191D37",
         background: "var(--background)",
         foreground: "var(--foreground)",
+        "light-grey": "rgba(255, 255, 255, 0.7)",
       },
       textShadow: {
         custom: "0px 4px 4px rgba(0, 0, 0, 0.50)",
