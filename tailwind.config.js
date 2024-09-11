@@ -35,8 +35,6 @@ module.exports = {
         "brand-white": "rgba(255, 255, 255, 0.9)",
         "brand-white-grey": "rgba(255, 255, 255, 0.6)",
         "light-grey": "rgba(255, 255, 255, 0.7)",
-        background: "var(--background)",
-        foreground: "var(--foreground)",
       },
       textShadow: {
         custom: "0px 4px 4px rgba(0, 0, 0, 0.50)",

@@ -7,8 +7,8 @@ const WorkWithUsSection = () => {
       style={{
         background: 'url("/images/vector4.svg")',
         backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        backgroundPosition: "bottom"
+        backgroundSize: "contain",
+        backgroundPosition: "bottom",
       }}
     >
       <div className="md:max-w-[664px] text-left sm:px-0 px-5">
@@ -28,7 +28,7 @@ const WorkWithUsSection = () => {
           <p className="text-[#FFFFFFE5] text-base lg:text-[22px] font-bold leading-normal tracking-normal">
             What are you waiting for? Get started today!
           </p>
-          <button className="font-Oswald w-max h-auto border-none outline-none text-small-paragraph tracking-[-0.24px] text-white rounded-full py-[10px] px-[50px] bg-main-gradient lg:!mt-10 md:!mt-[50px] !mt-[65px]">
+          <button className="font-Oswald w-max h-auto  border-none outline-none text-small-paragraph tracking-[-0.24px] text-white rounded-full py-[10px] px-[50px] bg-main-gradient  lg:!mt-10 md:!mt-[50px] !mt-[65px] transition duration-300">
             Submit Your Game
           </button>
         </div>

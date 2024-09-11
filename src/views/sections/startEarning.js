@@ -3,7 +3,7 @@ import React from "react";
 
 const StartEarning = () => {
   return (
-    <section className="relative xxl-max-screen xl:px-[100px] lg:px-[50px] md:px-16 ">
+    <section className="relative xxl-max-screen xl:pl-[100px] lg:pl-[50px] md:pl-16 pt-28">
       {/* Background Shadow with Blur Effect */}
       <div className="absolute left-[50%] top-0 w-1/2 h-1/2 inset-0 bg-[rgba(96,188,119,0.6)] rounded-[728px] blur-[400px]"></div>
 
@@ -63,7 +63,7 @@ const StartEarning = () => {
         {/* </div> */}
         <Image
           src="/images/Frame73.svg"
-          className="absolute right-0 top-[20px] lg:block hidden"
+          className="absolute right-0 top-[-20px] lg:block hidden"
           alt="money image"
           width={975}
           height={591}
