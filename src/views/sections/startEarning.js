@@ -3,9 +3,9 @@ import React from "react";
 
 const StartEarning = () => {
   return (
-    <section className="xxl-max-screen lg:px-[50px] md:px-16 ">
+    <section className="relative xxl-max-screen xl:px-[100px] lg:px-[50px] md:px-16 ">
       {/* Background Shadow with Blur Effect */}
-      <div className="absolute inset-0 bg-[rgba(96,188,119,0.6)] rounded-[728px] blur-[400px]"></div>
+      <div className="absolute left-[50%] top-0 w-1/2 h-1/2 inset-0 bg-[rgba(96,188,119,0.6)] rounded-[728px] blur-[400px]"></div>
 
       {/* Content Section */}
       <div className="relative flex lg:flex-row flex-col-reverse justify-between items-center py-8 xl:mb-[263px] lg:mb-[220px] md:mb-[150px] mb-[90px]">

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const WorkWithUsSection = () => {
   return (
-    <section className="xxl-max-screen overflow-hidden relative lg:px-[50px] md:px-16 lg:border-none border-t border-[#FFFFFF] ">
+    <section className="xxl-max-screen overflow-hidden relative xl:px-[100px] lg:px-[50px] md:px-16 lg:border-none border-t border-[#FFFFFF] ">
       <div className="flex lg:flex-row flex-col lg:items-start items-center 2xl:gap-[60px] xl:gap-[80px] md:gap-[35px] gap-[20px] md:pt-[56px] pt-[25px] lg:pb-[76px] lg:border-t border-[#FFFFFF] w-full">
         {/* Navigation Links */}
         <div className="2xl:max-w-[32%] xl:max-w-[36%] lg:max-w-[35%] w-full uppercase flex flex-col  lg:items-start items-center">

@@ -24,7 +24,7 @@ module.exports = {
         "small-paragraph": ["24px"],
         "secondary-heading": ["32px"],
         "button-text": ["22px"],
-        "banner-large": ["175px"],
+        "banner-large": ["174px"],
         "big-title": ["50px"],
         "default-title": ["40px"],
         caption: ["20px"],
