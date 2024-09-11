@@ -34,6 +34,7 @@ module.exports = {
         "brand-black": "#000000",
         "brand-white": "rgba(255, 255, 255, 0.9)",
         "brand-white-grey": "rgba(255, 255, 255, 0.6)",
+        "light-grey": "rgba(255, 255, 255, 0.7)",
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
