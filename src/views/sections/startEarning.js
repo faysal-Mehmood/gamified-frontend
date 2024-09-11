@@ -3,7 +3,7 @@ import React from "react";
 
 const StartEarning = () => {
   return (
-    <section className="relative xxl-max-screen pl-[100px]">
+    <section className="relative xxl-max-screen pl-[100px] ">
       {/* Background Shadow with Blur Effect */}
       <div className="absolute inset-0 bg-[rgba(96,188,119,0.6)] rounded-[728px] blur-[400px]"></div>
 
