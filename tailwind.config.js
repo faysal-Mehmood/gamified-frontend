@@ -41,6 +41,7 @@ module.exports = {
         "light-grey": "rgba(255, 255, 255, 0.7)",
         "half-grey": "rgba(255, 255, 255, 0.05)",
         "half-grey1": "rgba(255, 255, 255, 0.20)",
+        "half-grey2": "rgba(255, 255, 255, 0.40)"
       },
       textShadow: {
         custom: "0px 4px 4px rgba(0, 0, 0, 0.50)",

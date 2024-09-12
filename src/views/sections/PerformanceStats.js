@@ -17,8 +17,8 @@ const status = [
 
 const PerformanceStats = () => {
   return (
-    <section className='w-full bg-main-gradient pt-8 pb-[31px] '>
-      <div className='xxl-max-screen mx-auto pl-[125px] pr-[100px] grid grid-cols-3 gap-8'>
+    <section className='text-white bg-main-gradient pt-8 pb-[31px]'>
+      <div className='xxl-max-screen xl:px-[100px] lg:px-[50px] md:px-16 px-4 grid grid-cols-3 gap-8'>
         {status?.map((item, i) => (
           <div
             key={i}

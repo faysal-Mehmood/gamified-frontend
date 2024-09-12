@@ -3,7 +3,7 @@ import Image from "next/image";
 const WorkWithUsSection = () => {
   return (
     <section
-      className=" xxl-max-screen flex flex-col-reverse md:flex-row gap-[30px] items-center justify-between pt-[168px] pb-16 xl:px-[100px] lg:px-[50px] md:px-16 "
+      className="xxl-max-screen flex flex-col-reverse md:flex-row gap-[30px] items-center justify-between pt-[168px] pb-16 xl:px-[100px] lg:px-[50px] md:px-16 "
       style={{
         background: 'url("/images/vector4.svg")',
         backgroundRepeat: "no-repeat",
