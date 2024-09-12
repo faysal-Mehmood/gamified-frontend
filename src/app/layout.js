@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
         <main className='w-full h-full relative'>
           <Header />
           {children}
-          <Footer/>
+          <Footer />
         </main>
       </body>
     </html>
