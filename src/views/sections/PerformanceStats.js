@@ -1,16 +1,18 @@
+"use client";
 import React from "react";
+import CountUp from "react-countup";
 
 const status = [
   {
-    number: "994,000",
+    number: 994000,
     name: "USD paid out",
   },
   {
-    number: "9,994,000",
+    number: 9994000,
     name: "Downloads",
   },
   {
-    number: "99,994,000",
+    number: 99994000,
     name: "Points Earned",
   },
 ];
@@ -30,12 +32,14 @@ const PerformanceStats = () => {
                 : i === 1
                 ? "justify-center"
                 : "justify-end"
-            } items-center  ${i === 2 && "ml-[inherit]"} `}>
-            <h3 className='font-Inter font-semibold text-subheading leading-9 text-white tracking-[-0.4px]'>
-              {i === 0 && <span className='mr-3'>$</span>} {item?.number}
-              <span className=''>+</span>
+            } items-center  ${i === 2 && "ml-[inherit]"} `}
+          >
+            <h3 className="font-Inter font-semibold text-subheading leading-9 text-white tracking-[-0.4px]">
+              {i === 0 && <span className="mr-3">$</span>}
+              <CountUp end={item?.number} enableScrollSpy duration={4} />
+              <span className="">+</span>
             </h3>
-            <p className='font-Inter font-normal text-paragraph text-white tracking-[-0.26px]'>
+            <p className="font-Inter font-normal text-paragraph text-white tracking-[-0.26px]">
               {item?.name}
             </p>
           </div>
