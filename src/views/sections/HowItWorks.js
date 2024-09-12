@@ -46,19 +46,31 @@ const HowItWorks = () => {
         </div>
         {/* Step 2 */}
         <div className="flex lg:flex-row flex-col items-center justify-between md:gap-[105px] gap-4 md:mb-[80px] mb-[34px] w-full">
-          <div className="w-full md:flex hidden justify-center items-center h-auto">
-            <img
-              src="/images/all-games.png"
-              alt="Step 1 Image"
-              className="max-w-full"
-            />
+          <div className="w-full md:flex flex-wrap gap-5 hidden justify-center items-center h-auto">
+            {[48, 120, 30, 34, 50]?.map((item) => (
+              <div className="inline-flex items-center gap-3 border border-half-grey1 bg-half-grey backdrop-blur-xl px-5 py-[10px] rounded-full ">
+                <img
+                  src="/images/win-small-logo.svg"
+                  alt="Step 1 Image"
+                  className="max-w-full"
+                />
+                <p className="text-[30px] font-bold leading-none text-white/90 tracking-[-0.3px] font-inter">
+                  {item}
+                </p>
+              </div>
+            ))}
           </div>
           <div className="w-full flex md:hidden justify-center items-center h-auto">
-            <img
-              src="/images/all-games.png"
-              alt="Step 1 Image"
-              className="max-w-full"
-            />
+            <div className="inline-flex items-center gap-3 border border-half-grey1 bg-half-grey backdrop-blur-xl px-5 py-[10px] rounded-full ">
+              <img
+                src="/images/win-small-logo.svg"
+                alt="Step 1 Image"
+                className="max-w-full"
+              />
+              <p className="text-[30px] font-bold leading-none text-white/90 tracking-[-0.3px] font-inter">
+                150
+              </p>
+            </div>
           </div>
           <div className="flex md:flex-row flex-row-reverse items-center md:gap-10 gap-5 w-full">
             <h1 className="md:text-[60px] text-[30px] font-semibold leading-normal md:tracking-[-0.3px] tracking-[-0.6px] text-brand-white rounded-full md:max-w-[130px] max-w-[65px] w-full md:h-[130px] h-[65px] flex justify-center items-center bg-circle-gradient border-2 border-brand-blue backdrop-blur-md ">
@@ -91,14 +103,14 @@ const HowItWorks = () => {
           </div>
           <div className="w-full md:flex hidden justify-center items-center h-auto">
             <img
-              src="/images/all-games.png"
+              src="/images/money-coin.png"
               alt="Step 1 Image"
               className="max-w-full"
             />
           </div>
           <div className="w-full flex md:hidden justify-center items-center h-auto">
             <img
-              src="/images/all-games.png"
+              src="/images/money-coin.png"
               alt="Step 1 Image"
               className="max-w-full"
             />
@@ -106,7 +118,7 @@ const HowItWorks = () => {
         </div>
         {/* Buttons */}
         <div className="flex items-center justify-center md:flex-row flex-col gap-[30px]">
-          <button className="flex items-center justify-center text-[26px] font-light leading-normal tracking-[-0.26px] md:w-max w-full bg-circle-gradient border-2 border-brand-blue backdrop-blur-md text-brand-white py-[15px] px-10 rounded-full flex items-center gap-[5px]">
+          <button className="flex items-center justify-center text-[26px] font-light leading-normal tracking-[-0.26px] md:w-max w-full bg-circle-gradient border-2 border-brand-blue backdrop-blur-md text-brand-white py-[15px] px-10 rounded-full  gap-[5px]">
             <img
               src="/images/android.svg"
               alt="Step 1 Image"
@@ -114,7 +126,7 @@ const HowItWorks = () => {
             />
             Download for Android
           </button>
-          <button className="flex items-center justify-center text-[26px] font-light leading-normal tracking-[-0.26px] md:w-max w-full bg-circle-gradient border-2 border-brand-blue backdrop-blur-md text-brand-white py-[15px] px-10 rounded-full flex items-center gap-[5px]">
+          <button className="flex items-center justify-center text-[26px] font-light leading-normal tracking-[-0.26px] md:w-max w-full bg-circle-gradient border-2 border-brand-blue backdrop-blur-md text-brand-white py-[15px] px-10 rounded-full  gap-[5px]">
             <img
               src="/images/apple.svg"
               alt="Step 1 Image"
