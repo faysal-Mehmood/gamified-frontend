@@ -5,7 +5,7 @@ const Ourgames = () => {
     <section className="xxl-max-screen w-full flex flex-col">
       <div className="w-full flex gap-4">
         {[
-          "/images/game1.svg",
+          "/images/game1.png",
           "/images/game2.png",
           "/images/game3.svg",
           "/images/game4.svg",
