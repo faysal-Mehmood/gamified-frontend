@@ -62,7 +62,7 @@ const StartEarning = () => {
         />
         {/* </div> */}
         <Image
-          src="/images/Frame73.svg"
+          src="/images/Frame73.png"
           className="absolute right-0 top-[-20px] lg:block hidden"
           alt="money image"
           width={975}
