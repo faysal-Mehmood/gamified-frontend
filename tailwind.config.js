@@ -102,7 +102,7 @@ module.exports = {
         },
 
         ".hero-free-win-big-text": {
-          "text-shadow": "0px 4px 4px rgba(0, 0, 0, 0.50)",
+          // "text-shadow": "0px 4px 4px rgba(0, 0, 0, 0.50)",
           "-webkit-text-stroke-width": "5",
           "-webkit-text-stroke-color": "#000",
           " background": "linear-gradient(90deg, #4D89F0 0%, #9184EA 100%)",
