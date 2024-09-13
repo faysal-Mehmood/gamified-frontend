@@ -37,7 +37,7 @@ const Reviews = () => {
       setCurrentSlider(current);
       setTimeout(() => {
         setFitBackColor(false);
-      }, 9);
+      }, 100);
     },
   };
 
@@ -52,7 +52,7 @@ const Reviews = () => {
             sliderRef = slider;
           }}
           {...settings}
-          className='review-circle-slider '>
+          className='review-circle-slider relative'>
           {Array(1, 2, 3, 4, 5).map((item, index) => (
             <div key={index} className='w-max h-max px-[87.2px] '>
               <Circle

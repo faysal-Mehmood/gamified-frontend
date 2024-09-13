@@ -53,6 +53,8 @@ module.exports = {
         "main-gradient": "linear-gradient(90deg, #4D89F0 0%, #9184EA 100%)",
         "circle-gradient":
           "linear-gradient(90deg, rgba(77, 137, 240, 0.20) 0%, rgba(145, 132, 234, 0.20) 100%)",
+        "game-hover-gradient":
+          "linear-gradient(180deg, rgba(0, 0, 0, 0.00) 59.88%, rgba(0, 0, 0, 0.80) 75.78%)",
       },
       backgroundClip: {
         text: "text",
