@@ -5,7 +5,7 @@ const WorkWithUsSection = () => {
     <section className="xxl-max-screen overflow-hidden relative xl:px-[100px] lg:px-[50px] md:px-16 lg:border-none border-t border-[#FFFFFF] ">
       <div className="flex lg:flex-row flex-col lg:items-start items-center 2xl:gap-[60px] xl:gap-[80px] md:gap-[35px] gap-[20px] md:pt-[56px] pt-[25px] lg:pb-[76px] lg:border-t border-[#FFFFFF] w-full">
         {/* Navigation Links */}
-        <div className="2xl:max-w-[32%] xl:max-w-[36%] lg:max-w-[35%] w-full uppercase flex flex-col  lg:items-start items-center">
+        <div className="2xl:max-w-[28%] xl:max-w-[30%] lg:max-w-[35%] w-full uppercase flex flex-col  lg:items-start items-center">
           {["Home", "How It Works", "Our Games", "Work With Us"].map(
             (text, index) => (
               <a
@@ -22,7 +22,7 @@ const WorkWithUsSection = () => {
             )
           )}
         </div>
-        <div className="md:max-w-[400px] sm:max-w-[300px] max-w-[200px] w-full h-[1px] bg-brand-white-grey mx-auto lg:hidden !mt-0"/>
+        <div className="md:max-w-[400px] sm:max-w-[300px] max-w-[200px] w-full h-[1px] bg-brand-white-grey mx-auto lg:hidden !mt-0" />
         <div className="w-full flex flex-col space-y-2 lg:items-start items-center lg:pb-0 md:pb-[35px] pb-10 lg:border-none border-b border-brand-white-grey">
           <p className="text-small-paragraph leading-normal font-light tracking-[-0.24px] text-brand-white">
             Contact Us at
@@ -33,7 +33,7 @@ const WorkWithUsSection = () => {
           >
             support@winrgames.com
           </a>
-          <div className="md:max-w-[400px] sm:max-w-[300px] max-w-[200px] w-full h-[1px] bg-brand-white-grey mx-auto lg:hidden !mt-0 lg:!mb-0 md:!mb-[35px] !mb-[20px]"/>
+          <div className="md:max-w-[400px] sm:max-w-[300px] max-w-[200px] w-full h-[1px] bg-brand-white-grey mx-auto lg:hidden !mt-0 lg:!mb-0 md:!mb-[35px] !mb-[20px]" />
           <p className="text-small-paragraph leading-normal font-light tracking-[-0.24px] !mt-0 !mb-[10px] text-brand-white">
             Stay Connected
           </p>
@@ -69,12 +69,11 @@ const WorkWithUsSection = () => {
             ))}
           </div>
         </div>
-
       </div>
 
-      <div className="flex lg:flex-row flex-col lg:items-start items-center 2xl:gap-[60px] xl:gap-[80px] md:gap-[35px] gap-[20px] lg:pt-[56px] md:pt-[35px] pt-[30px] md:pb-[76px] md:pb-10 pb-[30px] lg:border-t border-[#FFFFFF] w-full">
+      <div className="flex lg:flex-row flex-col lg:items-start items-center 2xl:gap-[60px] xl:gap-[80px] md:gap-[35px] gap-[20px] lg:pt-[30px] md:pt-[35px] pt-[30px] md:pb-[76px]  pb-[30px] lg:border-t border-[#FFFFFF] w-full">
         {/* Footer Section */}
-        
+
         <div className="2xl:max-w-[32%] xl:max-w-[36%] lg:max-w-[35%] w-full lg:text-start text-center">
           <p className="lg:text-caption text-[16px] leading-normal font-semibold tracking-[-0.2px] text-[#ffffff]">
             © 2014 <span className="text-[#4D89F0]">WINR Games®.</span> All
@@ -92,8 +91,8 @@ const WorkWithUsSection = () => {
           </a>
         </div>
       </div>
-      <div className="absolute lg:right-0 md:right-0 sm:right-[-25%] right-[-45%] top-0">
-        <div className="relative top-0 left-0 w-[523px] lg:h-[650px] md:h-[1000px] h-[700px]">
+      <div className="absolute  md:right-0 lg:right-0  sm:right-[-25%] right-[-45%] top-[10px]">
+        <div className="relative top-0 right-[-64px] w-[523px] lg:h-[464px]">
           <Image
             src="/images/footerVector.svg"
             alt="footer-vector"

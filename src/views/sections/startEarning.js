@@ -33,7 +33,7 @@ const StartEarning = () => {
                 src="/images/googleplay.svg"
                 alt="Google Play Store"
                 width={290}
-                height={60}
+                height={84}
                 className="lg:w-[290px] sm:w-[250px] w-[200px]"
               />
             </a>
@@ -46,8 +46,8 @@ const StartEarning = () => {
                 src="/images/App_Store.svg"
                 alt="Apple App Store"
                 width={255}
-                height={60}
-                className="lg:w-[290px] sm:w-[250px] w-[200px]"
+                height={84}
+                className="lg:w-[255px] sm:w-[250px] w-[200px]"
               />
             </a>
           </div>
@@ -63,7 +63,7 @@ const StartEarning = () => {
         {/* </div> */}
         <Image
           src="/images/Frame73.png"
-          className="absolute right-0 top-[-20px] lg:block hidden"
+          className="absolute right-0 top-[-40px] lg:block hidden"
           alt="money image"
           width={975}
           height={591}

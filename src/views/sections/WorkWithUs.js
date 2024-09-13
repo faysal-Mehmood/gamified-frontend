@@ -13,7 +13,7 @@ const WorkWithUsSection = () => {
     >
       <div className="md:max-w-[664px] text-left sm:px-0 px-5">
         <h2
-          className="text-[50px] lg:text-[80px] font-bold uppercase leading-normal tracking-normal bg-gradient-to-r from-[#4D89F0] to-[#9184EA] 
+          className="text-[50px] lg:text-[80px] font-bold uppercase leading-normal tracking-normal bg-main-gradient
             bg-clip-text text-transparent"
         >
           WORK WITH US
@@ -28,7 +28,7 @@ const WorkWithUsSection = () => {
           <p className="text-[#FFFFFFE5] text-base lg:text-[22px] font-bold leading-normal tracking-normal">
             What are you waiting for? Get started today!
           </p>
-          <button className="font-Oswald w-max h-auto  border-none outline-none text-small-paragraph tracking-[-0.24px] text-white rounded-full py-[10px] px-[50px] bg-main-gradient  lg:!mt-10 md:!mt-[50px] !mt-[65px] transition duration-300">
+          <button className="font-Oswald w-max h-auto  border-none outline-none text-small-heading tracking-[-0.24px] text-white rounded-full py-[10px] px-[50px] bg-main-gradient  lg:!mt-10 md:!mt-[50px] !mt-[65px] transition duration-300">
             Submit Your Game
           </button>
         </div>

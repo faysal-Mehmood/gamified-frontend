@@ -28,12 +28,12 @@ h3,
 h4,
 h5,
 h6,
-button {
+button,
+a {
   font-family: "Oswald", sans-serif;
 }
 
-p,
-a {
+p {
   font-family: "Inter", sans-serif;
 }
 
