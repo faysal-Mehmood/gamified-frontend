@@ -96,8 +96,18 @@ module.exports = {
           "border-image": "linear-gradient(90deg, #4D89F0 0%, #9184EA 100%)",
           "border-image-slice": "1",
         },
-        "blur-bg": {
+        ".blur-bg": {
           "backdrop-filter": "blur(20px)",
+        },
+
+        ".hero-free-win-big-text": {
+          "text-shadow": "0px 4px 4px rgba(0, 0, 0, 0.50)",
+          "-webkit-text-stroke-width": "5",
+          "-webkit-text-stroke-color": "#000",
+          " background": "linear-gradient(90deg, #4D89F0 0%, #9184EA 100%)",
+          "background-clip": "text",
+          "-webkit-background-clip": "text",
+          "-webkit-text-fill-color": "transparent",
         },
       });
     },
