@@ -47,8 +47,11 @@ const HowItWorks = () => {
       {/* Step 2 */}
       <div className="flex lg:flex-row flex-col items-center justify-between md:gap-[105px] gap-4 md:mb-[80px] mb-[34px] w-full">
         <div className="w-full md:flex flex-wrap gap-5 hidden justify-center items-center h-auto">
-          {[48, 120, 30, 34, 50]?.map((item) => (
-            <div className="inline-flex items-center gap-3 border border-half-grey1 bg-half-grey backdrop-blur-xl px-5 py-[10px] rounded-full ">
+          {[48, 120, 30, 34, 50]?.map((item, index) => (
+            <div
+              key={index}
+              className="inline-flex items-center gap-3 border border-half-grey1 bg-half-grey backdrop-blur-xl px-5 py-[10px] rounded-full "
+            >
               <img
                 src="/images/win-small-logo.svg"
                 alt="Step 1 Image"
@@ -72,7 +75,7 @@ const HowItWorks = () => {
             </p>
           </div>
         </div>
-        <div className="flex md:flex-row flex-row-reverse items-center md:gap-10 gap-5 w-full">
+        <div className="flex  flex-row-reverse items-center md:gap-10 gap-5 w-full">
           <h1 className="md:text-[60px] text-[30px] font-semibold leading-normal md:tracking-[-0.3px] tracking-[-0.6px] text-brand-white rounded-full md:max-w-[130px] max-w-[65px] w-full md:h-[130px] h-[65px] flex justify-center items-center bg-circle-gradient border-2 border-brand-blue backdrop-blur-md ">
             02
           </h1>

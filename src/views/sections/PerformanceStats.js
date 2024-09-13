@@ -19,8 +19,8 @@ const status = [
 
 const PerformanceStats = () => {
   return (
-    <section className='text-white bg-main-gradient pt-8 pb-[31px]'>
-      <div className='xxl-max-screen xl:px-[100px] lg:px-[50px] md:px-16 px-4 grid grid-cols-3 gap-8'>
+    <section className="text-white bg-main-gradient pt-8 pb-[31px]">
+      <div className="xxl-max-screen xl:px-[100px] lg:px-[50px] md:px-16 px-4 grid grid-cols-3 gap-8">
         {status?.map((item, i) => (
           <div
             key={i}
@@ -35,9 +35,9 @@ const PerformanceStats = () => {
             } items-center  ${i === 2 && "ml-[inherit]"} `}
           >
             <h3 className="font-Inter font-semibold text-subheading leading-9 text-white tracking-[-0.4px]">
-              {i === 0 && <span className="mr-3">$</span>}
+              {i === 0 && <span className="mr-7">$</span>}
               <CountUp end={item?.number} enableScrollSpy duration={4} />
-              <span className="">+</span>
+              <span className="ml-2">+</span>
             </h3>
             <p className="font-Inter font-normal text-paragraph text-white tracking-[-0.26px]">
               {item?.name}
