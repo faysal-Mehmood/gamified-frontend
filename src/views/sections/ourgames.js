@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Ourgames = () => {
   return (
-    <section className="xxl-max-screen w-full flex flex-col gap-4 pt-10">
+    <section className="xxl-max-screen w-full flex flex-col gap-4">
       <div className="w-full grid lg:grid-cols-5 md:grid-cols-4 grid-cols-2 gap-4">
         {[
           "/images/game2.png",

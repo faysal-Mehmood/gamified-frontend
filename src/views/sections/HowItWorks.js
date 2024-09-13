@@ -75,7 +75,7 @@ const HowItWorks = () => {
             </p>
           </div>
         </div>
-        <div className="flex md:flex-row flex-row-reverse items-center md:gap-10 gap-5 w-full">
+        <div className="flex  flex-row-reverse items-center md:gap-10 gap-5 w-full">
           <h1 className="md:text-[60px] text-[30px] font-semibold leading-normal md:tracking-[-0.3px] tracking-[-0.6px] text-brand-white rounded-full md:max-w-[130px] max-w-[65px] w-full md:h-[130px] h-[65px] flex justify-center items-center bg-circle-gradient border-2 border-brand-blue backdrop-blur-md ">
             02
           </h1>
