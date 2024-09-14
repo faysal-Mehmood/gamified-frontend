@@ -4,7 +4,7 @@ import Image from "next/image";
 const Ourgames = () => {
   return (
     <section className="xxl-max-screen w-full flex flex-col gap-4">
-      <div className="w-full grid lg:grid-cols-5 md:grid-cols-4 grid-cols-2 gap-4">
+      <div className="w-full grid  grid-cols-2 md:grid-cols-4 lg:grid-cols-5  gap-4">
         {[
           "/images/game2.png",
           "/images/game1.png",
@@ -111,23 +111,37 @@ export default Ourgames;
 const BoxShadowEffect = () => {
   return (
     <div className="pl-2 pb-[11px] absolute inset-0  bg-opacity-50 flex flex-col items-start justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-      <span className="text-brand-white text-small-paragraph leading-normal tracking-[-0.237px] font-medium">
+      <span className="text-brand-white text-subheading leading-normal tracking-[-0.237px] font-medium">
         Brickz
       </span>
       <div className="flex items-center gap-[5.92px]">
+        <Image
+          src="/images/Frame2.png"
+          alt="android-logo"
+          width={46}
+          height={46}
+          className="hidden md:block"
+        />
+        <Image
+          src="/images/Frame7.png"
+          alt="android-logo"
+          width={46}
+          height={46}
+          className="hidden md:block"
+        />
         <Image
           src="/images/android.svg"
           alt="android-logo"
           width={28}
           height={28}
-          className="border border-half-grey2 p-[5.92px] rounded-[5.92px]"
+          className="border border-half-grey2 p-[5.92px] md:p-10 rounded-[5.92px] block md:hidden"
         />
         <Image
           src="/images/apple.svg"
           alt="android-logo"
           width={28}
           height={28}
-          className="border border-half-grey2 p-[5.92px] rounded-[5.92px]"
+          className="border border-half-grey2 p-[5.92px] rounded-[5.92px] block md:hidden"
         />
       </div>
     </div>
