@@ -1,18 +1,18 @@
 "use client";
 import React from "react";
-import CountUp from "react-countup";
+import SlotCounter from "react-slot-counter";
 
 const status = [
   {
-    number: 994000,
+    number: "994,000",
     name: "USD paid out",
   },
   {
-    number: 9994000,
+    number: "9,994,000",
     name: "Downloads",
   },
   {
-    number: 99994000,
+    number: "99,994,000",
     name: "Points Earned",
   },
 ];
@@ -36,7 +36,7 @@ const PerformanceStats = () => {
           >
             <h3 className="font-Inter font-semibold text-subheading leading-9 text-white tracking-[-0.4px]">
               {i === 0 && <span className="mr-7">$</span>}
-              <CountUp end={item?.number} enableScrollSpy duration={4} />
+              <SlotCounter value={item.number} duration={3} />
               <span className="ml-2">+</span>
             </h3>
             <p className="font-Inter font-normal text-paragraph text-white tracking-[-0.26px]">
