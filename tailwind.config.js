@@ -62,6 +62,9 @@ module.exports = {
       textFillColor: {
         transparent: "transparent",
       },
+      translate: {
+        "-182px-226px": "-182px, 226px",
+      },
     },
     letterSpacing: {
       normal: "-0.22px",
