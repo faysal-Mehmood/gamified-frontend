@@ -16,10 +16,10 @@ export default function RootLayout({ children }) {
     <html lang='en'>
       <body className={`${inter.className} relative bg-brand-black`}>
         <Image
-          src={"/images/owinr-background.svg"}
+          src={"/images/black-bg.svg"}
           fill
-          alt='logo'
-          className='object-cover '
+          alt='background'
+          className='object-contain xxl:object-cover '
         />
         <main className='w-full h-full relative'>
           <Header />

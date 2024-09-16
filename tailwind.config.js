@@ -70,6 +70,16 @@ module.exports = {
       normal: "-0.22px",
       medium: " -0.16px;",
     },
+
+    screens: {
+      sm: "640px", //@media (min-width: 640px) { ... }
+      md: "768px", //@media (min-width: 768px) { ... }
+      xmd: "992px",
+      lg: "1024px", //@media (min-width: 1024px) { ... }
+      xl: "1280px",
+      xxl: "1441px", //@media (min-width: 1280px) { ... }
+      "2xl": "1536px",
+    },
   },
   plugins: [
     function ({ addUtilities }) {
@@ -114,6 +124,11 @@ module.exports = {
           "background-clip": "text",
           "-webkit-background-clip": "text",
           "-webkit-text-fill-color": "transparent",
+        },
+        ".hero-mobile-text-outline": {
+          "text-shadow": "0px 2px 2px rgba(0, 0, 0, 0.25)",
+          "-webkit-text-stroke-width": "2.5px",
+          "-webkit-text-stroke-color": " #FFF",
         },
       });
     },

@@ -54,3 +54,8 @@ body {
   margin: auto;
 }
 
+.review-circle-slider {
+  .slick-list {
+    overflow-y: visible;
+  }
+}
