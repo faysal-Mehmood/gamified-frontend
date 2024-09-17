@@ -49,6 +49,11 @@ body {
   }
 }
 
+.btn-hover-1:hover {
+  border: 1px solid #4d89f0;
+  color: #4d89f0;
+}
+
 .xxl-max-screen {
   max-width: 1440px;
   margin: auto;

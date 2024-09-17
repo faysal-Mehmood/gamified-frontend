@@ -19,8 +19,8 @@ const status = [
 
 const PerformanceStats = () => {
   return (
-    <section className='text-white bg-main-gradient xmd:pt-8 xmd:pb-[31px]'>
-      <div className='xxl-max-screen xl:px-[100px]  lg:px-[50px] md:px-16 px-0 grid-cols-1 grid xmd:grid-cols-3 gap-0 xmd:gap-8'>
+    <section className="text-white bg-main-gradient xmd:pt-8 xmd:pb-[31px]">
+      <div className="xxl-max-screen xl:px-[100px]  lg:px-[50px] md:px-16 px-0 grid-cols-1 grid xmd:grid-cols-3 gap-0 xmd:gap-8">
         {status?.map((item, i) => (
           <>
             <div
@@ -41,20 +41,21 @@ const PerformanceStats = () => {
                   : i === 2
                   ? "pb-5 pt-3 xmd:p-0"
                   : "p-0"
-              } `}>
-              <h3 className='font-Inter font-semibold text-[30px] md:text-subheading leading-9 text-white tracking-[-0.3px] md:tracking-[-0.4px]'>
-                {i === 0 && <span className='mr-[2px] md:mr-7'>$</span>}
-                <SlotCounter value={item.number} duration={3} />
-                <span className='ml-[2px] md:ml-2'>+</span>
+              } `}
+            >
+              <h3 className="font-Inter flex items-end font-semibold text-[30px] md:text-subheading leading-9 text-white tracking-[-0.3px] md:tracking-[-0.4px]">
+                {i === 0 && <span className="mr-3">$</span>}
+                <SlotCounter value={item.number} duration={5} />
+                <span className="ml-[2px] mb-[2px] md:ml-2">+</span>
               </h3>
-              <p className='font-Inter font-normal text-caption md:text-paragraph text-white tracking-[-0.2px] md:tracking-[-0.26px]'>
+              <p className="font-Inter font-normal text-caption md:text-paragraph text-white tracking-[-0.2px] md:tracking-[-0.26px]">
                 {item?.name}
               </p>
             </div>
             {i == 2 ? (
               ""
             ) : (
-              <div className='w-full h-[5px] bg-black xmd:hidden block' />
+              <div className="w-full h-[5px] bg-black xmd:hidden block" />
             )}
           </>
         ))}
