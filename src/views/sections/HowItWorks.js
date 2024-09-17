@@ -9,13 +9,13 @@ const HowItWorks = () => {
   const counterLogoPosition = (index) => {
     switch (index) {
       case 0:
-        return "top-[10px] left-6 lg2:left-[81px]";
+        return "top-0 md:top-[10px] left-8 md:left-6 lg2:left-[81px]";
       case 1:
-        return "top-0 right-[29px]";
+        return "top-[31px] md:top-0 right-[29px]";
       case 2:
         return "top-[57%] left-[50%] -translate-x-1/2 -translate-y-1/2";
       case 3:
-        return "bottom-0 left-[9px]";
+        return "bottom-[31px] md:bottom-0 left-[9px]";
       case 4:
         return "bottom-0 right-0";
       default:
@@ -42,26 +42,26 @@ const HowItWorks = () => {
       </div>
       <div className='relative '>
         {/* Step 1 */}
-        <div className='pl-[65px] relative  flex lg:flex-row flex-col-reverse items-start justify-start   w-full '>
+        <div className='pl-[42px] md:pl-[65px] pt-10 pb-6 lg:pt-0 lg:pb-0 relative  flex lg:flex-row flex-col-reverse items-start justify-start w-full '>
           {/* top border */}
           <img
             src='/images/border-top-full.svg'
             alt='Step 1 Image'
-            className='max-w-full w-[calc(100%-540px)] object-cover h-1 absolute top-0 left-[65px] '
+            className='max-w-full w-[calc(100%-50%)]  lg:w-[calc(100%-44%)] object-cover h-1 absolute top-0 left-[30px] md:left-[65px] '
           />
 
           {/* left border */}
           <img
             src='/images/play-left-border.svg'
             alt='Step 1 Image'
-            className='max-w-full object-cover w-1  h-full absolute top-0 left-[65px]'
+            className='max-w-full object-cover w-1  h-full absolute top-0 left-[30px] md:left-[65px]'
           />
 
-          <h1 className='absolute z-[2] left-0 top-1/2 -translate-y-1/2  md:text-[60px] text-[30px] font-semibold leading-normal md:tracking-[-0.3px] tracking-[-0.6px] text-brand-white rounded-full md:max-w-[130px] max-w-[65px] w-full md:h-[130px] h-[65px] flex justify-center items-center bg-circle-gradient border-2 border-brand-blue backdrop-blur-md '>
+          <h1 className='absolute z-[2] left-0 bottom-[18px] lg:bottom-[inherit] top-[inherit] lg:top-1/2 translate-y-0 lg:-translate-y-1/2  md:text-[60px] text-[30px] font-semibold leading-normal md:tracking-[-0.3px] tracking-[-0.6px] text-brand-white rounded-full md:max-w-[130px] max-w-[65px] w-full md:h-[130px] h-[65px] flex justify-center items-center bg-circle-gradient border-2 border-brand-blue backdrop-blur-md '>
             01
           </h1>
 
-          <div className='relative w-full max-w-max px-[105px] min-h-[279px]   flex items-center md:gap-10 gap-5 '>
+          <div className='relative w-full max-w-max pl-[53px] md:px-[105px] min-h-max lg:min-h-[279px]   flex items-center md:gap-10 gap-5 '>
             <div className=' flex flex-col items-start gap-[10px]'>
               <h1 className='md:text-default-title text-small-heading font-medium leading-normal md:tracking-[-0.4px] tracking-[-0.26px] text-brand-white'>
                 Play Games
@@ -75,77 +75,61 @@ const HowItWorks = () => {
           <img
             src='/images/all-games.png'
             alt='Step 1 Image'
-            width={571}
-            height={272}
-            className='  md:flex hidden  relative left-5 pl-5 pt-10  lg:pt-0 lg:pl-0 top-0 lg:top-[-37px] '
+            className='md:block hidden relative  pl-5 lg:pt-0 lg:pl-0 top-0 lg:top-[-37px] '
           />
 
-          <div className='w-full flex md:hidden justify-center items-center h-auto'>
-            <img
-              src='/images/all-games.png'
-              alt='Step 1 Image'
-              className='max-w-full'
-            />
-          </div>
+          <img
+            src='/images/all-mobile-games.png'
+            alt='Step 1 Image'
+            className='max-w-full w-auto h-auto md:hidden block pl-5'
+          />
         </div>
         {/* Step 2 */}
-        <div className=' pt-12 pb-[54px] relative pl-[65px] pr-[190px]  flex lg:flex-row flex-col items-center justify-between md:gap-14 gap-4  w-full'>
+        <div className='pt-[30px] md:pt-12 pb-6 md:pb-[54px] relative pl-[42px] md:pl-[65px] pr-[42px] md:pr-[190px]  flex lg:flex-row flex-col items-end md:items-center justify-between md:gap-14 gap-4  w-full'>
           {/* top border */}
           <img
             src='/images/border-top-full.svg'
             alt='Step 1 Image'
-            className='max-w-full w-[calc(100%-255px)] object-cover h-1 absolute top-0 left-[65px] '
+            className='max-w-full w-[calc(100%-60px)] md:w-[calc(100%-132px)] lg:w-[calc(100%-255px)] object-cover h-1 absolute top-0 left-[30px] md:left-[65px] '
           />
 
           {/* right border */}
           <img
             src='/images/border-right.svg'
             alt='Step 1 Image'
-            className='max-w-full object-cover w-1 h-full absolute top-0 right-[190px]'
+            className='max-w-full object-cover w-1 h-full absolute top-0 right-[30px] lg:right-[190px]'
           />
 
           {/* bottom border */}
           <img
             src='/images/border-bottom.svg'
             alt='Step 1 Image'
-            className='max-w-full w-[calc(100%-260px)] object-cover  h-1 absolute bottom-0 left-[65px] '
+            className='max-w-full w-[calc(100%-60px)] md:w-[calc(100%-132px)] lg:w-[calc(100%-255px)] object-cover  h-1 absolute bottom-0 left-[30px] md:left-[65px] '
           />
 
-          <h1 className='absolute z-[2] right-[125px] top-1/2 -translate-y-1/2  md:text-[60px] text-[30px] font-semibold leading-normal md:tracking-[-0.3px] tracking-[-0.6px] text-brand-white rounded-full md:max-w-[130px] max-w-[65px] w-full md:h-[130px] h-[65px] flex justify-center items-center bg-circle-gradient border-2 border-brand-blue backdrop-blur-md '>
+          <h1 className='absolute z-[2]  right-0 md:right-[125px] bottom-[18px] lg:bottom-[inherit] top-[inherit] lg:top-1/2 translate-y-0 lg:-translate-y-1/2  md:text-[60px] text-[30px] font-semibold leading-normal md:tracking-[-0.3px] tracking-[-0.6px] text-brand-white rounded-full md:max-w-[130px] max-w-[65px] w-full md:h-[130px] h-[65px] flex justify-center items-center bg-circle-gradient border-2 border-brand-blue backdrop-blur-md '>
             02
           </h1>
-          <div className='w-[457px]  md:flex flex-wrap gap-5 hidden justify-center items-center h-[185px] overflow-hidden relative'>
+          <div className='mr-8 md:pr-0 w-full md:w-[457px]  h-[185px] overflow-hidden relative'>
             {[48, 120, 234, 25, 173]?.map((item, index) => (
               <div
                 key={index}
-                className={`inline-flex items-center gap-3 border border-half-grey1 bg-half-grey backdrop-blur-xl px-5 py-[10px] rounded-full absolute ${counterLogoPosition(
+                className={`inline-flex items-center gap-2 md:gap-3 border border-half-grey1 bg-half-grey backdrop-blur-xl px-[13px] md:px-5 py-[6px] md:py-[10px] rounded-full absolute ${counterLogoPosition(
                   index,
                 )}`}>
                 <img
                   src='/images/win-small-logo.svg'
                   alt='Step 1 Image'
-                  className='max-w-full'
+                  className='w-[16px] md:w-[25px] h-[14px] md:h-[22px]'
                 />
-                <p className='text-[30px] font-bold leading-none text-white/90 tracking-[-0.3px] font-inter'>
+                <p className='text-[19px] md:text-[30px] font-bold leading-none text-white/90 tracking-[-0.3px] font-inter'>
                   {item}
                 </p>
               </div>
             ))}
           </div>
 
-          <div className='w-full flex md:hidden justify-center items-center h-auto'>
-            <div className='inline-flex items-center gap-3 border border-half-grey1 bg-half-grey backdrop-blur-xl px-5 py-[10px] rounded-full '>
-              <img
-                src='/images/win-small-logo.svg'
-                alt='Step 1 Image'
-                className='max-w-full'
-              />
-              <p className='text-[30px] font-bold leading-none text-white/90 tracking-[-0.3px] font-inter'>
-                150
-              </p>
-            </div>
-          </div>
-          <div className='w-max flex justify-start items-center md:gap-10 gap-5 pr-[116px]'>
+          <div className='w-max flex justify-start items-center md:gap-10 gap-5 pr-12 md:pr-[116px] md:pt-0 pt-7'>
             <div className='flex flex-col items-start gap-[10px]'>
               <h1 className='md:text-default-title text-small-heading font-medium leading-normal md:tracking-[-0.4px] tracking-[-0.26px] text-brand-white'>
                 Earn WINR Rewards
@@ -157,18 +141,18 @@ const HowItWorks = () => {
           </div>
         </div>
         {/* Step 3 */}
-        <div className=' pl-[65px] relative flex lg:flex-row flex-col-reverse items-center justify-between md:gap-[44px]  w-full pt-7 '>
-          <h1 className='absolute z-[2] left-0 top-1/2 -translate-y-1/2  md:text-[60px] text-[30px] font-semibold leading-normal md:tracking-[-0.3px] tracking-[-0.6px] text-brand-white rounded-full md:max-w-[130px] max-w-[65px] w-full md:h-[130px] h-[65px] flex justify-center items-center bg-circle-gradient border-2 border-brand-blue backdrop-blur-md '>
+        <div className=' pl-[42px] md:pl-[65px] relative flex lg:flex-row flex-col-reverse items-center justify-between md:gap-[44px]  w-full pt-7 '>
+          <h1 className='absolute z-[2] left-0 bottom-[18px] lg:bottom-[inherit] top-[inherit] lg:top-1/2 translate-y-0 lg:-translate-y-1/2   md:text-[60px] text-[30px] font-semibold leading-normal md:tracking-[-0.3px] tracking-[-0.6px] text-brand-white rounded-full md:max-w-[130px] max-w-[65px] w-full md:h-[130px] h-[65px] flex justify-center items-center bg-circle-gradient border-2 border-brand-blue backdrop-blur-md '>
             03
           </h1>
           {/* left border */}
           <img
             src='/images/border-left-3.svg'
             alt='Step 1 Image'
-            className='max-w-full object-cover w-1  h-full absolute top-0 left-[65px]'
+            className='max-w-full object-cover w-1  h-full absolute top-0 left-[30px] md:left-[65px]'
           />
 
-          <div className='pl-[105px] flex items-center md:gap-10 gap-5 w-full pb-[41px]'>
+          <div className='pl-[53px] md:pl-[105px] pt-[255px] md:pt-0 flex items-center md:gap-10 gap-5 w-full pb-6 md:pb-[41px]'>
             <div className='flex flex-col items-start gap-[10px]'>
               <h1 className='md:text-default-title text-small-heading font-medium leading-normal md:tracking-[-0.4px] tracking-[-0.26px] text-brand-white'>
                 Convert to Cash or Crypto
@@ -185,11 +169,11 @@ const HowItWorks = () => {
               className='max-w-full'
             />
           </div>
-          <div className='w-full flex md:hidden justify-center items-center h-auto'>
+          <div className='w-[386px] h-[200px] flex-shrink-0 block absolute top-[30px] right-[-85px]  md:hidden  '>
             <img
-              src='/images/money-coin.png'
+              src='/images/mobile-money-coin.svg'
               alt='Step 1 Image'
-              className='max-w-full'
+              className='max-w-full w-full h-auto'
             />
           </div>
         </div>
@@ -198,7 +182,7 @@ const HowItWorks = () => {
       <img
         src='/images/last-border-3.svg'
         alt='Step 1 Image'
-        className='max-w-full w-full object-cover h-1 absolute pl-[63px] '
+        className='max-w-full w-full object-cover h-1 absolute pl-[30px] md:pl-[63px] '
       />
       {/* Buttons */}
       <div className='flex items-center justify-center md:flex-row flex-col gap-[30px]  md:mt-[160px] mt-[112px]'>
