@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Slider from "react-slick";
 import Image from "next/image";
 import "slick-carousel/slick/slick.css";
@@ -8,8 +8,17 @@ import "slick-carousel/slick/slick-theme.css";
 const Reviews = () => {
   const [currentSlide, setCurrentSlider] = useState(0);
   const [fitBackColor, setFitBackColor] = useState(false);
+  const [circle, setCircle] = useState();
 
+  // const [nav1, setNav1] = useState(null);
+  // const [nav2, setNav2] = useState(null);
+  // let sliderRef1 = useRef(null);
   let sliderRef = useRef(null);
+
+  // useEffect(() => {
+  //   setNav1(sliderRef1);
+  //   setNav2(sliderRef);
+  // }, []);
 
   const next = () => {
     setFitBackColor(true);
@@ -26,7 +35,7 @@ const Reviews = () => {
     arrows: false,
     className: "center",
     centerMode: true,
-    infinite: false,
+    infinite: true,
     centerPadding: "0px",
     speed: 500,
     className: "slider variable-width",
@@ -41,30 +50,56 @@ const Reviews = () => {
     },
   };
 
+  // const settings2 = {
+  //   dots: false,
+  //   arrows: false,
+  //   infinite: true,
+  //   speed: 700,
+  //   slidesToShow: 5,
+  //   slidesToScroll: 1,
+  //   afterChange: (current) => {
+  //     setCircle(current);
+  //   },
+  // };
+
   return (
     <section className='w-full mx-auto mb-0 md:mb-[150px] xmd:mb-[316px]'>
       <h1 className='relative z-10 font-bold text-default-title xmd:text-large-heading uppercase leading-[60px] text-center xmd:leading-[100px] stroke-custom-0 bg-main-gradient bg-clip-text text-fill-transparent w-full lg:w-[1006px] mx-auto mb-[90px] md:mb-[184px] px-[33px]'>
         100,000+ trusted reviews from people JUST like you
       </h1>
-      <div className='w-full h-auto relative mt-[-235px] md:mt-0'>
+
+      <div className='w-full h-auto relative '>
+        {/* <div className='w-full h-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  '>
+          <Slider
+            {...settings2}
+            asNavFor={nav2}
+            ref={(slider) => (sliderRef1 = slider)}
+            className='h-full review-circle-scroll '>
+            {Array(1, 2, 3, 4, 5, 6).map((i, index) => (
+              <div key={i} className='h-full relative bg-black'>
+                <div
+                  className={`${
+                    circle + 2 === index
+                      ? "w-[222px] h-[222px] "
+                      : "w-[120px] h-[120px]"
+                  }  ${
+                    circle + 1 === index ? "bottom-0 left-0" : ""
+                  } absolute border-brand-blue rounded-full border-2  backdrop-blur-[10px] bg-circle-gradient `}></div>
+              </div>
+            ))}
+          </Slider>
+        </div> */}
         <Slider
           ref={(slider) => {
             sliderRef = slider;
           }}
+          // asNavFor={nav1}
           {...settings}
           className='review-circle-slider relative'>
           {Array(1, 2, 3, 4, 5, 6, 7, 8, 10).map((item, index) => (
             <div
               key={index}
-              className={`w-max h-max px-0 md:px-[87.2px] relative ${
-                currentSlide === index - 1
-                  ? "mt-[623px] md:mt-0 right-[80px] md:right-0"
-                  : currentSlide === index + 1
-                  ? "left-[80px] md:left-0"
-                  : currentSlide === index
-                  ? "mt-[238px] md:mt-0"
-                  : ""
-              }  `}>
+              className={`w-max h-max px-0 md:px-[87.2px] relative z-10  `}>
               <Circle
                 fitBackColor={fitBackColor}
                 currentSlide={currentSlide}
@@ -115,11 +150,15 @@ const Circle = ({ fitBackColor, currentSlide, index }) => {
       {/* Top circle */}
       <div
         className={`absolute z-[-1] rounded-full border-2 border-brand-blue backdrop-blur-[10px]
-          ${fitBackColor ? `bg-light-grey` : "bg-circle-gradient"}
+          ${fitBackColor ? `bg-circle-gradient` : "bg-circle-gradient"}
           ${
             currentSlide === index
               ? `md:w-[222px] w-[101px] h-[101px] md:h-[222px] left-[-68px] top-[9px] transition-all duration-500 ease-in-out
-              ${fitBackColor ? "transform -translate-y-80 translate-x-72" : ""}`
+              ${
+                fitBackColor
+                  ? "transform translate-y-0 translate-x-[59rem]"
+                  : ""
+              }`
               : `w-[82px] h-[82px] left-[15px] top-[173px] transition-all duration-500 ease-in-out
               ${
                 fitBackColor
@@ -133,11 +172,7 @@ const Circle = ({ fitBackColor, currentSlide, index }) => {
       />
 
       <div
-        className={`${
-          currentSlide === index - 1 || currentSlide === index + 1
-            ? "w-[362px] md:w-[752px] h-[362px] md:h-[752px] overflow-hidden"
-            : "w-[451px] md:w-[752px] h-[451px] md:h-[752px]"
-        } flex flex-col justify-start gap-3 md:gap-[46px] items-center rounded-full pt-[53px] md:pt-[70px] px-20 md:px-[129px] pb-16 md:pb-[170px] border-2 blur-bg border-brand-blue flex-shrink-0
+        className={`${"w-[451px] md:w-[752px] h-[451px] md:h-[752px]"} flex flex-col justify-start gap-3 md:gap-[46px] items-center rounded-full pt-[53px] md:pt-[70px] px-20 md:px-[129px] pb-16 md:pb-[170px] border-2 blur-bg border-brand-blue flex-shrink-0
          bg-circle-gradient
         `}
         style={{
