@@ -61,6 +61,28 @@ body {
 
 .review-circle-slider {
   .slick-list {
-    overflow-y: visible;
+    height: auto;
+    overflow-y: inherit;
+    .slick-track {
+      height: auto;
+
+      .slick-slide {
+        height: max-content;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .slick-list {
+      height: 985px;
+      overflow-y: inherit;
+      .slick-track {
+        height: 985px;
+
+        .slick-slide {
+          height: max-content;
+        }
+      }
+    }
   }
 }
