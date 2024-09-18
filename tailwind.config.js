@@ -107,7 +107,7 @@ module.exports = {
           "-webkit-background-clip": "text",
           "background-clip": "text",
           "-webkit-text-stroke": "5px transparent",
-          color: "#0D101B",
+          color: "#11172A",
         },
         ".linear-solid-border": {
           "border-image": "linear-gradient(90deg, #4D89F0 0%, #9184EA 100%)",
