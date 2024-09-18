@@ -7,7 +7,7 @@ import Reviews from "@/views/sections/Reviews";
 import HowItWorks from "@/views/sections/HowItWorks";
 export default function Home() {
   return (
-    <main>
+    <main className='w-full  overflow-hidden xxl:overflow-visible'>
       <Hero />
       <PerformanceStats />
       <HowItWorks />

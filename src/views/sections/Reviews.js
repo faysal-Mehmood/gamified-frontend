@@ -63,12 +63,18 @@ const Reviews = () => {
   // };
 
   return (
-    <section className='w-full mx-auto mb-0 md:mb-[150px] xmd:mb-[316px]'>
+    <section className='w-full mx-auto mb-[150px]  xmd:mb-[316px] relative'>
+      <div
+        className='absolute top-[30px] left-[-294px] xsm:h-0 xsm:w-0 w-[334px] h-[334px] rounded-full border-[1.219px] border-[#4D89F0] 
+bg-gradient-to-r from-[rgba(77,137,240,0.20)] to-[rgba(145,132,234,0.20)] 
+backdrop-blur-[6.094865322113037px]'
+      />
+
       <h1 className='relative z-10 font-bold text-default-title xmd:text-large-heading uppercase leading-[60px] text-center xmd:leading-[100px] stroke-custom-0 bg-main-gradient bg-clip-text text-fill-transparent w-full lg:w-[1006px] mx-auto mb-[90px] md:mb-[184px] px-[33px]'>
         100,000+ trusted reviews from people JUST like you
       </h1>
 
-      <div className='w-full h-auto relative '>
+      <div className='w-full h-[451px] xsm:h-auto relative '>
         {/* <div className='w-full h-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  '>
           <Slider
             {...settings2}
@@ -99,7 +105,7 @@ const Reviews = () => {
           {Array(1, 2, 3, 4, 5, 6, 7, 8, 10).map((item, index) => (
             <div
               key={index}
-              className={`w-max h-max px-0 md:px-[87.2px] relative z-10  `}>
+              className={`w-max h-max px-5  md:px-[87.2px] relative z-10  `}>
               <Circle
                 fitBackColor={fitBackColor}
                 currentSlide={currentSlide}
@@ -138,6 +144,12 @@ const Reviews = () => {
           </button>
         </div>
       </div>
+
+      <div
+        className='absolute bottom-[-270px] right-[-294px] xsm:h-0 xsm:w-0 w-[334px] h-[334px] rounded-full border-[1.219px] border-[#4D89F0] 
+bg-gradient-to-r from-[rgba(77,137,240,0.20)] to-[rgba(145,132,234,0.20)] 
+backdrop-blur-[6.094865322113037px]'
+      />
     </section>
   );
 };
@@ -222,7 +234,7 @@ const Circle = ({ fitBackColor, currentSlide, index }) => {
           Dan Ed Esguerra <br /> Reviewing XXX GAME
         </p>
 
-        <div className='w-max h-max absolute left-[128px] bottom-[170px] z-[1]'>
+        <div className='w-max h-max absolute left-[84px] md:left-[128px] bottom-[115px] md:bottom-[170px] z-[1]'>
           <Image src='/images/coma.svg' alt='user' width={92} height={76} />
         </div>
       </div>
