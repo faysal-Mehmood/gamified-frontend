@@ -37,11 +37,11 @@ const Hero = () => {
                 for cash or cryptocurrency. Our games are 100% free to download
                 and play.
               </p>
-              <div className='flex lg:items-center items-end lg:justify-center justify-start  gap-[10px]'>
-                <div className='flex items-center sm:flex-row flex-col gap-2'>
+              <div className='flex items-center lg:items-center sm:items-end lg:justify-center justify-start  gap-[10px]'>
+                <div className='flex items-center sm:flex-row flex-col gap-1 sm:gap-2'>
                   <Link
                     href='#'
-                    className='relative w-[197px] md:w-[229px] h-[73px] group '>
+                    className='relative w-[163px] sm:w-[196px] h-[49px] sm:h-[65px] group '>
                     <Image
                       src='/images/googleplay.svg'
                       alt='App_Store'
@@ -49,7 +49,9 @@ const Hero = () => {
                       className='object-contain transition-transform duration-300 ease-in-out group-hover:scale-105'
                     />
                   </Link>
-                  <Link href='#' className='relative w-[196px] h-[65px] group'>
+                  <Link
+                    href='#'
+                    className='relative w-[163px] sm:w-[196px] h-[49px] sm:h-[65px] group'>
                     <Image
                       src='/images/App_Store.svg'
                       alt='googleplay'
@@ -59,7 +61,7 @@ const Hero = () => {
                   </Link>
                 </div>
 
-                <div className='flex flex-col items-start gap-1'>
+                <div className='flex flex-col items-start gap-[9px] sm:gap-1'>
                   <Image
                     src='/images/stars.svg'
                     alt='stars'

@@ -87,13 +87,13 @@ const WorkWithUsSection = () => {
           </a>
         </div>
       </div>
-      <div className='absolute  md:right-0 lg:right-0  sm:right-[-25%] right-[-45%] top-[10px]'>
-        <div className='relative top-0 right-[-64px] w-[523px] lg:h-[464px]'>
+      <div className='absolute  md:right-0 lg:right-0  sm:right-[-25%] right-[-20%] top-[10px] '>
+        <div className='relative top-0 right-[-64px] w-[523px] h-[464px]'>
           <Image
             src='/images/footerVector.svg'
             alt='footer-vector'
             fill
-            className='absolute'
+            className='absolute opacity-40 md:opacity-1'
           />
         </div>
       </div>

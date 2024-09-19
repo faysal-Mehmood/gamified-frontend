@@ -74,7 +74,7 @@ backdrop-blur-[6.094865322113037px]'
         100,000+ trusted reviews from people JUST like you
       </h1>
 
-      <div className='w-full h-[451px] xsm:h-auto relative '>
+      <div className='w-full h-[451px] md:h-[753px] xmd:h-auto relative '>
         {/* <div className='w-full h-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  '>
           <Slider
             {...settings2}

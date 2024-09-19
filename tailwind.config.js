@@ -77,9 +77,10 @@ module.exports = {
       md: "768px", //@media (min-width: 768px) { ... }
       xmd: "992px",
       lg: "1024px", //@media (min-width: 1024px) { ... }
-      lg2: "1124px", //@media (min-width: 1024px
-      xl: "1280px",
-      xxl: "1441px", //@media (min-width: 1280px) { ... }
+      lg2: "1124px",
+      lg3: "1145px",
+      xl: "1280px", //@media (min-width: 1280px) { ... }
+      xxl: "1441px",
       "2xl": "1536px",
     },
   },

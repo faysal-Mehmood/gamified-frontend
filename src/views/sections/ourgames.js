@@ -49,15 +49,17 @@ const Ourgames = () => {
 
         {/* Div occupying grid columns 2, 3, and 4 */}
         <div className='lg:col-span-3 md:col-span-2 col-span-2 md:py-0 py-[50px]'>
-          <h2 className='xl:text-banner-large lg:text-[90px] md:text-[70px] text-[68px] font-bold uppercase leading-normal tracking-normal bg-main-gradient bg-clip-text text-transparent text-center'>
-            Our Games
-          </h2>
-          <p className='max-w-[761px] mx-auto text-center text-[#FFFFFFE5] lg:text-[22px] md:text-[18px] text-base font-light leading-normal tracking-normal'>
-            Our 20+ games are 100% free to play, and allow you to earn real
-            cryptocurrency or cash. Whether you’re into puzzles, strategy, or
-            action-packed adventures, we’ve got something for everyone. Create
-            one account and start earning rewards today!
-          </p>
+          <div className='w-full h-full flex flex-col items-center justify-center'>
+            <h2 className='xl:text-banner-large lg:text-[90px] md:text-[70px] text-[68px] font-bold uppercase leading-normal tracking-normal bg-main-gradient bg-clip-text text-transparent text-center'>
+              Our Games
+            </h2>
+            <p className='max-w-[761px] mx-auto text-center text-[#FFFFFFE5] lg:text-[22px] md:text-[18px] text-base font-light leading-normal tracking-normal'>
+              Our 20+ games are 100% free to play, and allow you to earn real
+              cryptocurrency or cash. Whether you’re into puzzles, strategy, or
+              action-packed adventures, we’ve got something for everyone. Create
+              one account and start earning rewards today!
+            </p>
+          </div>
         </div>
 
         {/* Second image */}
@@ -113,7 +115,7 @@ const BoxShadowEffect = () => {
   const [isBtn2Hover, setisBtn2Hover] = useState(false);
   return (
     <div className='pl-2 pb-[11px] absolute inset-0  bg-opacity-50 flex flex-col items-start justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
-      <span className='text-brand-white text-subheading leading-normal tracking-[-0.237px] font-medium'>
+      <span className='text-brand-white text-[23px] md:text-subheading leading-normal tracking-[-0.237px] font-medium'>
         Brickz
       </span>
       <div className='flex items-center gap-[5.92px]'>

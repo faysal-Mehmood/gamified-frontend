@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const HowItWorks = () => {
@@ -30,7 +31,7 @@ const HowItWorks = () => {
       //   backgroundRepeat: "no-repeat",
       // }}
     >
-      <div className='flex flex-col items-start max-w-[664px] w-full md:mb-[72px] mb-[74px] '>
+      <div className='flex flex-col items-start max-w-[664px] w-full md:mb-[72px] mb-10 '>
         <h2 className='md:text-large-heading text-big-title font-bold leading-normal tracking-normal bg-gradient-to-r from-[#4D89F0] to-[#9184EA] bg-clip-text text-transparent'>
           HOW IT WORKS
         </h2>
@@ -42,7 +43,7 @@ const HowItWorks = () => {
       </div>
       <div className='relative '>
         {/* Step 1 */}
-        <div className='pl-[42px] md:pl-[65px] pt-10 pb-6 lg:pt-0 lg:pb-0 relative  flex lg:flex-row flex-col-reverse items-start justify-start w-full '>
+        <div className='pl-[33px] md:pl-[65px] pr-[33px] md:pr-0 pt-[33px] pb-6 lg:pt-0 lg:pb-0 relative  flex lg:flex-row flex-col-reverse items-start justify-start w-full '>
           {/* top border */}
           <img
             src='/images/border-top-full.svg'
@@ -62,7 +63,7 @@ const HowItWorks = () => {
           </h1>
 
           <div className='relative w-full max-w-max pl-[53px] md:px-[105px] min-h-max lg:min-h-[279px]   flex items-center md:gap-10 gap-5 '>
-            <div className=' flex flex-col items-start gap-[10px]'>
+            <div className=' flex flex-col items-start gap-0 md:gap-[10px]'>
               <h1 className='md:text-default-title text-small-heading font-medium leading-normal md:tracking-[-0.4px] tracking-[-0.26px] text-brand-white'>
                 Play Games
               </h1>
@@ -81,11 +82,11 @@ const HowItWorks = () => {
           <img
             src='/images/all-mobile-games.png'
             alt='Step 1 Image'
-            className='max-w-full w-auto h-auto md:hidden block pl-5'
+            className='max-w-full w-auto h-auto md:hidden block pl-5 -mb-5 ml-auto'
           />
         </div>
         {/* Step 2 */}
-        <div className='pt-[30px] md:pt-12 pb-6 md:pb-[54px] relative pl-[42px] md:pl-[65px] pr-[42px] md:pr-[190px]  flex lg:flex-row flex-col items-end md:items-center justify-between md:gap-14 gap-4  w-full'>
+        <div className='pt-[30px] md:pt-12 pb-6 md:pb-[54px] relative pl-[33px] md:pl-[65px] pr-[42px] md:pr-[190px]  flex lg:flex-row flex-col items-end md:items-center justify-between md:gap-14 gap-4  w-full'>
           {/* top border */}
           <img
             src='/images/border-top-full.svg'
@@ -130,7 +131,7 @@ const HowItWorks = () => {
           </div>
 
           <div className='w-max flex justify-start items-center md:gap-10 gap-5 pr-12 md:pr-[116px] md:pt-0 pt-7'>
-            <div className='flex flex-col items-start gap-[10px]'>
+            <div className='flex flex-col items-end md:items-start gap-0 md:gap-[10px]'>
               <h1 className='md:text-default-title text-small-heading font-medium leading-normal md:tracking-[-0.4px] tracking-[-0.26px] text-brand-white'>
                 Earn WINR Rewards
               </h1>
@@ -141,7 +142,7 @@ const HowItWorks = () => {
           </div>
         </div>
         {/* Step 3 */}
-        <div className=' pl-[42px] md:pl-[65px] relative flex lg:flex-row flex-col-reverse items-center justify-between md:gap-[44px]  w-full pt-7 '>
+        <div className=' pl-[33px] md:pl-[65px] relative flex lg:flex-row flex-col-reverse items-center justify-between md:gap-[44px]  w-full pt-7 '>
           <h1 className='absolute z-[2] left-0 bottom-[18px] lg:bottom-[inherit] top-[inherit] lg:top-1/2 translate-y-0 lg:-translate-y-1/2   md:text-[60px] text-[30px] font-semibold leading-normal md:tracking-[-0.3px] tracking-[-0.6px] text-brand-white rounded-full md:max-w-[130px] max-w-[65px] w-full md:h-[130px] h-[65px] flex justify-center items-center bg-circle-gradient border-2 border-brand-blue backdrop-blur-md '>
             03
           </h1>
@@ -153,8 +154,8 @@ const HowItWorks = () => {
           />
 
           <div className='pl-[53px] md:pl-[105px] pt-[255px] md:pt-0 flex items-center md:gap-10 gap-5 w-full pb-6 md:pb-[41px]'>
-            <div className='flex flex-col items-start gap-[10px]'>
-              <h1 className='md:text-default-title text-small-heading font-medium leading-normal md:tracking-[-0.4px] tracking-[-0.26px] text-brand-white'>
+            <div className='flex flex-col items-start gap-0 md:gap-[10px]'>
+              <h1 className='md:text-default-title text-small-heading font-medium leading-normal md:tracking-[-0.4px] tracking-[-1px] text-brand-white'>
                 Convert to Cash or Crypto
               </h1>
               <p className='md:text-small-paragraph text-[14px] font-light leading-normal md:tracking-[-0.24px] tracking-[-0.14px] text-brand-white'>
@@ -169,7 +170,7 @@ const HowItWorks = () => {
               className='max-w-full'
             />
           </div>
-          <div className='w-[386px] h-[200px] flex-shrink-0 block absolute top-[30px] right-[-85px]  md:hidden  '>
+          <div className='w-[386px] h-[200px] flex-shrink-0 block absolute top-[30px] left-[38px]  md:hidden  '>
             <img
               src='/images/mobile-money-coin.svg'
               alt='Step 1 Image'
@@ -185,9 +186,10 @@ const HowItWorks = () => {
         className='max-w-full w-full object-cover h-1 absolute pl-[30px] md:pl-[63px] '
       />
       {/* Buttons */}
-      <div className='flex items-center justify-center md:flex-row flex-col gap-[30px]  md:mt-[160px] mt-[112px]'>
-        <button
-          onMouseEnter={() => setisBtn1Hover(true)}
+      <div className='flex items-center justify-center md:flex-row flex-col gap-[30px]  md:mt-[160px]  mt-20'>
+        <Link
+          href='#'
+          onMousbuttoneEnter={() => setisBtn1Hover(true)}
           onMouseLeave={() => setisBtn1Hover(false)}
           className='flex items-center justify-center text-[26px] font-light leading-normal tracking-[-0.26px] md:w-max w-full bg-circle-gradient border-2 border-brand-blue backdrop-blur-md text-brand-white hover:text-brand-blue py-[15px] px-10 rounded-full  gap-[5px] transition-all duration-300 ease-in-out'>
           <img
@@ -200,8 +202,9 @@ const HowItWorks = () => {
             className='w-[26px] h-[26px]'
           />
           Download for Android
-        </button>
-        <button
+        </Link>
+        <Link
+          href='#'
           onMouseEnter={() => setisBtn2Hover(true)}
           onMouseLeave={() => setisBtn2Hover(false)}
           className='flex items-center justify-center text-[26px] font-light leading-normal tracking-[-0.26px] md:w-max w-full bg-circle-gradient border-2 border-brand-blue backdrop-blur-md text-brand-white hover:text-brand-blue py-[15px] px-10 rounded-full  gap-[5px] transition-all duration-300 ease-in-out'>
@@ -215,7 +218,7 @@ const HowItWorks = () => {
             className='w-[30px] h-[30px]'
           />
           Download for IOS
-        </button>
+        </Link>
       </div>
     </section>
   );
