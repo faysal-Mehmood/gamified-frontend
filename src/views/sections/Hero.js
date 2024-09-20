@@ -5,7 +5,9 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className='w-full min-h-[963px] xxl-max-screen mx-auto flex flex-col  justify-end pb-10 xmd:pb-[80px] xl:px-[100px] lg:px-[50px] md:px-16 px-3  relative  overflow-x-hidden lg:overflow-visible'>
+    <section
+      id='home'
+      className='w-full min-h-[963px] xxl-max-screen mx-auto flex flex-col  justify-end pb-10 xmd:pb-[80px] xl:px-[100px] lg:px-[50px] md:px-16 px-3  relative  overflow-x-hidden lg:overflow-visible'>
       <div className='w-full flex items-end justify-between relative z-20'>
         <div>
           <h1 className='pt-[550px] md:pt-[512px]  lg:pt-0 lg:inline-flex font-Oswald xl:text-hero-large lg:text-[150px] md:text-[110px] text-[90px] font-bold md:tracking-[-1.8px] tracking-[-0.9px] leading-[90px] md:leading-[110px] lg:leading-[150px] xl:leading-[180px] uppercase text-wrap'>

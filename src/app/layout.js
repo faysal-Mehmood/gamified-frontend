@@ -14,13 +14,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
-      <body className={`${inter.className} relative bg-brand-black`}>
-        <Image
-          src={"/images/black-bg.svg"}
+      <body className={`${inter.className} relative bg-brand-black `}>
+        {/* <Image
+          src={"/images/desktop-bg.png"}
           fill
           alt='background'
           className='object-contain xxl:object-cover '
-        />
+        /> */}
         <main className='w-full h-full relative'>
           <Header />
           {children}

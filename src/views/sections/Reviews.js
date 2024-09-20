@@ -8,17 +8,8 @@ import "slick-carousel/slick/slick-theme.css";
 const Reviews = () => {
   const [currentSlide, setCurrentSlider] = useState(0);
   const [fitBackColor, setFitBackColor] = useState(false);
-  const [circle, setCircle] = useState();
 
-  // const [nav1, setNav1] = useState(null);
-  // const [nav2, setNav2] = useState(null);
-  // let sliderRef1 = useRef(null);
   let sliderRef = useRef(null);
-
-  // useEffect(() => {
-  //   setNav1(sliderRef1);
-  //   setNav2(sliderRef);
-  // }, []);
 
   const next = () => {
     setFitBackColor(true);
@@ -50,18 +41,6 @@ const Reviews = () => {
     },
   };
 
-  // const settings2 = {
-  //   dots: false,
-  //   arrows: false,
-  //   infinite: true,
-  //   speed: 700,
-  //   slidesToShow: 5,
-  //   slidesToScroll: 1,
-  //   afterChange: (current) => {
-  //     setCircle(current);
-  //   },
-  // };
-
   return (
     <section className='w-full mx-auto mb-[150px]  xmd:mb-[316px] relative'>
       <div
@@ -74,27 +53,7 @@ backdrop-blur-[6.094865322113037px]'
         100,000+ trusted reviews from people JUST like you
       </h1>
 
-      <div className='w-full h-[451px] md:h-[753px] xmd:h-auto relative '>
-        {/* <div className='w-full h-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  '>
-          <Slider
-            {...settings2}
-            asNavFor={nav2}
-            ref={(slider) => (sliderRef1 = slider)}
-            className='h-full review-circle-scroll '>
-            {Array(1, 2, 3, 4, 5, 6).map((i, index) => (
-              <div key={i} className='h-full relative bg-black'>
-                <div
-                  className={`${
-                    circle + 2 === index
-                      ? "w-[222px] h-[222px] "
-                      : "w-[120px] h-[120px]"
-                  }  ${
-                    circle + 1 === index ? "bottom-0 left-0" : ""
-                  } absolute border-brand-blue rounded-full border-2  backdrop-blur-[10px] bg-circle-gradient `}></div>
-              </div>
-            ))}
-          </Slider>
-        </div> */}
+      <div className='w-full h-[451px] md:h-[753px] xmd:h-auto relative  overflow-y-hidden'>
         <Slider
           ref={(slider) => {
             sliderRef = slider;
@@ -215,7 +174,7 @@ const Circle = ({ fitBackColor, currentSlide, index }) => {
 
         <div className='flex items-center gap-0 md:gap-[5px] mt-1'>
           <p className='!font-Oswald font-semibold text-caption text-white tracking-[-0.2px] md:block hidden'>
-            4.8
+            5
           </p>
           {Array(1, 2, 3, 4, 5).map((i) => (
             <div

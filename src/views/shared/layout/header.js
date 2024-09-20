@@ -33,25 +33,27 @@ const Header = () => {
           } left-0 xmd:left-[inherit] xmd:top-[inherit]  xmd:relative  xmd:bg-transparent xmd:p-0 py-5 px-5 bg-brand-dark-blur`}>
           <div className='items-center gap-[50px] flex xmd:flex-row flex-col'>
             <Link
-              href='#'
+              href='/'
               className='font-normal text-small-paragraph tracking-[-0.24px] text-brand-white-grey hover:text-brand-white transition-all ease-in-out '>
               Home
             </Link>
             <Link
-              href='#'
+              href='#games'
               className='font-normal text-small-paragraph tracking-[-0.24px] text-brand-white-grey hover:text-brand-white transition-all ease-in-out '>
               Games
             </Link>
             <Link
-              href='#'
+              href='#howItWorks'
               className='font-normal text-small-paragraph tracking-[-0.24px] text-brand-white-grey hover:text-brand-white transition-all ease-in-out '>
               How It Works
             </Link>
           </div>
         </div>
 
-        <button className='font-Oswald w-max leading-6 flex items-center justify-center  h-auto border-none outline-none text-small-paragraph tracking-[-0.24px] text-white rounded-full py-[17px] px-[14px] xmd:px-[70px]  xmd:h-[66px] xmd:w-[224px] bg-main-gradient transition-all duration-300 ease-in-out hover:bg-[linear-gradient(90deg,rgba(77,137,240,0.3)_0%,rgba(145,132,234,0.3)_100%)] btn-hover-1'>
-          <span className='xmd:block hidden'>Cash Out</span>
+        <button className='group font-Oswald w-max leading-6 flex items-center justify-center h-auto outline-none text-small-paragraph tracking-[-0.24px] rounded-full py-[17px] px-[14px] xmd:px-[70px] xmd:h-[66px] xmd:w-[224px] bg-main-gradient transition-colors ease-in-out hover:bg-[linear-gradient(90deg,rgba(77,137,240,0.3)_0%,rgba(145,132,234,0.3)_100%)] btn-hover-1'>
+          <span className='xmd:block hidden text-white group-hover:text-brand-blue transition-colors ease-in-out'>
+            Cash Out
+          </span>
           <Image
             src='/images/icons/WithdrawMoney.svg'
             alt='download'

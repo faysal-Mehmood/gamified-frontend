@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const WorkWithUsSection = () => {
   return (
@@ -80,11 +81,21 @@ const WorkWithUsSection = () => {
 
         {/* Terms and Conditions */}
         <div className='w-full lg:text-start text-center'>
-          <a
-            href='#terms'
-            className='lg:text-caption text-[16px] leading-normal font-normal tracking-[-0.2px] text-light-grey'>
-            Terms & Conditions & Privacy Policy
-          </a>
+          <span className='font-Oswald lg:text-caption text-[16px] leading-normal font-normal tracking-[-0.2px] text-light-grey'>
+            <Link
+              href='/terms-and-conditions'
+              // className='lg:text-caption text-[16px] leading-normal font-normal tracking-[-0.2px] text-light-grey'
+            >
+              Terms & Conditions
+            </Link>
+            &nbsp;&&nbsp;
+            <Link
+              href='/privacy-policy'
+              // className='lg:text-caption text-[16px] leading-normal font-normal tracking-[-0.2px] text-light-grey'
+            >
+              Privacy Policy
+            </Link>
+          </span>
         </div>
       </div>
       <div className='absolute  md:right-0 lg:right-0  sm:right-[-25%] right-[-20%] top-[10px] '>

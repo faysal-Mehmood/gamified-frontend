@@ -5,8 +5,8 @@ import Link from "next/link";
 import React, { useState } from "react";
 
 const HowItWorks = () => {
-  const [isBtn1Hover, setisBtn1Hover] = useState(false);
-  const [isBtn2Hover, setisBtn2Hover] = useState(false);
+  // const [isBtn1Hover, setisBtn1Hover] = useState(false);
+  // const [isBtn2Hover, setisBtn2Hover] = useState(false);
   const counterLogoPosition = (index) => {
     switch (index) {
       case 0:
@@ -25,6 +25,7 @@ const HowItWorks = () => {
   };
   return (
     <section
+      id='howItWorks'
       className='xxl-max-screen   text-white pt-[100px]  md:pb-[165px] pb-[100px] xl:px-[100px] lg:px-[50px] md:px-16 px-4 relative z-20 overflow-hidden'
       // style={{
       //   background: "url('/images/howitworkvector.png')",
@@ -62,7 +63,7 @@ const HowItWorks = () => {
             01
           </h1>
 
-          <div className='relative w-full max-w-max pl-[53px] md:px-[105px] min-h-max lg:min-h-[279px]   flex items-center md:gap-10 gap-5 '>
+          <div className='relative w-full max-w-max pl-[53px] md:pl-[105px] md:pr-8 lg3:px-[105px] min-h-max lg:min-h-[279px]   flex items-center md:gap-10 gap-5 '>
             <div className=' flex flex-col items-start gap-0 md:gap-[10px]'>
               <h1 className='md:text-default-title text-small-heading font-medium leading-normal md:tracking-[-0.4px] tracking-[-0.26px] text-brand-white'>
                 Play Games
@@ -76,7 +77,7 @@ const HowItWorks = () => {
           <img
             src='/images/all-games.png'
             alt='Step 1 Image'
-            className='md:block hidden relative  pl-5 lg:pt-0 lg:pl-0 top-0 lg:top-[-37px] '
+            className=' lg:w-[500px] lg3:w-auto  md:block hidden relative  pl-5 lg:pt-0 lg:pl-0 top-0 lg:top-[-37px]  '
           />
 
           <img
@@ -86,7 +87,7 @@ const HowItWorks = () => {
           />
         </div>
         {/* Step 2 */}
-        <div className='pt-[30px] md:pt-12 pb-6 md:pb-[54px] relative pl-[33px] md:pl-[65px] pr-[42px] md:pr-[190px]  flex lg:flex-row flex-col items-end md:items-center justify-between md:gap-14 gap-4  w-full'>
+        <div className='pt-[30px] md:pt-12 pb-6 md:pb-[54px] relative pl-[33px] md:pl-[65px] pr-[42px] md:pr-0 lg:pr-[190px]  flex lg:flex-row flex-col items-end md:items-center justify-between md:gap-14 gap-4  w-full'>
           {/* top border */}
           <img
             src='/images/border-top-full.svg'
@@ -98,7 +99,7 @@ const HowItWorks = () => {
           <img
             src='/images/border-right.svg'
             alt='Step 1 Image'
-            className='max-w-full object-cover w-1 h-full absolute top-0 right-[30px] lg:right-[190px]'
+            className='max-w-full object-cover w-1 h-full absolute top-0 right-[30px] md:right-[65px] lg:right-[190px]'
           />
 
           {/* bottom border */}
@@ -108,7 +109,7 @@ const HowItWorks = () => {
             className='max-w-full w-[calc(100%-60px)] md:w-[calc(100%-132px)] lg:w-[calc(100%-255px)] object-cover  h-1 absolute bottom-0 left-[30px] md:left-[65px] '
           />
 
-          <h1 className='absolute z-[2]  right-0 md:right-[125px] bottom-[18px] lg:bottom-[inherit] top-[inherit] lg:top-1/2 translate-y-0 lg:-translate-y-1/2  md:text-[60px] text-[30px] font-semibold leading-normal md:tracking-[-0.3px] tracking-[-0.6px] text-brand-white rounded-full md:max-w-[130px] max-w-[65px] w-full md:h-[130px] h-[65px] flex justify-center items-center bg-circle-gradient border-2 border-brand-blue backdrop-blur-md '>
+          <h1 className='absolute z-[2]  right-0 lg:right-[125px] bottom-[18px] lg:bottom-[inherit] top-[inherit] lg:top-1/2 translate-y-0 lg:-translate-y-1/2  md:text-[60px] text-[30px] font-semibold leading-normal md:tracking-[-0.3px] tracking-[-0.6px] text-brand-white rounded-full md:max-w-[130px] max-w-[65px] w-full md:h-[130px] h-[65px] flex justify-center items-center bg-circle-gradient border-2 border-brand-blue backdrop-blur-md '>
             02
           </h1>
           <div className='mr-8 md:pr-0 w-full md:w-[457px]  h-[185px] overflow-hidden relative'>
@@ -143,7 +144,7 @@ const HowItWorks = () => {
         </div>
         {/* Step 3 */}
         <div className=' pl-[33px] md:pl-[65px] relative flex lg:flex-row flex-col-reverse items-center justify-between md:gap-[44px]  w-full pt-7 '>
-          <h1 className='absolute z-[2] left-0 bottom-[18px] lg:bottom-[inherit] top-[inherit] lg:top-1/2 translate-y-0 lg:-translate-y-1/2   md:text-[60px] text-[30px] font-semibold leading-normal md:tracking-[-0.3px] tracking-[-0.6px] text-brand-white rounded-full md:max-w-[130px] max-w-[65px] w-full md:h-[130px] h-[65px] flex justify-center items-center bg-circle-gradient border-2 border-brand-blue backdrop-blur-md '>
+          <h1 className='absolute z-[2] left-0 bottom-8 xs:bottom-[18px] lg:bottom-[inherit] top-[inherit] lg:top-1/2 translate-y-0 lg:-translate-y-1/2   md:text-[60px] text-[30px] font-semibold leading-normal md:tracking-[-0.3px] tracking-[-0.6px] text-brand-white rounded-full md:max-w-[130px] max-w-[65px] w-full md:h-[130px] h-[65px] flex justify-center items-center bg-circle-gradient border-2 border-brand-blue backdrop-blur-md '>
             03
           </h1>
           {/* left border */}
@@ -189,34 +190,37 @@ const HowItWorks = () => {
       <div className='flex items-center justify-center md:flex-row flex-col gap-[30px]  md:mt-[160px]  mt-20'>
         <Link
           href='#'
-          onMousbuttoneEnter={() => setisBtn1Hover(true)}
-          onMouseLeave={() => setisBtn1Hover(false)}
-          className='flex items-center justify-center text-[26px] font-light leading-normal tracking-[-0.26px] md:w-max w-full bg-circle-gradient border-2 border-brand-blue backdrop-blur-md text-brand-white hover:text-brand-blue py-[15px] px-10 rounded-full  gap-[5px] transition-all duration-300 ease-in-out'>
-          <img
-            src={
-              isBtn1Hover
-                ? "/images/icons/gradient-android.svg"
-                : "/images/android.svg"
-            }
-            alt='Step 1 Image'
-            className='w-[26px] h-[26px]'
-          />
+          className='group flex items-center justify-center text-[26px] font-light leading-normal tracking-[-0.26px] md:w-max w-full bg-circle-gradient border-2 border-brand-blue backdrop-blur-md text-brand-white hover:text-brand-blue py-[15px] px-10 rounded-full gap-[5px] transition-all duration-300 ease-in-out relative'>
+          <div className='relative w-[26px] h-[26px]'>
+            <img
+              src={"/images/android.svg"}
+              alt='Step 1 Image'
+              className='absolute w-full h-full object-contain transition-opacity duration-300 ease-in-out opacity-100 group-hover:opacity-0'
+            />
+            <img
+              src={"/images/icons/gradient-android.svg"}
+              alt='Step 1 Image'
+              className='absolute w-full h-full object-contain transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100'
+            />
+          </div>
           Download for Android
         </Link>
+
         <Link
           href='#'
-          onMouseEnter={() => setisBtn2Hover(true)}
-          onMouseLeave={() => setisBtn2Hover(false)}
-          className='flex items-center justify-center text-[26px] font-light leading-normal tracking-[-0.26px] md:w-max w-full bg-circle-gradient border-2 border-brand-blue backdrop-blur-md text-brand-white hover:text-brand-blue py-[15px] px-10 rounded-full  gap-[5px] transition-all duration-300 ease-in-out'>
-          <img
-            src={
-              isBtn2Hover
-                ? "/images/icons/gradient-apple.svg"
-                : "/images/apple.svg"
-            }
-            alt='Step 1 Image'
-            className='w-[30px] h-[30px]'
-          />
+          className='group flex items-center justify-center text-[26px] font-light leading-normal tracking-[-0.26px] md:w-max w-full bg-circle-gradient border-2 border-brand-blue backdrop-blur-md text-brand-white hover:text-brand-blue py-[15px] px-10 rounded-full gap-[5px] transition-all duration-300 ease-in-out relative'>
+          <div className='relative w-[26px] h-[26px]'>
+            <img
+              src={"/images/apple.svg"}
+              alt='Step 1 Image'
+              className='absolute w-full h-full object-contain transition-opacity duration-300 ease-in-out opacity-100 group-hover:opacity-0'
+            />
+            <img
+              src={"/images/icons/gradient-apple.svg"}
+              alt='Step 1 Image'
+              className='absolute w-full h-full object-contain transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100'
+            />
+          </div>
           Download for IOS
         </Link>
       </div>
