@@ -123,17 +123,18 @@ const Circle = ({ fitBackColor, currentSlide, index }) => {
         className={`absolute z-[-1] rounded-full border-2 border-brand-blue backdrop-blur-[10px]
           ${fitBackColor ? `bg-circle-gradient` : "bg-circle-gradient"}
           ${
+            //md:w-[222px] w-[101px] h-[101px] md:h-[222px]
             currentSlide === index
-              ? `md:w-[222px] w-[101px] h-[101px] md:h-[222px] left-[-68px] top-[9px] transition-all duration-500 ease-in-out
+              ? `w-[82px] h-[82px] left-[-18.8rem] top-[35.1rem] transition-all duration-500 ease-in-out
               ${
-                fitBackColor
+                currentSlide === index + 1
                   ? "transform translate-y-0 translate-x-[59rem]"
                   : ""
               }`
               : `w-[82px] h-[82px] left-[15px] top-[173px] transition-all duration-500 ease-in-out
               ${
-                fitBackColor
-                  ? "transform translate-y-80 translate-x-[500px]"
+                currentSlide === index + 1
+                  ? "transform translate-y-[0rem] translate-x-[0rem] w-[82px] h-[82px]"
                   : ""
               }`
           }`}
@@ -203,11 +204,16 @@ const Circle = ({ fitBackColor, currentSlide, index }) => {
         className={`absolute z-[-1] rounded-full border-2 border-brand-blue backdrop-blur-[10px]
           bg-circle-gradient
           ${
+            //md:w-[102px] w-10 h-10 md:h-[102px]
             currentSlide === index
-              ? `md:w-[102px] w-10 h-10 md:h-[102px] right-[18px] bottom-[108px] transition-all duration-500 ease-in-out
-              ${fitBackColor ? "transform translate-y-80 -translate-x-72" : ""}`
-              : `w-[82px] h-[82px] right-[44px] bottom-[107px] transition-all duration-500 ease-in-out
-              ${fitBackColor ? "transform -translate-y-80 translate-x-72" : ""}`
+              ? `md:w-[222px] w-[101px] h-[101px] md:h-[222px] right-[37rem] bottom-[33rem] transition-all duration-500 ease-in-out
+               `
+              : `md:w-[102px] w-10 h-10 md:h-[102px] right-[18px] bottom-[108px] transition-all duration-500 ease-in-out
+              ${
+                currentSlide === index + 1
+                  ? "transform -translate-y-0 -translate-x-[40rem]"
+                  : ""
+              }`
           }`}
         style={{
           transition: "all 0.5s ease-in-out",
