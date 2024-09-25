@@ -125,14 +125,14 @@ const Circle = ({ fitBackColor, currentSlide, index }) => {
           ${
             //md:w-[222px] w-[101px] h-[101px] md:h-[222px]
             currentSlide === index
-              ? `md:!w-[102px] w-10 h-10 md:!h-[102px] left-[39.4rem] top-[34.7rem] transition-all duration-500 ease-in-out
+              ? ` md:w-[102px] w-10 h-10 md:h-[102px] left-[40rem] top-[34rem] transition-all duration-100 ease-in-out
               `
-              : `md:!w-[102px] w-10 h-10 md:!h-[102px] top-[173px] transition-all duration-500 ease-in-out
-              ${
-                currentSlide === index + 1
-                  ? "md:!w-[102px] w-10 h-10 md:!h-[102px] left-[39.5rem] top-[33.9rem]"
-                  : ""
-              }`
+              : `${
+                  currentSlide === index
+                    ? "md:w-[222px] w-[101px] h-[101px] md:h-[222px] left-[-4.25rem] top-[.5625rem]"
+                    : "top-[10.8125rem] left-[.9375rem] w-[82px] h-[82px]"
+                }  transition-all duration-100 ease-in-out
+             `
           }`}
         style={{
           transition: "all 0.5s ease-in-out",
@@ -202,14 +202,10 @@ const Circle = ({ fitBackColor, currentSlide, index }) => {
           ${
             //
             currentSlide === index
-              ? `md:w-[102px] w-10 h-10 md:h-[102px] right-[-17.2rem] bottom-[29.8rem] transition-all duration-500 ease-in-out
+              ? `md:w-[222px] w-[101px] h-[101px] md:h-[222px]  right-[37.4rem] bottom-[32.6rem] transition-all duration-100 ease-in-out
                `
-              : `md:w-[102px] w-10 h-10 md:h-[102px] right-[18px] bottom-[108px] transition-all duration-500 ease-in-out
-              ${
-                currentSlide === index + 1
-                  ? "md:w-[222px] w-[101px] h-[101px] md:h-[222px] right-[-22.8rem] bottom-[32rem]  transform "
-                  : ""
-              }`
+              : `md:w-[102px] w-10 h-10 md:h-[102px] right-[18px] bottom-[108px] transition-all duration-100 ease-in-out
+             `
           }`}
         style={{
           transition: "all 0.5s ease-in-out",
