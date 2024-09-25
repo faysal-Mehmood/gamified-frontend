@@ -125,16 +125,12 @@ const Circle = ({ fitBackColor, currentSlide, index }) => {
           ${
             //md:w-[222px] w-[101px] h-[101px] md:h-[222px]
             currentSlide === index
-              ? `w-[82px] h-[82px] left-[-18.8rem] top-[35.1rem] transition-all duration-500 ease-in-out
+              ? `md:!w-[102px] w-10 h-10 md:!h-[102px] left-[39.4rem] top-[34.7rem] transition-all duration-500 ease-in-out
+              `
+              : `md:!w-[102px] w-10 h-10 md:!h-[102px] top-[173px] transition-all duration-500 ease-in-out
               ${
                 currentSlide === index + 1
-                  ? "transform translate-y-0 translate-x-[59rem]"
-                  : ""
-              }`
-              : `w-[82px] h-[82px] left-[15px] top-[173px] transition-all duration-500 ease-in-out
-              ${
-                currentSlide === index + 1
-                  ? "transform translate-y-[0rem] translate-x-[0rem] w-[82px] h-[82px]"
+                  ? "md:!w-[102px] w-10 h-10 md:!h-[102px] left-[39.5rem] top-[33.9rem]"
                   : ""
               }`
           }`}
@@ -204,14 +200,14 @@ const Circle = ({ fitBackColor, currentSlide, index }) => {
         className={`absolute z-[-1] rounded-full border-2 border-brand-blue backdrop-blur-[10px]
           bg-circle-gradient
           ${
-            //md:w-[102px] w-10 h-10 md:h-[102px]
+            //
             currentSlide === index
-              ? `md:w-[222px] w-[101px] h-[101px] md:h-[222px] right-[37rem] bottom-[33rem] transition-all duration-500 ease-in-out
+              ? `md:w-[102px] w-10 h-10 md:h-[102px] right-[-17.2rem] bottom-[29.8rem] transition-all duration-500 ease-in-out
                `
               : `md:w-[102px] w-10 h-10 md:h-[102px] right-[18px] bottom-[108px] transition-all duration-500 ease-in-out
               ${
                 currentSlide === index + 1
-                  ? "transform -translate-y-0 -translate-x-[40rem]"
+                  ? "md:w-[222px] w-[101px] h-[101px] md:h-[222px] right-[-22.8rem] bottom-[32rem]  transform "
                   : ""
               }`
           }`}
