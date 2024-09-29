@@ -47,7 +47,7 @@ const PerformanceStats = () => {
                 {i === 0 && <span className="mr-3">$</span>}
                 <SlotCounter
                   value={item.number}
-                  duration={5}
+                  duration={8}
                   animateOnVisible
                 />
                 <span className="ml-[2px] mb-[2px] md:ml-2">+</span>
