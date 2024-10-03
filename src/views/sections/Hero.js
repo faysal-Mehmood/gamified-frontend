@@ -8,9 +8,9 @@ const Hero = () => {
     <section
       id='home'
       className='w-full min-h-[963px] xxl-max-screen mx-auto flex flex-col  justify-end pb-10 xmd:pb-[80px] xl:px-[100px] lg:px-[50px] md:px-16 px-3  relative  overflow-x-hidden lg:overflow-visible'>
-      <div className='w-full flex items-end justify-between relative z-20'>
+      <div className='w-full flex items-end justify-around relative z-20'>
         <div>
-          <h1 className='pt-[550px] md:pt-[512px]  lg:pt-0 lg:inline-flex font-Oswald xl:text-hero-large lg:text-[150px] md:text-[110px] text-[90px] font-bold md:tracking-[-1.8px] tracking-[-0.9px] leading-[90px] md:leading-[110px] lg:leading-[150px] xl:leading-[180px] uppercase text-wrap'>
+          <h1 className='text-center pr-5 smx:pr-0 pt-[550px] md:pt-[512px]  lg:pt-0 lg:inline-flex font-Oswald xl:text-hero-large lg:text-[150px] md:text-[110px] smx:text-[90px] text-[75px] font-bold md:tracking-[-1.8px] tracking-[-0.9px] leading-[94px] smx:leading-[90px] md:leading-[110px] lg:leading-[150px] xl:leading-[180px] uppercase text-wrap'>
             <span className='text-black text-stroke-outline mr-[35px] lg:block hidden'>
               Play for
             </span>
@@ -19,7 +19,7 @@ const Hero = () => {
               Play for
             </span>
 
-            <span className='flex items-center lg:contents'>
+            <span className='flex items-center justify-center lg:contents'>
               <span className=' hero-free-win-big-text lg:block hidden'>
                 Free
               </span>
@@ -28,19 +28,19 @@ const Hero = () => {
                 &nbsp;WIN
               </span>
             </span>
-            <span className='text-[240.243px] leading-[240px] lg:leading-[inherit] lg:text-[inherit] bg-main-gradient bg-clip-text text-fill-transparent lg:hidden block'>
+            <span className=' smx:mt-0 -mt-6 smx:text-[240.243px] text-[203px] leading-[200px] smx:leading-[240px] lg:leading-[inherit] lg:text-[inherit] bg-main-gradient bg-clip-text text-fill-transparent lg:hidden block'>
               BIG
             </span>
           </h1>
           <div className='flex items-end'>
             <div className='w-full md:w-[612px]'>
-              <p className='!font-Oswald md:text-paragraph text-button-text leading-[27px] font-light md:tracking-[-0.26px] tracking-[-0.22px] text-brand-white mb-9 ml-[5px]'>
+              <p className='!font-Oswald md:text-paragraph text-button-text leading-[27px] font-light md:tracking-[-0.26px] tracking-[-0.22px] text-brand-white mb-9 ml-[5px] pl-[10px] pr-5 smx:pr-0'>
                 Play your favorite games, earn points, and easily redeem them
                 for cash or cryptocurrency. Our games are 100% free to download
                 and play.
               </p>
-              <div className='flex items-center lg:items-center sm:items-end lg:justify-center justify-start  gap-[10px]'>
-                <div className='flex items-center sm:flex-row flex-col gap-1 sm:gap-2'>
+              <div className='flex items-start lg:items-center justify-center  gap-[10px]'>
+                <div className='flex items-start smx:items-center sm:flex-row flex-col gap-1 sm:gap-2'>
                   <Link
                     href='#'
                     className='relative w-[163px] sm:w-[196px] h-[49px] sm:h-[65px] group '>
@@ -117,17 +117,17 @@ const Hero = () => {
       <img
         src='/images/ETHcoin.svg' //haf-blue
         alt='ETHcoin1'
-        className='absolute top-[25px] lg:top-[100px] left-[40px] lg:left-[234px] w-[320px] lg:w-auto'
+        className='absolute top-[2.8%] lg:top-[100px] left-[13%] lg:left-[234px] w-[290px] lg:w-auto'
       />
       <img
         src='/images/BTCcoin.svg' //yellow
         alt='BTCcoin'
-        className='absolute top-1/2 left-1/2 transform lg:translate-x-[-60%] translate-x-[-5%] translate-y-[-190%] lg:translate-y-[-110%]  w-[280px] lg:w-auto'
+        className='absolute top-[55%] left-[44%] transform lg:translate-x-[-60%] translate-x-[-5%] translate-y-[-190%] lg:translate-y-[-110%]  w-[270px] lg:w-auto'
       />
       <img
         src='/images/SOL-Coin.svg' //black
         alt='SOL-Coin'
-        className='absolute top-1/2 left-1/2 transform lg:translate-x-[-75%] translate-x-[27%] translate-y-[-155%] lg:translate-y-[-50%] w-[220px] lg:w-auto'
+        className='absolute top-1/2 left-1/2 transform lg:translate-x-[-75%] translate-x-[27%] translate-y-[-155%] lg:translate-y-[-50%] w-[196px] lg:w-auto'
       />
     </section>
   );
