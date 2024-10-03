@@ -3,7 +3,10 @@ import Image from "next/image";
 
 const WorkWithUsSection = () => {
   return (
-    <section className="xxl-max-screen  flex bg-transparent md:bg-inherit flex-col-reverse md:flex-row gap-[10px] md:gap-[22px] items-center justify-between pt-[105px] md:pt-[168px] pb-16 xl:px-[100px] lg:px-[50px] md:px-16 relative">
+    <section
+      id="work-with-us"
+      className="xxl-max-screen  flex bg-transparent md:bg-inherit flex-col-reverse md:flex-row gap-[10px] md:gap-[22px] items-center justify-between pt-[105px] md:pt-[168px] pb-16 xl:px-[100px] lg:px-[50px] md:px-16 relative"
+    >
       <div className="md:max-w-[664px] text-left sm:px-0 px-5 relative z-10">
         <h2
           className="text-[50px] lg:text-[80px] font-bold uppercase leading-normal tracking-normal bg-main-gradient
