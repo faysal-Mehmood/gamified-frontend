@@ -28,7 +28,7 @@ const Reviews = () => {
     centerMode: true,
     infinite: true,
     centerPadding: "0px",
-    speed: 500,
+    speed: 700,
     className: "slider variable-width",
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -37,7 +37,7 @@ const Reviews = () => {
       setCurrentSlider(current);
       setTimeout(() => {
         setFitBackColor(false);
-      }, 100);
+      }, 300);
     },
   };
 
@@ -125,11 +125,19 @@ const Circle = ({ fitBackColor, currentSlide, index }) => {
       {/* Top circle */}
       <div
         className={`absolute z-[-1] rounded-full border-2 border-brand-blue backdrop-blur-[10px]
-          bg-circle-gradient ${
-            fitBackColor
-              ? "transform translate-y-[390px] translate-x-[524px]"
-              : ""
-          }
+          bg-circle-gradient 
+         md:w-[222px] w-[101px] h-[101px] md:h-[222px] left-[-68px] top-[9px]    transition-transform transition-opacity duration-700 ease-in-out
+    ${
+      fitBackColor
+        ? "opacity-100 translate-y-[373px] translate-x-[35rem]"
+        : "opacity-0 translate-x-0"
+    }
+          `}
+      />
+      <div
+        className={`absolute z-[-1] rounded-full border-2 border-brand-blue backdrop-blur-[10px]
+          bg-circle-gradient 
+         
           ${
             currentSlide === index
               ? `md:w-[222px] w-[101px] h-[101px] md:h-[222px] left-[-68px] top-[9px] transition-all duration-500 ease-in-out
@@ -142,6 +150,7 @@ const Circle = ({ fitBackColor, currentSlide, index }) => {
         }}
       />
 
+      {/* main circle */}
       <div
         className={`${"w-[451px] md:w-[752px] h-[451px] md:h-[752px]"} flex flex-col justify-start gap-3 md:gap-[46px] items-center rounded-full pt-[53px] md:pt-[70px] px-20 md:px-[129px] pb-16 md:pb-[170px] border-2 blur-bg border-brand-blue flex-shrink-0
          bg-circle-gradient
@@ -200,14 +209,21 @@ const Circle = ({ fitBackColor, currentSlide, index }) => {
         </div>
       </div>
 
-      {/* Bottom circle */}
+      {/*bottom animation circle */}
+      <div
+        className={`absolute z-[-1] w-[82px] h-[82px] right-[44px] bottom-[107px] 
+    rounded-full border-2 border-brand-blue backdrop-blur-[10px] bg-circle-gradient
+    transition-transform transition-opacity duration-700 ease-in-out
+    ${
+      fitBackColor
+        ? "opacity-100 translate-y-[-373px] translate-x-[20rem]"
+        : "opacity-0 translate-x-0"
+    }`}
+      />
+      {/* bottom static circle */}
       <div
         className={`absolute z-[-1] rounded-full border-2 border-brand-blue backdrop-blur-[10px]
-          bg-circle-gradient ${
-            fitBackColor
-              ? "transform translate-y-[-383px] translate-x-[18rem]"
-              : ""
-          }
+          bg-circle-gradient 
           ${
             currentSlide === index
               ? `md:w-[102px] w-10 h-10 md:h-[102px] right-[18px] bottom-[108px] transition-all duration-500 ease-in-out
