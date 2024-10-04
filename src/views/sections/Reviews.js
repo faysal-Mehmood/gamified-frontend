@@ -75,7 +75,7 @@ backdrop-blur-[6.094865322113037px]"
             </div>
           ))}
         </Slider>
-        <div className="w-fit h-max absolute bottom-[70px] left-1/2 transform translate-x-[-118%] z-[5] hidden md:block">
+        <div className="w-fit h-max absolute bottom-[70px] left-1/2 transform translate-x-[-118%] z-[5]">
           <button
             onClick={previous}
             className="w-[50px] h-[50px] p-[13px] flex items-center justify-center flex-shrink-0 border-1 border-solid border-transparent relative rounded-full "
@@ -91,7 +91,7 @@ backdrop-blur-[6.094865322113037px]"
           </button>
         </div>
 
-        <div className="w-fit h-max absolute bottom-[70px] left-1/2 transform translate-x-[18%] z-[2] hidden md:block">
+        <div className="w-fit h-max absolute bottom-[70px] left-1/2 transform translate-x-[18%] z-[2] ">
           <button
             onClick={next}
             className="w-[50px] h-[50px] p-[13px] flex items-center justify-center flex-shrink-0 border-1 border-solid border-transparent relative rounded-full "

@@ -4,15 +4,15 @@ import SlotCounter from "react-slot-counter";
 
 const status = [
   {
-    number: "994,000",
+    number: "1,000,000",
     name: "USD paid out",
   },
   {
-    number: "9,994,000",
+    number: "10,000,000",
     name: "Downloads",
   },
   {
-    number: "99,994,000",
+    number: "100,000,000",
     name: "Points Earned",
   },
 ];
@@ -47,9 +47,9 @@ const PerformanceStats = () => {
                 {i === 0 && <span className="mr-3">$</span>}
                 <SlotCounter
                   value={item.number}
-                  duration={8}
+                  duration={5}
                   animateOnVisible
-                  easing='linear'
+                  dummyCharacterCount={1.5}
                 />
                 <span className="ml-[2px] mb-[2px] md:ml-2">+</span>
               </h3>
