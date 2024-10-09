@@ -112,22 +112,22 @@ const Hero = () => {
       <img
         src='/images/IOTAcoin.svg' //blue
         alt='IOTAcoin'
-        className='absolute top-[30px] left-[-115px] lg:left-[37px] w-[250px] lg:w-auto '
+        className='absolute top-[2%] md:top-[-2%] lg:top-[3%] left-[-105px] md:left-[-150px] lg:left-[37px] w-[250px] md:w-[320px] lg:w-auto '
       />
       <img
         src='/images/ETHcoin.svg' //haf-blue
         alt='ETHcoin1'
-        className='absolute top-[2.8%] lg:top-[100px] left-[13%] lg:left-[234px] w-[290px] lg:w-auto'
+        className='absolute top-[2.8%] lg:top-[15%] right-[-2%] xs:right-[13%] lg:left-[16%] lg3:left-[13%] w-[290px] md:w-[350px] lg3:w-auto'
       />
       <img
         src='/images/BTCcoin.svg' //yellow
         alt='BTCcoin'
-        className='absolute top-[55%] left-[44%] transform lg:translate-x-[-60%] translate-x-[-5%] translate-y-[-190%] lg:translate-y-[-110%]  w-[270px] lg:w-auto'
+        className='absolute top-[55%] lg:top-[40%] md:top-[70%] lg3:top-[44%] xxl:left-[49%] lg3:left-[48%] lg:left-[42%] lg:right-0 right-[-25%] xs:right-[-7%] transform lg:translate-x-[-60%] translate-x-[-5%] translate-y-[-190%] lg:translate-y-[-110%] w-[270px] md:w-[330px] lg3:w-auto'
       />
       <img
         src='/images/SOL-Coin.svg' //black
         alt='SOL-Coin'
-        className='absolute top-1/2 left-1/2 transform lg:translate-x-[-75%] translate-x-[27%] translate-y-[-155%] lg:translate-y-[-50%] w-[196px] lg:w-auto'
+        className='absolute lg:top-1/2 md:top-[62%] top-[53%] lg:left-1/2 lg:right-0 md:right-[-5%] right-[-9%] transform lg:translate-x-[-75%] translate-x-[27%] translate-y-[-155%] lg:translate-y-[-50%] w-[196px] md:w-[250px] lg:w-auto'
       />
     </section>
   );
