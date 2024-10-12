@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import Slider from "react-slick";
 import Image from "next/image";
 import "slick-carousel/slick/slick.css";
@@ -35,9 +35,7 @@ const Reviews = () => {
     variableWidth: true,
     afterChange: (current) => {
       setCurrentSlider(current);
-      setTimeout(() => {
-        setFitBackColor(false);
-      }, 100);
+      setFitBackColor(false);
     },
   };
 
@@ -127,7 +125,7 @@ const Circle = ({ fitBackColor, currentSlide, index }) => {
         className={`absolute z-[-1] rounded-full border-2 border-brand-blue backdrop-blur-[10px]
           bg-circle-gradient ${
             fitBackColor
-              ? "transform translate-y-[390px] translate-x-[524px]"
+              ? "transform translate-y-[90px] translate-x-[200px]"
               : ""
           }
           ${
@@ -205,7 +203,7 @@ const Circle = ({ fitBackColor, currentSlide, index }) => {
         className={`absolute z-[-1] rounded-full border-2 border-brand-blue backdrop-blur-[10px]
           bg-circle-gradient ${
             fitBackColor
-              ? "transform translate-y-[-383px] translate-x-[18rem]"
+              ? "transform translate-y-[-170px] translate-x-[5rem]"
               : ""
           }
           ${
