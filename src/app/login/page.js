@@ -6,10 +6,31 @@ import googleLogin from "../aserts/Images/google-login.png";
 import appleLogin from "../aserts/Images/apple-login.png";
 import emailLogin from "../aserts/Images/email-login.png";
 
+// detail of buttons for creating multiple buttons through map
+const loginOptions = [
+  {
+    imageSrc: appleLogin,
+    altText: "sign in with apple",
+    label: "Sign in with Apple",
+  },
+  {
+    imageSrc: googleLogin,
+    altText: "sign in with google",
+    label: "Sign in with Google",
+  },
+  {
+    imageSrc: emailLogin,
+    altText: "sign in with email",
+    label: "Sign in with Email",
+  },
+];
+
 const page = () => {
   return (
+    // main div
     <div className=" xxl-max-screen flex items-center justify-center md:h-screen smx:h-auto">
       <div className=" xxl:w-[1242px]  max-h-full flex xxl:flex-row smx:flex-col md:flex-row xxl:justify-between md:justify-around items-center justify-center    xl:w-[1000px] lg3:w-[950px] lg:w-[900px] smx:w-full smx:py-12 ">
+        {/* left side image with heading */}
         <div className=" flex flex-col items-center justify-center text-center xxl:w-[526px] lg:w-[400px] xmd:w-[350px] md:w-[310px] gap-10 xl:gap-6 lg3:gap-4 lg:gap-3 md:gap-2 smx:gap-0">
           <Image src={loginLogo} alt="logicImage" className=" " />
           <div>
@@ -35,46 +56,26 @@ const page = () => {
           />
         </div>
 
-        {/* <div className=" flex flex-col gap-5">
-          <button className=" flex items-center justify-center gap-4 text-button-text font-semibold text-brand-white w-[504px] h-[75.12px] py-2 rounded-[3rem] bg-button-gradient">
-            <Image src={appleLogin} alt="sign in with apple" />
-            <p>Sign in with Apple</p>
-          </button>
-          <button className=" flex items-center justify-center gap-4 text-button-text font-semibold text-brand-white w-[504px] h-[75.12px] py-2 rounded-[3rem] bg-button-gradient">
-            <Image src={googleLogin} alt="sign in with apple" />
-            <p>Sign in with Apple</p>
-          </button>
-          <button className=" flex items-center justify-center gap-4 text-button-text font-semibold text-brand-white w-[504px] h-[75.12px] py-2 rounded-[3rem] bg-button-gradient">
-            <Image src={emailLogin} alt="sign in with apple" />
-            <p>Sign in with Apple</p>
-          </button>
-        </div> */}
-
-        <div className="flex flex-col gap-5  lg3:gap-3 lg:gap-2 md:gap-2 smx:gap-2 ">
-          <LoginButton
-            imageSrc={appleLogin}
-            altText="sign in with apple"
-            label="Sign in with Apple"
-          />
-          <LoginButton
-            imageSrc={googleLogin}
-            altText="sign in with google"
-            label="Sign in with Google"
-          />
-          <LoginButton
-            imageSrc={emailLogin}
-            altText="sign in with email"
-            label="Sign in with Email"
-          />
+        {/* map for all three buttons */}
+        <div className="flex flex-col xxl:gap-5 lg3:gap-3 lg:gap-2 md:gap-2 smx:gap-2">
+          {loginOptions.map((option, index) => (
+            <LoginButton
+              key={index}
+              imageSrc={option.imageSrc}
+              altText={option.altText}
+              label={option.label}
+            />
+          ))}
         </div>
       </div>
     </div>
   );
 };
 
+// seprate component for button
 const LoginButton = ({ imageSrc, altText, label }) => {
   return (
-    <button className="flex items-center justify-center gap-4 text-button-text lg:text-[20px] xxl:font-semibold lg:font-medium text-brand-white xxl:w-[504px] xxl:h-[75.12px] xl:w-[400px] xl:h-[70px] lg3:w-[350px] lg:h-[60px] lg:w-[310px] md:w-[300px] md:h-[58px] smx:w-[335px] smx:h-[49px] smx:text-[16.11px]  py-2 rounded-[3rem] bg-button-gradient">
+    <button className="flex items-center justify-center gap-4 text-button-text lg:text-[20px] xxl:font-semibold lg:font-medium text-brand-white xxl:w-[504px] xxl:h-[75.12px] xl:w-[400px] xl:h-[70px] lg3:w-[350px] lg:h-[60px] lg:w-[310px] md:w-[300px] md:h-[58px] smx:w-[335px] smx:h-[49px] smx:text-[16.11px] py-2 rounded-[3rem] bg-button-gradient">
       <Image src={imageSrc} alt={altText} />
       <p>{label}</p>
     </button>

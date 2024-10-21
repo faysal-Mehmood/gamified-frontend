@@ -35,6 +35,8 @@ module.exports = {
         "brand-white": "rgba(255, 255, 255, 0.9)",
         "brand-white-grey": "rgba(255, 255, 255, 0.6)",
         "brand-blue": "#4D89F0",
+        "custom-border": "rgba(72, 91, 131, 1)",
+        "custome-blue": "rgba(40, 57, 92, 0.4)",
         "brand-dark-blur": "#191D37",
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -42,6 +44,9 @@ module.exports = {
         "half-grey": "rgba(255, 255, 255, 0.05)",
         "half-grey1": "rgba(255, 255, 255, 0.20)",
         "half-grey2": "rgba(255, 255, 255, 0.40)",
+
+        "balance-sheet-background": "rgba(40, 57, 92, 1)",
+        "balance-items-bg": "rgba(27, 39, 64, 1)",
       },
       textShadow: {
         custom: "0px 4px 4px rgba(0, 0, 0, 0.50)",
@@ -57,7 +62,14 @@ module.exports = {
           "linear-gradient(180deg, rgba(0, 0, 0, 0.00) 59.88%, rgba(0, 0, 0, 0.80) 75.78%)",
         "button-gradient":
           "linear-gradient(90deg, rgba(77, 137, 240, 0.2) 0%, rgba(145, 132, 234, 0.2) 100%)",
+        "balance-button-gradient":
+          "linear-gradient(112.36deg, #398AF2 0.55%, #A083E9 100%)",
       },
+      boxShadow: {
+        "custom-shadow":
+          "rgba(133, 132, 235, 0.4) 0px 30px 60px -12px, rgba(133, 132, 235, 0.4) 0px 18px 36px -18px",
+      },
+
       backgroundClip: {
         text: "text",
       },
