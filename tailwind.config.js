@@ -1,3 +1,5 @@
+const { Roboto } = require("next/font/google");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -11,6 +13,7 @@ module.exports = {
       fontFamily: {
         Oswald: ["Oswald", "sans-serif"],
         Inter: ["Inter", "sans-serif"],
+        Roboto: ["Roboto", "sans-serif"],
       },
 
       fontSize: {
@@ -64,6 +67,8 @@ module.exports = {
           "linear-gradient(90deg, rgba(77, 137, 240, 0.2) 0%, rgba(145, 132, 234, 0.2) 100%)",
         "balance-button-gradient":
           "linear-gradient(112.36deg, #398AF2 0.55%, #A083E9 100%)",
+        "balance-background":
+          "radial-gradient(circle, rgba(26, 42, 108, 0.5) 10%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 1) 100%)",
       },
       boxShadow: {
         "custom-shadow":
