@@ -3,19 +3,20 @@
 import React from "react";
 import Image from "next/image";
 import { transactionsData } from "@/data/balance"; // Import transactions data
-import logo from "..//../app/aserts/Images/login-logo.png";
-import bitcoin from "../../app/aserts/Images/Bitcoin-currency.png";
-import Ibitcoin from "../../app/aserts/Images/i-bitcoin-currency.png";
-import ethereum from "../../app/aserts/Images/ethereum-currency.png";
-import Iethereum from "../../app/aserts/Images/i-etherieum-currency.png";
-import iota from "../../app/aserts/Images/iota-currency.png";
-import Iiota from "../../app/aserts/Images/i-iota-currency.png";
-import solana from "../../app/aserts/Images/solana-currency.png";
-import Isolana from "../../app/aserts/Images/i-solana-currency.png";
-import USD from "../../app/aserts/Images/USD-currency.png";
-import IUSD from "../../app/aserts/Images/i-USD-currency.png";
-import refresh from "../../app/aserts/Images/refresh.png";
-import arrow from "../../app/aserts/Images/arrow.png";
+import logo from "..//../app/assets/Images/login-logo.svg";
+import bitcoin from "../../app/assets/Images/Bitcoin-currency.svg";
+import Ibitcoin from "../../app/assets/Images/i-bitcoin-currency.svg";
+import ethereum from "../../app/assets/Images/ethereum-currency.svg";
+import Iethereum from "../../app/assets/Images/i-etherieum-currency.svg";
+import iota from "../../app/assets/Images/iota-currency.svg";
+import Iiota from "../../app/assets/Images/i-iota-currency.svg";
+import solana from "../../app/assets/Images/solana-currency.svg";
+import Isolana from "../../app/assets/Images/i-solana-currency.svg";
+import USD from "../../app/assets/Images/USD-currency.svg";
+import IUSD from "../../app/assets/Images/i-USD-currency.svg";
+import refresh from "../../app/assets/Images/refresh.png";
+import arrow from "../../app/assets/Images/arrow.svg";
+import downArrow from "../../app/assets/Images/down-arrow.svg";
 
 import { useState, useEffect } from "react";
 
@@ -23,15 +24,6 @@ function BalanceOverview() {
   const [balance, setBalance] = useState(12150); // State to hold the balance
   const [activeIndex, setActiveIndex] = useState(0); // State to track the active currency button
   const [transactions, setTransactions] = useState(transactionsData.iota); // Set initial transactions
-  const [isWideScreen, setIsWideScreen] = useState(window.innerWidth > 640);
-  useEffect(() => {
-    const handleResize = () => {
-      setIsWideScreen(window.innerWidth > 640);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   // Array of currency buttons with images
   const currencyButtons = [
@@ -115,73 +107,104 @@ function BalanceOverview() {
 
         {/* Currency Selection Buttons */}
 
-        <div className="flex items-center smx:justify-center sm:justify-between">
+        <div className="flex items-center  justify-between">
           {currencyButtons.map((item, index) => {
             const isActive = activeIndex === index;
             return (
-              <button
-                key={index}
-                className={`xxl:w-[230px] xxl:h-[140px] lg3:w-[180px] lg3:h-[100px] md:w-[125px] md:h-[80px] sm:w-[90px] sm:h-[70px]  flex items-center justify-center 
-          ${
-            isActive
-              ? "bg-balance-button-gradient shadow-custom-shadow z-10 smx:w-[180px] "
-              : "bg-custom-blue opacity-80 w-[37px]"
-          }
-          border-t-2 border-b-2 border-r-2 border-custom-border sm:border-2 p-4 mx-0 my-6 rounded-md
-          sm:${
-            isActive ? "w-[0px] h-[80px]" : "w-[80px] h-[80px]"
-          } sm:h-[80px] // Small devices specific size logic
-        `}
-                onClick={() => handleCurrencyClick(index)}
-              >
-                {isWideScreen || isActive ? (
+              <div>
+                <button
+                  key={index}
+                  className={`xxl:w-[230px] xxl:h-[140px] lg3:w-[180px] lg3:h-[100px] md:w-[125px] md:h-[80px] sm:w-[90px] sm:h-[70px] lg3:p-12  flex items-center justify-center 
+                ${
+                  isActive
+                    ? "bg-balance-button-gradient shadow-custom-shadow z-10"
+                    : "bg-custom-blue opacity-80 w-[37px]"
+                }
+                border-t-2 border-b-2 border-r-2 border-custom-border sm:border-2 p-4 mx-0 my-6 rounded-md
+                hidden sm:flex justify-between // Hide on small devices
+              `}
+                  onClick={() => handleCurrencyClick(index)}
+                >
                   <Image
                     src={
                       activeIndex === index ? item.whiteImageSrc : item.imageSrc
                     }
-                    alt={item.altText}
-                    className="smx:w-[80px] smx:h-[50px] md:w-auto md:h-auto" // Adjust to your needs
                   />
-                ) : (
-                  <span className="text-brand-white font-bold">
-                    {item.text}{" "}
-                    {/* Display currency text for inactive buttons */}
-                  </span>
-                )}
-              </button>
+                </button>
+                <button
+                  key={index}
+                  className={`xxl:w-[230px] xxl:h-[140px] lg3:w-[180px] lg3:h-[100px] md:w-[125px] md:h-[80px]  flex items-center justify-center
+                   smx:block  
+                   sm:hidden 
+                   ${
+                     isActive
+                       ? "bg-balance-button-gradient shadow-custom-shadow z-10 w-[125px] h-[70px]"
+                       : "bg-custom-blue opacity-80 w-[50px] h-[70px]"
+                   }
+    border-t-2 border-b-2 border-r-2 border-custom-border sm:border-2  mx-0 my-6 rounded-md
+  `}
+                  onClick={() => handleCurrencyClick(index)}
+                >
+                  {isActive ? (
+                    <Image
+                      src={item.whiteImageSrc}
+                      alt={item.altText}
+                      className="smx:w-[120px] smx:h-[50px] sm:w-auto sm:h-auto" // Adjust to your needs
+                    />
+                  ) : (
+                    <span className="text-brand-white font-bold">
+                      {item.text}{" "}
+                      {/* Display currency text for inactive buttons */}
+                    </span>
+                  )}
+                </button>
+              </div>
             );
           })}
         </div>
 
         {/* Convert and Withdraw Buttons */}
         <div className="flex items-center justify-center smx:gap-1 md:gap-5">
-          <button className="bg-button-gradient xxl:w-[605px] xxl:h-[73.27px] lg3:w-[480px] lg3:h-[60px] md:w-[340px] md:h-[55px] sm:w-[220px] sm:h-[55px] smx:w-[180px] smx:h-[50px] smx:rounded-sm lg:rounded-2xl xxl:text-[26px] xl:text-[20px] text-brand-white font-black font-Roboto">
+          <button className="bg-button-gradient xxl:w-[605px] xxl:h-[73.27px] lg3:w-[480px] lg3:h-[60px] md:w-[340px] md:h-[55px] sm:w-[220px] sm:h-[55px] smx:w-[150px] smx:h-[50px] smx:rounded-sm lg:rounded-2xl xxl:text-[26px] xl:text-[20px] text-brand-white font-black font-Roboto">
             Convert Now
           </button>
-          <button className="bg-button-gradient xxl:w-[605px] xxl:h-[73.27px]  lg3:w-[480px] lg3:h-[60px] md:w-[340px] md:h-[55px]  sm:w-[220px] sm:h-[55px] smx:rounded-sm lg:rounded-2xl xxl:text-[26px] xl:text-[20 px] text-brand-white font-black font-Roboto smx:w-[180px] smx:h-[50px]">
+          <button className="bg-button-gradient xxl:w-[605px] xxl:h-[73.27px]  lg3:w-[480px] lg3:h-[60px] md:w-[340px] md:h-[55px]  sm:w-[220px] sm:h-[55px] smx:w-[150px] smx:rounded-sm lg:rounded-2xl xxl:text-[26px] xl:text-[20 px] text-brand-white font-black font-Roboto smx:w-[180px] smx:h-[50px]">
             Withdraw
           </button>
         </div>
 
         {/* Latest Transactions Section */}
-        <div className="bg-balance-sheet-background my-6 rounded-3xl p-6 xxl:w-[1242px] lg3:w-[980px]">
-          <div className="flex justify-between items-center p-6">
+        <div
+          className="bg-balance-sheet-background smx:my-4  md:my-6 rounded-3xl smx:p-3 sm:py-6     xxl:w-[1242px] lg3:w-[980px] md:h-[476px] smx:h-[507px] overflow-auto"
+          style={{
+            scrollbarWidth: "thin", // For Firefox
+            scrollbarColor: "rgba(50, 70, 100, 1)  rgba(27, 39, 64, 1)", // For Firefox
+          }}
+        >
+          <div className="flex justify-between items-center smx:py-2 sm:px-6 md:px-6">
             <p className="text-brand-white xxl:text-[26px] xl:text-[22px] font-black">
               Latest Transactions
             </p>
-            <Image src={refresh} alt="refresh" />
+            <Image
+              src={refresh}
+              alt="refresh"
+              className=" smx:w-[18px] smx:h-[18px] smx:mx-2"
+            />
           </div>
 
           {/* Mapping Over Transactions */}
-          <div className="w-full flex items-center justify-center flex-col gap-3">
+          <div className="w-full flex items-center justify-center flex-col md:gap-3 smx:gap-2">
             {transactions.map((transaction, index) => (
               <div
                 key={index}
-                className="bg-balance-items-bg flex justify-between items-center xxl:w-[1182px] lg3:w-[900px] md:w-[650px] smx:w-[350px] text-center xxl:p-5 lg3:p-3  md:py-2 md:px-2 smx:px-2 smx:py-2 smx:rounded-sm  lg:rounded-3xl"
+                className="bg-balance-items-bg flex justify-between items-center xxl:w-[1182px] lg3:w-[900px] md:w-[650px] smx:w-[320px] sm:w-[400px] text-center xxl:p-5 lg3:p-3  sm:py-2 sm:px-2 smx:px-2 smx:py-2 smx:rounded-md  lg:rounded-3xl"
               >
                 <div className="flex items-center gap-3">
-                  <button className="xxl:w-[39px] xxl:h-[38px] md:w-[35px] md:h-[34px] bg-blue-950 flex items-center justify-center   rounded-2xl">
-                    <Image src={arrow} alt="arrowImage" />
+                  <button className="xxl:w-[39px] xxl:h-[38px] md:w-[35px] md:h-[34px] smx:w-[32px] smx:h-[31px] bg-blue-950 flex items-center justify-center   rounded-2xl">
+                    <Image
+                      src={transaction.arrow === "arrow" ? arrow : downArrow}
+                      alt="arrowImage"
+                    />
                   </button>
                   <div className="text-left">
                     <h4 className="text-brand-white font-bold xxl:text-[16px] md:text-[14px] smx:text-[13.2px] leading-2 xl:mb-1 font-Roboto">
