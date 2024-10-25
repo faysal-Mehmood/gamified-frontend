@@ -1,13 +1,13 @@
-import bitcoin from "../app/assets/Images/Bitcoin-currency.svg";
-import Ibitcoin from "../app/assets/Images/i-bitcoin-currency.svg";
-import ethereum from "../app/assets/Images/ethereum-currency.svg";
-import Iethereum from "../app/assets/Images/i-etherieum-currency.svg";
-import iota from "../app/assets/Images/iota-currency.svg";
-import Iiota from "../app/assets/Images/i-iota-currency.svg";
-import solana from "../app/assets/Images/solana-currency.svg";
-import Isolana from "../app/assets/Images/i-solana-currency.svg";
-import USD from "../app/assets/Images/USD-currency.svg";
-import IUSD from "../app/assets/Images/i-USD-currency.svg";
+import bitcoin from "@/assets/Images/Bitcoin-currency.svg";
+import Ibitcoin from "@/assets/Images/i-bitcoin-currency.svg";
+import ethereum from "@/assets/Images/ethereum-currency.svg";
+import Iethereum from "@/assets/Images/i-etherieum-currency.svg";
+import iota from "@/assets/Images/iota-currency.svg";
+import Iiota from "@/assets/Images/i-iota-currency.svg";
+import solana from "@/assets/Images/solana-currency.svg";
+import Isolana from "@/assets/Images/i-solana-currency.svg";
+import USD from "@/assets/Images/USD-currency.svg";
+import IUSD from "@/assets/Images/i-USD-currency.svg";
 
 export const transactionsData = {
   iota: [
@@ -47,6 +47,8 @@ export const currencyButtons = [
     id: 0,
     imageSrc: Iiota,
     altText: "iota-currency",
+    width: "159px",
+    height: "38px",
     whiteImageSrc: iota,
     text: "IOTA",
     dataId: "iota",
@@ -55,6 +57,8 @@ export const currencyButtons = [
     id: 1,
     imageSrc: bitcoin,
     altText: "bitcoin-currency",
+    width: "134px",
+    height: "28px",
     whiteImageSrc: Ibitcoin,
     text: "BTC",
     dataId: "bitcoin",
@@ -63,6 +67,8 @@ export const currencyButtons = [
     id: 2,
     imageSrc: ethereum,
     altText: "ethereum currency",
+    width: "146px",
+    height: "37px",
     whiteImageSrc: Iethereum,
     text: "ETH",
     dataId: "ethereum",
@@ -71,6 +77,8 @@ export const currencyButtons = [
     id: 3,
     imageSrc: solana,
     altText: "solana currency",
+    width: "166px",
+    height: "41px",
     whiteImageSrc: Isolana,
     text: "SOL",
     dataId: "solana",
@@ -79,6 +87,8 @@ export const currencyButtons = [
     id: 4,
     imageSrc: USD,
     altText: "USD currency",
+    width: "134px",
+    height: "49px",
     whiteImageSrc: IUSD,
     text: "USD",
     dataId: "usd",

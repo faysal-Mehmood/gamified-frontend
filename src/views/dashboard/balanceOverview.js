@@ -4,29 +4,29 @@ import React from "react";
 import { useState } from "react";
 import Image from "next/image";
 import { currencyButtons, transactionsData } from "@/data/balance"; // Import transactions data
-import logo from "..//../app/assets/Images/login-logo.svg";
-import refresh from "../../app/assets/Images/refresh.png";
-import arrow from "../../app/assets/Images/arrow.svg";
-import downArrow from "../../app/assets/Images/down-arrow.svg";
+import logo from "@/assets/Images/login-logo.svg";
+import refresh from "@/assets/Images/refresh.png";
+import arrow from "@/assets/Images/arrow.svg";
+import downArrow from "@/assets/Images/down-arrow.svg";
 
 function BalanceOverview() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [transactions, setTransactions] = useState(transactionsData.iota);
 
   return (
-    <div className="flex flex-col items-center justify-center xxl-max-screen py-10 px-[99px]">
+    <div className="flex flex-col items-center justify-center xxl-max-screen py-10 px-5 md:px-[99px]">
       {/* Balance Title */}
       <div>
-        <h1 className="font-Roboto text-brand-white text-center  text-[15.63px] md:text-[28px] leading-5 md:leading-8  font-bold uppercase">
+        <h1 className="font-Roboto text-brand-white-1 text-center  text-[15.63px] md:text-[28px] leading-5 md:leading-8  font-bold uppercase">
           Balance
         </h1>
-        <div className="flex justify-center items-center gap-4">
+        <div className="flex justify-center items-center gap-4 mb-5">
           <Image
             src={logo}
             alt="logoImage"
             className="w-[29px] md:w-[73px] h-[25px] md:h-[65px]"
           />
-          <h1 className="xxl:text-[85.53px] lg3:text-[70px] md:text-[55px] smx:text-[33.85px]  text-brand-white font-black font-Roboto">
+          <h1 className="font-Roboto text-[34px] md:text-[85px] text-brand-white-1 font-black leading-[100px]">
             12,150
           </h1>
         </div>
@@ -36,18 +36,18 @@ function BalanceOverview() {
       </div>
 
       {/* Currency Selection Buttons */}
-      <div className="w-full flex flex-wrap items-center  justify-between">
+      <div className="w-full flex flex-wrap items-center gap-[23px] my-6">
         {currencyButtons?.map((item, index) => {
           return (
             <div key={index}>
               <div
-                className={`w-full items-center justify-center px-10 py-12 hidden sm:flex
+                className={`min-w-[230px] min-h-[140px] items-center justify-center  hidden sm:flex 
                 ${
                   activeIndex === item?.id
                     ? "bg-balance-button-gradient shadow-custom-shadow z-10"
-                    : "bg-custom-blue opacity-80"
+                    : "bg-custom-blue opacity-80 border-2  border-custom-border"
                 }
-                border-2  border-custom-border   mx-0 my-6 rounded-[10px]
+                 rounded-[10px]
                  
               `}
                 onClick={() => {
@@ -59,9 +59,12 @@ function BalanceOverview() {
                   src={
                     activeIndex === index ? item.whiteImageSrc : item.imageSrc
                   }
+                  alt={item.altText}
+                  width={item.width}
+                  height={item.height}
                 />
               </div>
-              <button
+              <div
                 key={index}
                 className={`flex  sm:hidden items-center justify-center    border-2 border-custom-border   mx-0 my-6 rounded-md
                    ${
@@ -82,18 +85,18 @@ function BalanceOverview() {
                     {item.text}{" "}
                   </span>
                 )}
-              </button>
+              </div>
             </div>
           );
         })}
       </div>
 
       {/* Convert and Withdraw Buttons */}
-      <div className="w-full flex items-center justify-center md:gap-6 mb-6">
-        <button className="bg-button-gradient w-1/2   py-[21px]   rounded-lg lg:rounded-2xl text-base xxl:text-[26px]  text-brand-white font-black font-Roboto">
+      <div className="w-full flex items-center gap-2 md:gap-8 mb-6">
+        <button className="bg-button-gradient w-1/2   py-[21px]   rounded-lg lg:rounded-2xl text-base md:text-[26px]  text-brand-white-1 font-black font-Roboto">
           Convert Now
         </button>
-        <button className=" w-1/2 bg-button-gradient  py-[21px]   rounded-lg lg:rounded-2xl text-base xxl:text-[26px]  text-brand-white font-black font-Roboto ">
+        <button className=" w-1/2 bg-button-gradient  py-[21px]   rounded-lg lg:rounded-2xl text-base md:text-[26px]  text-brand-white-1 font-black font-Roboto ">
           Withdraw
         </button>
       </div>
@@ -107,7 +110,7 @@ function BalanceOverview() {
         }}
       >
         <div className="flex justify-between items-center pb-5">
-          <p className="font-Roboto text-brand-white  text-base leading-5  md:text-[26px] font-black">
+          <p className="font-Roboto text-brand-white-1  text-base leading-5  md:text-[26px] font-black">
             Latest Transactions
           </p>
           <Image
@@ -122,26 +125,25 @@ function BalanceOverview() {
           {transactions.map((transaction, index) => (
             <div
               key={index}
-              className="w-full bg-balance-items-bg flex justify-between items-center  text-center  rounded-xl p-4 py-5"
+              className="w-full bg-balance-items-bg flex justify-between items-center rounded-xl p-4 py-5"
             >
-              <div className="flex items-center gap-3">
-                <button className="xxl:w-[39px] xxl:h-[38px] md:w-[35px] md:h-[34px] smx:w-[32px] smx:h-[31px] bg-blue-950 flex items-center justify-center   rounded-2xl">
-                  <Image
-                    src={transaction.arrow === "arrow" ? arrow : downArrow}
-                    alt="arrowImage"
-                  />
-                </button>
+              <div className="flex items-center gap-5">
+                <Image
+                  src={transaction.arrow === "arrow" ? arrow : downArrow}
+                  alt="arrowImage"
+                />
+
                 <div className="text-left">
-                  <h4 className="text-brand-white font-bold xxl:text-[16px] md:text-[14px] smx:text-[13.2px] leading-2 xl:mb-1 font-Roboto">
+                  <h4 className="text-brand-white-1 font-bold  text-[14px] md:text-base leading-5 mb-1 font-Roboto">
                     {transaction.type} - {transaction.amount}
                   </h4>
-                  <p className="text-brand-white font-medium xxl:text-[12px] smx:text-[10px] font-Roboto">
+                  <p className="text-brand-blue-1 font-medium  text-[10px] md:text-[12px] leading-4  font-Roboto">
                     {transaction.date}
                   </p>
                 </div>
               </div>
               <div>
-                <p className="xxl:text-[23px] xl:text-[20px] font-bold text-brand-white font-Roboto">
+                <p className="text-[20px] md:text-[23px] leading-6  font-bold text-brand-white-1 font-Roboto">
                   {transaction.amount}
                 </p>
               </div>
