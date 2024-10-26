@@ -21,11 +21,11 @@ export const ConvertModel = ({
           role="dialog"
           aria-modal="true"
         >
-          <div
+          {/* <div
             className="fixed inset-0 bg-transparent bg-opacity-75 transition-opacity"
             aria-hidden="true"
             onClick={toggleModal} // Close modal when clicking outside
-          ></div>
+          ></div> */}
 
           <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
             <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
