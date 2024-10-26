@@ -52,6 +52,22 @@ export const currencyButtons = [
     whiteImageSrc: iota,
     text: "IOTA",
     dataId: "iota",
+    balance: {
+      winr: "12,150",
+      convertedAmount: "40,550 i",
+      min_threshold: "1,000,000 i",
+      speed: "Instant",
+      fee: "Free",
+    },
+    withdrawInfo: {
+      heading: "How to withdraw IOTA",
+      info: [
+        "Download an IOTA compatible crypto wallet",
+        "We suggest TanglePay, a mobile IOTA wallet",
+        "Generate and copy your wallet’s receive address",
+        "Paste it where it says “receive address IOTA” ",
+      ],
+    },
   },
   {
     id: 1,
@@ -62,6 +78,22 @@ export const currencyButtons = [
     whiteImageSrc: Ibitcoin,
     text: "BTC",
     dataId: "bitcoin",
+    balance: {
+      winr: "12,150",
+      convertedAmount: "1,000 sat",
+      min_threshold: "1,000,000 i",
+      speed: "Instant",
+      fee: "Free",
+    },
+    withdrawInfo: {
+      heading: "How to withdraw BTC",
+      info: [
+        "Download a Bitcoin compatible crypto wallet ",
+        "We suggest Phantom, a mobile crypto wallet",
+        "Generate and copy your wallet’s receive address",
+        "Paste it where it says “receive address BTC”  ",
+      ],
+    },
   },
   {
     id: 2,
@@ -72,6 +104,22 @@ export const currencyButtons = [
     whiteImageSrc: Iethereum,
     text: "ETH",
     dataId: "ethereum",
+    balance: {
+      winr: "12,150",
+      convertedAmount: "1,000 gwei",
+      min_threshold: "1,000,000 i",
+      speed: "Instant",
+      fee: "Free",
+    },
+    withdrawInfo: {
+      heading: "How to withdraw ETH",
+      info: [
+        "Download a Ethereum compatible crypto wallet  ",
+        "We suggest Phantom, a mobile crypto wallet",
+        "Generate and copy your wallet’s receive address",
+        "Paste it where it says “receive address ETH”",
+      ],
+    },
   },
   {
     id: 3,
@@ -82,6 +130,22 @@ export const currencyButtons = [
     whiteImageSrc: Isolana,
     text: "SOL",
     dataId: "solana",
+    balance: {
+      winr: "12,150",
+      convertedAmount: "1,000 lamport",
+      min_threshold: "1,000,000 i",
+      speed: "Instant",
+      fee: "Free",
+    },
+    withdrawInfo: {
+      heading: "How to withdraw SOL",
+      info: [
+        "Download a Solana compatible crypto wallet",
+        "We suggest Phantom, a mobile crypto wallet",
+        "Generate and copy your wallet’s receive address",
+        "Paste it where it says “receive address SOL” ",
+      ],
+    },
   },
   {
     id: 4,
@@ -92,5 +156,12 @@ export const currencyButtons = [
     whiteImageSrc: IUSD,
     text: "USD",
     dataId: "usd",
+    balance: {
+      winr: "12,150",
+      convertedAmount: "$10.00",
+      min_threshold: "1,000,000 i",
+      speed: "Instant",
+      fee: "Free",
+    },
   },
 ];

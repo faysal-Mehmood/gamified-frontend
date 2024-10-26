@@ -3,15 +3,19 @@
 import React from "react";
 import { useState } from "react";
 import Image from "next/image";
+import { ConvertModel } from "./convertModel.js";
 import { currencyButtons, transactionsData } from "@/data/balance"; // Import transactions data
 import logo from "@/assets/Images/login-logo.svg";
 import refresh from "@/assets/Images/refresh.png";
 import arrow from "@/assets/Images/arrow.svg";
 import downArrow from "@/assets/Images/down-arrow.svg";
+import { WithdraInfoModel } from "./convertModel.js/withdraw/withdraInfo.js";
 
 function BalanceOverview() {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeCurrency, setActiveCurrency] = useState(currencyButtons?.[0]);
   const [transactions, setTransactions] = useState(transactionsData.iota);
+  const [openWithdrawInfo, setOpenWithdrawInfo] = useState(false);
+  const [isOpenModel, setisOpenModel] = useState("");
 
   return (
     <div className="flex flex-col items-center justify-center xxl-max-screen py-10 px-5 md:px-[99px]">
@@ -43,7 +47,7 @@ function BalanceOverview() {
               <div
                 className={`min-w-[230px] min-h-[140px] items-center justify-center  hidden sm:flex 
                 ${
-                  activeIndex === item?.id
+                  activeCurrency?.id === item?.id
                     ? "bg-balance-button-gradient shadow-custom-shadow z-10"
                     : "bg-custom-blue opacity-80 border-2  border-custom-border"
                 }
@@ -51,13 +55,15 @@ function BalanceOverview() {
                  
               `}
                 onClick={() => {
-                  setActiveIndex(item?.id);
+                  setActiveCurrency(item);
                   setTransactions(transactionsData[item?.dataId]);
                 }}
               >
                 <Image
                   src={
-                    activeIndex === index ? item.whiteImageSrc : item.imageSrc
+                    activeCurrency?.id === index
+                      ? item.whiteImageSrc
+                      : item.imageSrc
                   }
                   alt={item.altText}
                   width={item.width}
@@ -68,13 +74,13 @@ function BalanceOverview() {
                 key={index}
                 className={`flex  sm:hidden items-center justify-center    border-2 border-custom-border   mx-0 my-6 rounded-md
                    ${
-                     activeIndex === item?.id
+                     activeCurrency?.id === item?.id
                        ? "bg-balance-button-gradient shadow-custom-shadow z-10 px-5 py-7"
                        : "bg-custom-blue opacity-80 p-1 py-7"
                    }`}
                 onClick={() => handleCurrencyClick(index)}
               >
-                {activeIndex === item?.id ? (
+                {activeCurrency?.id === item?.id ? (
                   <Image
                     src={item.whiteImageSrc}
                     alt={item.altText}
@@ -93,10 +99,16 @@ function BalanceOverview() {
 
       {/* Convert and Withdraw Buttons */}
       <div className="w-full flex items-center gap-2 md:gap-8 mb-6">
-        <button className="bg-button-gradient w-1/2   py-[21px]   rounded-lg lg:rounded-2xl text-base md:text-[26px]  text-brand-white-1 font-black font-Roboto">
+        <button
+          onClick={() => setisOpenModel("convert")}
+          className="bg-button-gradient w-1/2   py-[21px]   rounded-lg lg:rounded-2xl text-base md:text-small-heading  text-brand-white-1 font-black font-Roboto"
+        >
           Convert Now
         </button>
-        <button className=" w-1/2 bg-button-gradient  py-[21px]   rounded-lg lg:rounded-2xl text-base md:text-[26px]  text-brand-white-1 font-black font-Roboto ">
+        <button
+          onClick={() => setisOpenModel("withdraw")}
+          className=" w-1/2 bg-button-gradient  py-[21px]   rounded-lg lg:rounded-2xl text-base md:text-small-heading  text-brand-white-1 font-black font-Roboto "
+        >
           Withdraw
         </button>
       </div>
@@ -110,7 +122,7 @@ function BalanceOverview() {
         }}
       >
         <div className="flex justify-between items-center pb-5">
-          <p className="font-Roboto text-brand-white-1  text-base leading-5  md:text-[26px] font-black">
+          <p className="font-Roboto text-brand-white-1  text-base leading-5  md:text-small-heading font-black">
             Latest Transactions
           </p>
           <Image
@@ -151,6 +163,23 @@ function BalanceOverview() {
           ))}
         </div>
       </div>
+
+      {/* model */}
+      {(isOpenModel === "convert" || isOpenModel === "withdraw") && (
+        <ConvertModel
+          setisOpenModel={setisOpenModel}
+          isOpenModel={isOpenModel}
+          activeCurrency={activeCurrency}
+          setOpenWithdrawInfo={setOpenWithdrawInfo}
+        />
+      )}
+      {openWithdrawInfo && (
+        <WithdraInfoModel
+          setOpenWithdrawInfo={setOpenWithdrawInfo}
+          openWithdrawInfo={openWithdrawInfo}
+          activeCurrency={activeCurrency}
+        />
+      )}
     </div>
   );
 }

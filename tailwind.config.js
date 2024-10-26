@@ -40,9 +40,12 @@ module.exports = {
         "brand-white-1": "#FAFAFB",
         "brand-blue": "#4D89F0",
         "brand-blue-1": "#7D8FB4",
+        "brand-blue-dark": "#28395C",
+        "brand-blue-dark-1": "#398AF2",
         "custom-border": "rgba(72, 91, 131, 1)",
         "custome-blue": "rgba(40, 57, 92, 0.4)",
         "brand-dark-blur": "#191D37",
+        "brand-darkish": "#1B2740",
         background: "var(--background)",
         foreground: "var(--foreground)",
         "light-grey": "rgba(255, 255, 255, 0.7)",
@@ -59,6 +62,7 @@ module.exports = {
       webkitTextStroke: {
         custom: "5px #000",
       },
+
       backgroundImage: {
         "main-gradient": "linear-gradient(90deg, #4D89F0 0%, #9184EA 100%)",
         "circle-gradient":
