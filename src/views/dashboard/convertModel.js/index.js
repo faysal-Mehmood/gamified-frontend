@@ -7,6 +7,7 @@ export const ConvertModel = ({
   setisOpenModel,
   activeCurrency,
   setOpenWithdrawInfo,
+  setisConverTransaction,
 }) => {
   // Function to toggle modal open/close
   const toggleModal = () => setisOpenModel("");
@@ -38,6 +39,7 @@ export const ConvertModel = ({
                     name="cross-icon"
                     onClick={toggleModal}
                     mainClassName="cursor-pointer"
+                    className="w-[30px] h-[30px]"
                   />
                 </div>
                 {isOpenModel === "convert" && (
@@ -50,7 +52,10 @@ export const ConvertModel = ({
                   />
                 )}
 
-                <button className="w-full font-Roboto bg-main-gradient font-black leading-7 text-base md:text-[26px] text-brand-white-1 py-5 rounded-2xl">
+                <button
+                  onClick={() => setisConverTransaction(isOpenModel)}
+                  className="w-full font-Roboto bg-main-gradient font-black leading-7 text-base md:text-[26px] text-brand-white-1 py-5 rounded-2xl"
+                >
                   {isOpenModel === "convert" ? "Convert" : "Withdraw"}
                 </button>
               </div>

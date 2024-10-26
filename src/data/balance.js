@@ -20,6 +20,7 @@ import ghost from "@/assets/Images/ghost.svg";
 export const transactionsData = {
   iota: [
     {
+      transaction_type: "withdraw",
       type: "Withdrawal - IOTA",
       amount: "100",
       date: "Mar 24, 2022, 12:12 AM",
@@ -32,6 +33,7 @@ export const transactionsData = {
       },
     },
     {
+      transaction_type: "withdraw",
       type: "Withdrawal - USD",
       amount: "200",
       date: "Mar 24, 2022, 12:12 AM",
@@ -44,6 +46,7 @@ export const transactionsData = {
       },
     },
     {
+      transaction_type: "convert",
       type: "Instant Conversion - IOTA",
       amount: "100",
       date: "Mar 22, 2022, 12:12 AM",
@@ -56,6 +59,7 @@ export const transactionsData = {
       },
     },
     {
+      transaction_type: "convert",
       type: "Auto Conversion - USD",
       amount: "200",
       date: "Mar 24, 2022, 12:12 AM",

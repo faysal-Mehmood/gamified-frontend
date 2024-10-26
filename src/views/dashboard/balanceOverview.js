@@ -10,13 +10,15 @@ import refresh from "@/assets/Images/refresh.png";
 import arrow from "@/assets/Images/arrow.svg";
 import downArrow from "@/assets/Images/down-arrow.svg";
 import { WithdraInfoModel } from "./convertModel.js/withdraw/withdraInfo.js";
+import { WithdrawTransactionModel } from "./convertModel.js/withdraw/withdrawTransactionModel.js";
 
 function BalanceOverview() {
   const [activeCurrency, setActiveCurrency] = useState(currencyButtons?.[0]);
   const [transactions, setTransactions] = useState(transactionsData.iota);
   const [openWithdrawInfo, setOpenWithdrawInfo] = useState(false);
+  const [isConverTransaction, setisConverTransaction] = useState("");
   const [isOpenModel, setisOpenModel] = useState("");
-
+  console.log("isConverTransaction", isConverTransaction);
   return (
     <div className="relative flex flex-col items-center justify-center xxl-max-screen py-10 px-5 md:px-[99px]">
       {/* Balance Title */}
@@ -141,6 +143,10 @@ function BalanceOverview() {
                 <Image
                   src={transaction.arrow === "arrow" ? arrow : downArrow}
                   alt="arrowImage"
+                  className="cursor-pointer"
+                  onClick={() => {
+                    setisConverTransaction(transaction?.transaction_type);
+                  }}
                 />
 
                 <div className="text-left">
@@ -169,12 +175,20 @@ function BalanceOverview() {
           isOpenModel={isOpenModel}
           activeCurrency={activeCurrency}
           setOpenWithdrawInfo={setOpenWithdrawInfo}
+          setisConverTransaction={setisConverTransaction}
         />
       )}
       {openWithdrawInfo && (
         <WithdraInfoModel
           setOpenWithdrawInfo={setOpenWithdrawInfo}
           openWithdrawInfo={openWithdrawInfo}
+          activeCurrency={activeCurrency}
+        />
+      )}
+      {(isConverTransaction === "convert" || isOpenModel === "withdraw") && (
+        <WithdrawTransactionModel
+          setisConverTransaction={setisConverTransaction}
+          isConverTransaction={isConverTransaction}
           activeCurrency={activeCurrency}
         />
       )}

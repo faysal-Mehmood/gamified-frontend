@@ -117,7 +117,7 @@ export default function Tutorial() {
                     </button>
                   ) : (
                     <Icon
-                      name="arrow-right"
+                      name="arrow-right-circular"
                       onClick={nextSlide}
                       className="cursor-pointer hover:opacity-80"
                     />
