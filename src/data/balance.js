@@ -8,7 +8,15 @@ import solana from "@/assets/Images/solana-currency.svg";
 import Isolana from "@/assets/Images/i-solana-currency.svg";
 import USD from "@/assets/Images/USD-currency.svg";
 import IUSD from "@/assets/Images/i-USD-currency.svg";
-
+import IOTAcoin from "@/assets/Images/IOTAcoin.svg";
+import bitcoinImg from "@/assets/Images/bitcoin.svg";
+import ethereumcoin from "@/assets/Images/ETHcoin.svg";
+import solona from "@/assets/Images/SOLCoin.svg";
+import icon1 from "@/assets/Images/icon1.svg";
+import icon3 from "@/assets/Images/icon3.svg";
+import icon4 from "@/assets/Images/icon4.svg";
+import catholdingcoin from "@/assets/Images/catholdingcoin.svg";
+import ghost from "@/assets/Images/ghost.svg";
 export const transactionsData = {
   iota: [
     { type: "IOTA", amount: "100", date: "2024-10-22", arrow: "arrow" },
@@ -62,11 +70,24 @@ export const currencyButtons = [
     withdrawInfo: {
       heading: "How to withdraw IOTA",
       info: [
-        "Download an IOTA compatible crypto wallet",
-        "We suggest TanglePay, a mobile IOTA wallet",
-        "Generate and copy your wallet’s receive address",
-        "Paste it where it says “receive address IOTA” ",
+        {
+          text: "Download an IOTA compatible crypto wallet",
+          icon: icon1,
+        },
+        {
+          text: "We suggest TanglePay, a mobile IOTA wallet",
+          icon: catholdingcoin,
+        },
+        {
+          text: "Generate and copy your wallet’s receive address",
+          icon: icon3,
+        },
+        {
+          text: "Paste it where it says “receive address IOTA”",
+          icon: icon4,
+        },
       ],
+      currencyCoin: IOTAcoin,
     },
   },
   {
@@ -88,11 +109,24 @@ export const currencyButtons = [
     withdrawInfo: {
       heading: "How to withdraw BTC",
       info: [
-        "Download a Bitcoin compatible crypto wallet ",
-        "We suggest Phantom, a mobile crypto wallet",
-        "Generate and copy your wallet’s receive address",
-        "Paste it where it says “receive address BTC”  ",
+        {
+          text: "Download an IOTA compatible crypto wallet",
+          icon: icon1,
+        },
+        {
+          text: "We suggest TanglePay, a mobile IOTA wallet",
+          icon: ghost,
+        },
+        {
+          text: "Generate and copy your wallet’s receive address",
+          icon: icon3,
+        },
+        {
+          text: "Paste it where it says “receive address IOTA”",
+          icon: icon4,
+        },
       ],
+      currencyCoin: bitcoinImg,
     },
   },
   {
@@ -114,11 +148,24 @@ export const currencyButtons = [
     withdrawInfo: {
       heading: "How to withdraw ETH",
       info: [
-        "Download a Ethereum compatible crypto wallet  ",
-        "We suggest Phantom, a mobile crypto wallet",
-        "Generate and copy your wallet’s receive address",
-        "Paste it where it says “receive address ETH”",
+        {
+          text: "Download an IOTA compatible crypto wallet",
+          icon: icon1,
+        },
+        {
+          text: "We suggest TanglePay, a mobile IOTA wallet",
+          icon: ghost,
+        },
+        {
+          text: "Generate and copy your wallet’s receive address",
+          icon: icon3,
+        },
+        {
+          text: "Paste it where it says “receive address IOTA”",
+          icon: icon4,
+        },
       ],
+      currencyCoin: ethereumcoin,
     },
   },
   {
@@ -140,11 +187,24 @@ export const currencyButtons = [
     withdrawInfo: {
       heading: "How to withdraw SOL",
       info: [
-        "Download a Solana compatible crypto wallet",
-        "We suggest Phantom, a mobile crypto wallet",
-        "Generate and copy your wallet’s receive address",
-        "Paste it where it says “receive address SOL” ",
+        {
+          text: "Download an IOTA compatible crypto wallet",
+          icon: icon1,
+        },
+        {
+          text: "We suggest TanglePay, a mobile IOTA wallet",
+          icon: ghost,
+        },
+        {
+          text: "Generate and copy your wallet’s receive address",
+          icon: icon3,
+        },
+        {
+          text: "Paste it where it says “receive address IOTA”",
+          icon: icon4,
+        },
       ],
+      currencyCoin: solona,
     },
   },
   {
@@ -162,6 +222,28 @@ export const currencyButtons = [
       min_threshold: "1,000,000 i",
       speed: "Instant",
       fee: "Free",
+    },
+    withdrawInfo: {
+      heading: "How to withdraw SOL",
+      info: [
+        {
+          text: "Download an IOTA compatible crypto wallet",
+          icon: icon1,
+        },
+        {
+          text: "We suggest TanglePay, a mobile IOTA wallet",
+          icon: ghost,
+        },
+        {
+          text: "Generate and copy your wallet’s receive address",
+          icon: icon3,
+        },
+        {
+          text: "Paste it where it says “receive address IOTA”",
+          icon: icon4,
+        },
+      ],
+      currencyCoin: IOTAcoin,
     },
   },
 ];

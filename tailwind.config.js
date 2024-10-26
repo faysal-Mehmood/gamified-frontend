@@ -55,6 +55,7 @@ module.exports = {
 
         "balance-sheet-background": "rgba(40, 57, 92, 1)",
         "balance-items-bg": "rgba(27, 39, 64, 1)",
+        "dark-blue": "rgba(27, 39, 64, 1)",
       },
       textShadow: {
         custom: "0px 4px 4px rgba(0, 0, 0, 0.50)",
