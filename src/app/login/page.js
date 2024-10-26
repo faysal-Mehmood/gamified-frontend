@@ -1,10 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import loginLogo from "../assets/Images/login-logo.svg";
-import centerLogin from "../assets/Images/login-center-line.png";
-import googleLogin from "../assets/Images/google-login.svg";
-import appleLogin from "../assets/Images/apple-login.svg";
-import emailLogin from "../assets/Images/email-login.svg";
+import loginLogo from "../../assets/Images/login-logo.svg";
+
+import centerLogin from "../../assets/Images/login-center-line.svg";
+import googleLogin from "../../assets/Images/google-login.svg";
+import appleLogin from "../../assets/Images/apple-login.svg";
+import emailLogin from "../../assets/Images/email-login.svg";
 
 // detail of buttons for creating multiple buttons through map
 const loginOptions = [
@@ -56,7 +57,7 @@ const page = () => {
           <Image
             src={centerLogin}
             alt="centerLine"
-            className=" smx:rotate-90 md:rotate-0 smx:h-60 md:h-full  smx:w-full "
+            className=" smx:rotate-90 md:rotate-0 smx:h-60 md:h-full  smx:w-full shadow-custome-shadow2"
           />
         </div>
 
