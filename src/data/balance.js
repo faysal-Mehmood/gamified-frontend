@@ -11,34 +11,244 @@ import IUSD from "@/assets/Images/i-USD-currency.svg";
 
 export const transactionsData = {
   iota: [
-    { type: "IOTA", amount: "100", date: "2024-10-22", arrow: "arrow" },
-    { type: "IOTA", amount: "200", date: "2024-10-21", arrow: "arrow" },
-    { type: "IOTA", amount: "100", date: "2024-10-22", arrow: "downArrow" },
-    { type: "IOTA", amount: "200", date: "2024-10-21", arrow: "downArrow" },
+    {
+      type: "Withdrawal - IOTA",
+      amount: "100",
+      date: "Mar 24, 2022, 12:12 AM",
+      arrow: "arrow",
+      transactionInfo: {
+        status: "Confirmed",
+        date: "December 22, 2021, 10:53 PM",
+        conversionRate: "1:3.33",
+        amount: "10,000 i",
+      },
+    },
+    {
+      type: "Withdrawal - USD",
+      amount: "200",
+      date: "Mar 24, 2022, 12:12 AM",
+      arrow: "arrow",
+      transactionInfo: {
+        status: "Confirmed",
+        date: "December 22, 2021, 10:53 PM",
+        conversionRate: "1:3.33",
+        amount: "1,000 sat",
+      },
+    },
+    {
+      type: "Instant Conversion - IOTA",
+      amount: "100",
+      date: "Mar 22, 2022, 12:12 AM",
+      arrow: "downArrow",
+      transactionInfo: {
+        status: "Confirmed",
+        date: "December 22, 2021, 10:53 PM",
+        conversionRate: "1:3.33",
+        amount: "1,000 gwei",
+      },
+    },
+    {
+      type: "Auto Conversion - USD",
+      amount: "200",
+      date: "Mar 24, 2022, 12:12 AM",
+      arrow: "downArrow",
+      transactionInfo: {
+        status: "Confirmed",
+        date: "December 22, 2021, 10:53 PM",
+        conversionRate: "1:3.33",
+        amount: "$0.08",
+      },
+    },
   ],
   bitcoin: [
-    { type: "Bitcoin", amount: "0.01", date: "2024-10-20", arrow: "arrow" },
-    { type: "Bitcoin", amount: "0.05", date: "2024-10-19", arrow: "arrow" },
-    { type: "IOTA", amount: "100", date: "2024-10-22", arrow: "downArrow" },
-    { type: "IOTA", amount: "200", date: "2024-10-21", arrow: "downArrow" },
+    {
+      type: "Auto Conversion - USD",
+      amount: "0.01",
+      date: "Mar 24, 2022, 12:12 AM",
+      arrow: "arrow",
+      transactionInfo: {
+        status: "Confirmed",
+        date: "December 22, 2021, 10:53 PM",
+        conversionRate: "1:3.33",
+        amount: "10,000 i",
+      },
+    },
+    {
+      type: "Withdrawal - USD",
+      amount: "0.05",
+      date: "Mar 25, 2022, 12:12 AM",
+      arrow: "arrow",
+      transactionInfo: {
+        status: "Confirmed",
+        date: "December 22, 2021, 10:53 PM",
+        conversionRate: "1:3.33",
+        amount: "1,000 sat",
+      },
+    },
+    {
+      type: "Instant Conversion - IOTA",
+      amount: "100",
+      date: "Mar 22, 2022, 12:12 AM",
+      arrow: "downArrow",
+      transactionInfo: {
+        status: "Confirmed",
+        date: "December 22, 2021, 10:53 PM",
+        conversionRate: "1:3.33",
+        amount: "1,000 sat",
+      },
+    },
+    {
+      type: "Withdrawal - USD",
+      amount: "200",
+      date: "Mar 24, 2022, 12:12 AM",
+      arrow: "downArrow",
+      transactionInfo: {
+        status: "Confirmed",
+        date: "December 22, 2021, 10:53 PM",
+        conversionRate: "1:3.33",
+        amount: "1,000 sat",
+      },
+    },
   ],
   ethereum: [
-    { type: "Ethereum", amount: "1.2", date: "2024-10-18", arrow: "arrow" },
-    { type: "Ethereum", amount: "0.8", date: "2024-10-17", arrow: "arrow" },
-    { type: "IOTA", amount: "100", date: "2024-10-22", arrow: "downArrow" },
+    {
+      type: "Withdrawal - IOTA",
+      amount: "1.2",
+      date: "Mar 24, 2023, 12:12 AM",
+      arrow: "arrow",
+      transactionInfo: {
+        status: "Confirmed",
+        date: "December 22, 2021, 10:53 PM",
+        conversionRate: "1:3.33",
+        amount: "1,000 sat",
+      },
+    },
+    {
+      type: "Withdrawal - IOTA",
+      amount: "0.8",
+      date: "Mar 24, 2022, 12:12 AM",
+      arrow: "arrow",
+      transactionInfo: {
+        status: "Confirmed",
+        date: "December 22, 2021, 10:53 PM",
+        conversionRate: "1:3.33",
+        amount: "1,000 sat",
+      },
+    },
+    {
+      type: "Auto Conversion - USD",
+      amount: "100",
+      date: "Mar 22, 2022, 12:12 AM",
+      arrow: "downArrow",
+      transactionInfo: {
+        status: "Confirmed",
+        date: "December 22, 2021, 10:53 PM",
+        conversionRate: "1:3.33",
+        amount: "1,000 sat",
+      },
+    },
     { type: "IOTA", amount: "200", date: "2024-10-21", arrow: "downArrow" },
   ],
   solana: [
-    { type: "Solana", amount: "50", date: "2024-10-16", arrow: "arrow" },
-    { type: "Solana", amount: "30", date: "2024-10-15", arrow: "arrow" },
-    { type: "IOTA", amount: "100", date: "2024-10-22", arrow: "downArrow" },
-    { type: "IOTA", amount: "200", date: "2024-10-21", arrow: "downArrow" },
+    {
+      type: "Auto Conversion - USD",
+      amount: "50",
+      date: "April 14, 2022, 12:12 PM",
+      arrow: "arrow",
+      transactionInfo: {
+        status: "Confirmed",
+        date: "December 22, 2021, 10:53 PM",
+        conversionRate: "1:3.33",
+        amount: "1,000 sat",
+      },
+    },
+    {
+      type: "Withdrawal - USD",
+      amount: "30",
+      date: "April 14, 2022, 12:12 PM",
+      arrow: "arrow",
+      transactionInfo: {
+        status: "Confirmed",
+        date: "December 22, 2021, 10:53 PM",
+        conversionRate: "1:3.33",
+        amount: "1,000 sat",
+      },
+    },
+    {
+      type: "Auto Conversion - USD",
+      amount: "100",
+      date: "Mar 22, 2022, 12:12 AM",
+      arrow: "downArrow",
+      transactionInfo: {
+        status: "Confirmed",
+        date: "December 22, 2021, 10:53 PM",
+        conversionRate: "1:3.33",
+        amount: "1,000 sat",
+      },
+    },
+    {
+      type: "Withdrawal - USD",
+      amount: "200",
+      date: "2024-10-21",
+      arrow: "downArrow",
+      transactionInfo: {
+        status: "Confirmed",
+        date: "December 22, 2021, 10:53 PM",
+        conversionRate: "1:3.33",
+        amount: "1,000 sat",
+      },
+    },
   ],
   usd: [
-    { type: "USD", amount: "500", date: "2024-10-14", arrow: "arrow" },
-    { type: "USD", amount: "600", date: "2024-10-13", arrow: "arrow" },
-    { type: "IOTA", amount: "100", date: "2024-10-22", arrow: "downArrow" },
-    { type: "IOTA", amount: "200", date: "2024-10-21", arrow: "downArrow" },
+    {
+      type: "Withdrawal - IOTA",
+      amount: "500",
+      date: "April 14, 2022, 12:12 PM",
+      arrow: "arrow",
+      transactionInfo: {
+        status: "Confirmed",
+        date: "December 22, 2021, 10:53 PM",
+        conversionRate: "1:3.33",
+        amount: "1,000 sat",
+      },
+    },
+    {
+      type: "Withdrawal - USD",
+      amount: "600",
+      date: "April 14, 2022, 12:12 PM",
+      arrow: "arrow",
+      transactionInfo: {
+        status: "Confirmed",
+        date: "December 22, 2021, 10:53 PM",
+        conversionRate: "1:3.33",
+        amount: "1,000 sat",
+      },
+    },
+
+    {
+      type: "Instant Conversion - IOTA",
+      amount: "100",
+      date: "Mar 22, 2022, 12:12 AM",
+      arrow: "downArrow",
+      transactionInfo: {
+        status: "Confirmed",
+        date: "December 22, 2021, 10:53 PM",
+        conversionRate: "1:3.33",
+        amount: "1,000 sat",
+      },
+    },
+    {
+      type: "Auto Conversion - USD",
+      amount: "200",
+      date: "April 14, 2022, 12:12 PM",
+      arrow: "downArrow",
+      transactionInfo: {
+        status: "Confirmed",
+        date: "December 22, 2021, 10:53 PM",
+        conversionRate: "1:3.33",
+        amount: "1,000 sat",
+      },
+    },
   ],
 };
 
@@ -68,6 +278,15 @@ export const currencyButtons = [
         "Paste it where it says “receive address IOTA” ",
       ],
     },
+    transactionInfo: {
+      status: "Confirmed",
+      date: "December 22, 2021, 10:53 PM",
+      messageID:
+        "iota1qxttgnlnx7kezy8fv6kxhw3zns8wm08shmbdsrw4v5ztzrtt64yn5k07dz0",
+      recievingAddress:
+        "iota1qxttgnlnx7kezy8fv6kxhw3zns8wm08shmbdsrw4v5ztzrtt64yn5k07dz0",
+      amount: "10,000 i",
+    },
   },
   {
     id: 1,
@@ -93,6 +312,15 @@ export const currencyButtons = [
         "Generate and copy your wallet’s receive address",
         "Paste it where it says “receive address BTC”  ",
       ],
+    },
+    transactionInfo: {
+      status: "Confirmed",
+      date: "December 22, 2021, 10:53 PM",
+      messageID:
+        "iota1qxttgnlnx7kezy8fv6kxhw3zns8wm08shmbdsrw4v5ztzrtt64yn5k07dz0",
+      recievingAddress:
+        "iota1qxttgnlnx7kezy8fv6kxhw3zns8wm08shmbdsrw4v5ztzrtt64yn5k07dz0",
+      amount: "1,000 sat",
     },
   },
   {
@@ -120,6 +348,15 @@ export const currencyButtons = [
         "Paste it where it says “receive address ETH”",
       ],
     },
+    transactionInfo: {
+      status: "Confirmed",
+      date: "December 22, 2021, 10:53 PM",
+      messageID:
+        "iota1qxttgnlnx7kezy8fv6kxhw3zns8wm08shmbdsrw4v5ztzrtt64yn5k07dz0",
+      recievingAddress:
+        "iota1qxttgnlnx7kezy8fv6kxhw3zns8wm08shmbdsrw4v5ztzrtt64yn5k07dz0",
+      amount: "1,000 gwei",
+    },
   },
   {
     id: 3,
@@ -146,6 +383,15 @@ export const currencyButtons = [
         "Paste it where it says “receive address SOL” ",
       ],
     },
+    transactionInfo: {
+      status: "Confirmed",
+      date: "December 22, 2021, 10:53 PM",
+      messageID:
+        "iota1qxttgnlnx7kezy8fv6kxhw3zns8wm08shmbdsrw4v5ztzrtt64yn5k07dz0",
+      recievingAddress:
+        "iota1qxttgnlnx7kezy8fv6kxhw3zns8wm08shmbdsrw4v5ztzrtt64yn5k07dz0",
+      amount: "1,000 lamport",
+    },
   },
   {
     id: 4,
@@ -162,6 +408,12 @@ export const currencyButtons = [
       min_threshold: "1,000,000 i",
       speed: "Instant",
       fee: "Free",
+    },
+    transactionInfo: {
+      status: "Confirmed",
+      date: "December 22, 2021, 10:53 PM",
+      recievingAddress: "email@email.com",
+      amount: "1,000 lamport",
     },
   },
 ];
