@@ -18,7 +18,7 @@ function BalanceOverview() {
   const [isOpenModel, setisOpenModel] = useState("");
 
   return (
-    <div className="flex flex-col items-center justify-center xxl-max-screen py-10 px-5 md:px-[99px]">
+    <div className="relative flex flex-col items-center justify-center xxl-max-screen py-10 px-5 md:px-[99px]">
       {/* Balance Title */}
       <div>
         <h1 className="font-Roboto text-brand-white-1 text-center  text-[15.63px] md:text-[28px] leading-5 md:leading-8  font-bold uppercase">
@@ -45,14 +45,12 @@ function BalanceOverview() {
           return (
             <div key={index}>
               <div
-                className={`min-w-[230px] min-h-[140px] items-center justify-center  hidden sm:flex 
+                className={`min-w-[230px] min-h-[140px] items-center justify-center cursor-pointer  hidden sm:flex rounded-[10px]
                 ${
                   activeCurrency?.id === item?.id
                     ? "bg-balance-button-gradient shadow-custom-shadow z-10"
                     : "bg-custom-blue opacity-80 border-2  border-custom-border"
                 }
-                 rounded-[10px]
-                 
               `}
                 onClick={() => {
                   setActiveCurrency(item);
@@ -98,7 +96,7 @@ function BalanceOverview() {
       </div>
 
       {/* Convert and Withdraw Buttons */}
-      <div className="w-full flex items-center gap-2 md:gap-8 mb-6">
+      <div className="w-full  flex items-center gap-2 md:gap-8 mb-6">
         <button
           onClick={() => setisOpenModel("convert")}
           className="bg-button-gradient w-1/2   py-[21px]   rounded-lg lg:rounded-2xl text-base md:text-small-heading  text-brand-white-1 font-black font-Roboto"

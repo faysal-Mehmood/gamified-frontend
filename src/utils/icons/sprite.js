@@ -97,4 +97,99 @@ export const sprite = {
       />
     </svg>
   ),
+  "arrow-left": (
+    <svg
+      width="70"
+      height="70"
+      viewBox="0 0 70 70"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx="35"
+        cy="35"
+        r="34"
+        transform="matrix(-1 0 0 1 70 0)"
+        stroke="url(#paint0_linear_1_8401)"
+        stroke-width="2"
+      />
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M27.3788 35.7739L36.4836 44.6717C37.1876 45.3598 38.3123 45.3598 39.0163 44.6717C39.7437 43.9609 39.7437 42.7909 39.0163 42.0801L31.2673 34.5071L39.0163 26.9342C39.7437 26.2234 39.7437 25.0534 39.0163 24.3426C38.3123 23.6545 37.1876 23.6545 36.4836 24.3426L27.3788 33.2404C27.0351 33.5764 26.842 34.0321 26.842 34.5071C26.842 34.9822 27.0351 35.4379 27.3788 35.7739Z"
+        fill="url(#paint1_linear_1_8401)"
+      />
+      <defs>
+        <linearGradient
+          id="paint0_linear_1_8401"
+          x1="-5.21541e-07"
+          y1="35"
+          x2="70"
+          y2="35"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#4D89F0" />
+          <stop offset="1" stop-color="#9184EA" />
+        </linearGradient>
+        <linearGradient
+          id="paint1_linear_1_8401"
+          x1="40.3423"
+          y1="34.5071"
+          x2="26.842"
+          y2="34.5071"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#4D89F0" />
+          <stop offset="1" stop-color="#9184EA" />
+        </linearGradient>
+      </defs>
+    </svg>
+  ),
+  "arrow-right": (
+    <svg
+      width="70"
+      height="70"
+      viewBox="0 0 70 70"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx="35"
+        cy="35"
+        r="34"
+        stroke="url(#paint0_linear_1_8405)"
+        stroke-width="2"
+      />
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M42.6212 35.7739L33.5164 44.6717C32.8124 45.3598 31.6877 45.3598 30.9837 44.6717C30.2563 43.9609 30.2563 42.7909 30.9837 42.0801L38.7327 34.5071L30.9837 26.9342C30.2563 26.2234 30.2563 25.0534 30.9837 24.3426C31.6877 23.6545 32.8124 23.6545 33.5164 24.3426L42.6212 33.2404C42.9649 33.5764 43.158 34.0321 43.158 34.5071C43.158 34.9822 42.9649 35.4379 42.6212 35.7739Z"
+        fill="url(#paint1_linear_1_8405)"
+      />
+      <defs>
+        <linearGradient
+          id="paint0_linear_1_8405"
+          x1="-5.21541e-07"
+          y1="35"
+          x2="70"
+          y2="35"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#4D89F0" />
+          <stop offset="1" stop-color="#9184EA" />
+        </linearGradient>
+        <linearGradient
+          id="paint1_linear_1_8405"
+          x1="29.6577"
+          y1="34.5071"
+          x2="43.158"
+          y2="34.5071"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#4D89F0" />
+          <stop offset="1" stop-color="#9184EA" />
+        </linearGradient>
+      </defs>
+    </svg>
+  ),
 };
