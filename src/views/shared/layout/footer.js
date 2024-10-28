@@ -23,7 +23,7 @@ const WorkWithUsSection = () => {
     <section className="xxl-max-screen overflow-hidden relative xl:px-[100px] lg:px-[50px] md:px-16 lg:border-none border-t border-[rgba(255,255,255,0.40)] ">
       <div className="flex lg:flex-row flex-col lg:items-start items-center 2xl:gap-[60px] xl:gap-[80px] md:gap-[35px] gap-[20px] md:pt-[56px] pt-[25px] lg:pb-[76px] lg:border-t border-[rgba(255,255,255,0.40)] w-full">
         {/* Navigation Links */}
-        <div className="2xl:max-w-[28%] xl:max-w-[30%] lg:max-w-[35%] w-full uppercase flex flex-col  lg:items-start items-center">
+        <div className="2xl:max-w-[28%] xl:max-w-[30%] lg:max-w-[35%] w-full uppercase flex flex-col  lg:items-start items-center z-10">
           {footerLinks?.map((item, index) => (
             <a
               key={index}
@@ -35,7 +35,7 @@ const WorkWithUsSection = () => {
           ))}
         </div>
         <div className="md:max-w-[400px] sm:max-w-[300px] max-w-[200px] w-full h-[1px] bg-brand-white-grey mx-auto lg:hidden !mt-0" />
-        <div className="w-full flex flex-col space-y-2 lg:items-start items-center lg:pb-0 md:pb-[35px] pb-10 lg:border-none border-b border-brand-white-grey">
+        <div className="w-full flex flex-col space-y-2 lg:items-start items-center lg:pb-0 md:pb-[35px] pb-10 lg:border-none border-b border-brand-white-grey z-10">
           <p className="text-small-paragraph leading-normal font-light tracking-[-0.24px] text-brand-white">
             Contact Us at
           </p>
@@ -95,17 +95,17 @@ const WorkWithUsSection = () => {
 
         {/* Terms and Conditions */}
         <div className="w-full lg:text-start text-center">
-          <span className="font-Oswald lg:text-caption text-[16px] leading-normal font-normal tracking-[-0.2px] text-light-grey">
+          <span className="font-Oswald lg:text-caption text-[16px] leading-normal font-normal tracking-[-0.2px] text-light-grey z-10">
             <Link
               href="/terms-and-conditions"
-              // className='lg:text-caption text-[16px] leading-normal font-normal tracking-[-0.2px] text-light-grey'
+            // className='lg:text-caption text-[16px] leading-normal font-normal tracking-[-0.2px] text-light-grey'
             >
               Terms & Conditions
             </Link>
             &nbsp;&&nbsp;
             <Link
               href="/privacy-policy"
-              // className='lg:text-caption text-[16px] leading-normal font-normal tracking-[-0.2px] text-light-grey'
+            // className='lg:text-caption text-[16px] leading-normal font-normal tracking-[-0.2px] text-light-grey'
             >
               Privacy Policy
             </Link>

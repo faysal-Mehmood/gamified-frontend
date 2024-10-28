@@ -8,43 +8,39 @@ const Header = () => {
 
   return (
     <nav
-      className={`w-full  left-0 top-0 z-50  ${
-        menuOpen ? "bg-brand-dark-blur sticky" : "absolute"
-      }`}>
+      className={`w-full left-0 top-0 z-50 ${menuOpen ? "bg-brand-dark-blur sticky" : "absolute"
+        }`}>
       <div
-        className={`xxl-max-screen mx-auto  pt-[35px] px-5 md:px-8 lg:px-[50px]  xl:pl-[110px] xl:pr-[100px] flex items-center justify-between `}>
+        className={`xxl-max-screen mx-auto pt-[35px] px-5 md:px-8 lg:px-[50px] xl:pl-[110px] xl:pr-[100px] flex items-center justify-between`}>
         <Image
           src={menuOpen ? "/images/close.svg" : "/images/menu.svg"}
           width={30}
           height={30}
-          alt='logo'
+          alt='menu'
           className='xmd:hidden block cursor-pointer'
           onClick={() => setMenuOpen(!menuOpen)}
         />
-        <Image
-          src={"/images/owinr-logo.svg"}
-          width={156}
-          height={56}
-          alt='logo'
-        />
+        <Image src={"/images/owinr-logo.svg"} width={156} height={56} alt='logo' />
         <div
-          className={`w-full xmd:h-auto h-[calc(100vh-98px)] xmd:w-max fixed ${
-            menuOpen ? "top-[90px]" : "top-[-100%] transition-all"
-          } left-0 xmd:left-[inherit] xmd:top-[inherit]  xmd:relative  xmd:bg-transparent xmd:p-0 py-5 px-5 bg-brand-dark-blur`}>
+          className={`w-full xmd:h-auto h-[calc(100vh-98px)] xmd:w-max fixed ${menuOpen ? "top-[90px]" : "top-[-100%] transition-all"
+            } left-0 xmd:left-[inherit] xmd:top-[inherit] xmd:relative xmd:bg-transparent xmd:p-0 py-5 px-5 bg-brand-dark-blur`}>
           <div className='items-center gap-[50px] flex xmd:flex-row flex-col'>
             <Link
               href='/'
-              className='font-normal text-small-paragraph tracking-[-0.24px] text-brand-white-grey hover:text-brand-white transition-all ease-in-out '>
+              className='font-normal text-small-paragraph tracking-[-0.24px] text-brand-white-grey hover:text-brand-white transition-all ease-in-out'
+              onClick={() => setMenuOpen(false)}>
               Home
             </Link>
             <Link
               href='#games'
-              className='font-normal text-small-paragraph tracking-[-0.24px] text-brand-white-grey hover:text-brand-white transition-all ease-in-out '>
+              className='font-normal text-small-paragraph tracking-[-0.24px] text-brand-white-grey hover:text-brand-white transition-all ease-in-out'
+              onClick={() => setMenuOpen(false)}>
               Games
             </Link>
             <Link
               href='#howItWorks'
-              className='font-normal text-small-paragraph tracking-[-0.24px] text-brand-white-grey hover:text-brand-white transition-all ease-in-out '>
+              className='font-normal text-small-paragraph tracking-[-0.24px] text-brand-white-grey hover:text-brand-white transition-all ease-in-out'
+              onClick={() => setMenuOpen(false)}>
               How It Works
             </Link>
           </div>

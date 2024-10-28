@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import Slider from "react-slick";
 import Image from "next/image";
 import "slick-carousel/slick/slick.css";
@@ -45,8 +45,7 @@ const Reviews = () => {
     <section className="w-full mx-auto mb-[150px]  xmd:mb-[316px] relative">
       <div
         className="absolute top-[30px] left-[-294px] xsm:h-0 xsm:w-0 w-[334px] h-[334px] rounded-full border-[1.219px] border-[#4D89F0] 
-bg-gradient-to-r from-[rgba(77,137,240,0.20)] to-[rgba(145,132,234,0.20)] 
-backdrop-blur-[6.094865322113037px]"
+         bg-gradient-to-r from-[rgba(77,137,240,0.20)] to-[rgba(145,132,234,0.20)]  backdrop-blur-[6.094865322113037px]"
       />
 
       <h1 className="relative z-10 font-bold text-default-title xmd:text-large-heading uppercase leading-[60px] text-center xmd:leading-[100px] stroke-custom-0 bg-main-gradient bg-clip-text text-fill-transparent w-full lg:w-[1006px] mx-auto mb-[90px] md:mb-[184px] px-[33px]">
@@ -127,7 +126,7 @@ const Circle = ({ fitBackColor, currentSlide, index }) => {
         className={`absolute z-[-1] rounded-full border-2 border-brand-blue backdrop-blur-[10px]
           bg-circle-gradient ${
             fitBackColor
-              ? "transform translate-y-[390px] translate-x-[524px]"
+              ? "transform translate-y-[90px] translate-x-[200px]"
               : ""
           }
           ${
@@ -205,7 +204,7 @@ const Circle = ({ fitBackColor, currentSlide, index }) => {
         className={`absolute z-[-1] rounded-full border-2 border-brand-blue backdrop-blur-[10px]
           bg-circle-gradient ${
             fitBackColor
-              ? "transform translate-y-[-383px] translate-x-[18rem]"
+              ? "transform translate-y-[-170px] translate-x-[5rem]"
               : ""
           }
           ${
