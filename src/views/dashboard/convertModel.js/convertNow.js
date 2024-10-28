@@ -2,7 +2,6 @@ import Icon from "@/utils/icons";
 import React from "react";
 
 const ConvertNow = ({ activeCurrency }) => {
-  console.log(activeCurrency);
   const getCompletedPerc = (activeTab) => {
     let perc = "20%";
     switch (activeTab) {

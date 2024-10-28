@@ -31,7 +31,7 @@ export const ConvertModel = ({
           <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
             <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
               <div className="relative transform overflow-hidden rounded-[20px] bg-brand-blue-dark text-left shadow-xl transition-all sm:my-8 sm:w-full max-w-[1242px] p-[30px]">
-                <div className="w-full flex justify-between mb-3">
+                <div className="w-full flex justify-between mb-4">
                   <h2 className="font-Roboto text-brand-white-1 text-base md:text-small-heading font-black leading-7">
                     {isOpenModel === "convert" ? "Convert Now" : "Withdraw"}
                   </h2>
@@ -39,7 +39,7 @@ export const ConvertModel = ({
                     name="cross-icon"
                     onClick={toggleModal}
                     mainClassName="cursor-pointer"
-                    className="w-[30px] h-[30px]"
+                    className="w-[26px] h-[26px]"
                   />
                 </div>
                 {isOpenModel === "convert" && (

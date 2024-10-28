@@ -1,10 +1,36 @@
 import React from "react";
 import Icon from "@/utils/icons";
 const Withdraw = ({ activeCurrency, setOpenWithdrawInfo }) => {
+  const getFontSizes = (activeTab) => {
+    let perc = "80px";
+    switch (activeTab) {
+      case "ioto":
+        perc = "80px";
+        break;
+      case "bitcoin":
+        perc = "70px";
+        break;
+      case "ethereum":
+        perc = "56px";
+        break;
+      case "solana":
+        perc = "45px";
+        break;
+      case "usd":
+        perc = "80px";
+        break;
+    }
+    return perc;
+  };
+  console.log("activeCurrency", activeCurrency);
   return (
     <div className="flex flex-col md:flex-row mb-10 gap-[30px]">
       <div className="bg-brand-darkish px-7 pb-8 pt-10   rounded-[20px] min-w-[410px] ">
-        <h2 className="font-Roboto text-brand-white-1 text-small-text md:text-[80px] font-black leading-[82px]">
+        <h2
+          className={`font-Roboto text-brand-white-1 text-small-text md:text-[${getFontSizes(
+            activeCurrency?.["dataId"]
+          )}] font-black leading-[82px]`}
+        >
           {activeCurrency?.balance?.convertedAmount}
         </h2>
         <div className="h-[2px] bg-brand-blue-dark-1 mt-6 mb-7 " />
@@ -52,7 +78,7 @@ const Withdraw = ({ activeCurrency, setOpenWithdrawInfo }) => {
             className=" font-Roboto font-black  bg-dark-blue text-paragraph leading-[30.47px] text-brand-light-grey focus:border-none focus:outline-none w-3/4 placeholder:text-brand-light-grey"
           />
           <div>
-            <p className=" text-paragraph font-Roboto font-dark font-black text-brand-white-1">
+            <p className=" text-paragraph font-Roboto font-dark font-black text-brand-white-1 cursor-pointer">
               MAX
             </p>
           </div>

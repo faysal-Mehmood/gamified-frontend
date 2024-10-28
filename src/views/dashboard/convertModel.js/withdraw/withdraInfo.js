@@ -46,7 +46,7 @@ export const WithdraInfoModel = ({
                     name="cross-icon"
                     onClick={() => setOpenWithdrawInfo(false)}
                     mainClassName="cursor-pointer"
-                    className="w-[30px] h-[30px]"
+                    className="w-[26px] h-[26px]"
                   />
                 </div>
 

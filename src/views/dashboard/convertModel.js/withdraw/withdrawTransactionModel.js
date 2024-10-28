@@ -37,7 +37,7 @@ export const WithdrawTransactionModel = ({
                     name="cross-icon"
                     onClick={() => setisConverTransaction("")}
                     mainClassName="cursor-pointer"
-                    className="w-[30px] h-[30px]"
+                    className="w-[26px] h-[26px]"
                   />
                 </div>
 
