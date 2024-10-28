@@ -11,7 +11,6 @@ export const ConvertModel = ({
 }) => {
   // Function to toggle modal open/close
   const toggleModal = () => setisOpenModel("");
-
   return (
     <div>
       {/* Modal */}
@@ -22,12 +21,6 @@ export const ConvertModel = ({
           role="dialog"
           aria-modal="true"
         >
-          {/* <div
-            className="fixed inset-0 bg-transparent bg-opacity-75 transition-opacity"
-            aria-hidden="true"
-            onClick={toggleModal} // Close modal when clicking outside
-          ></div> */}
-
           <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
             <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
               <div className="relative transform overflow-hidden rounded-[20px] bg-brand-blue-dark text-left shadow-xl transition-all sm:my-8 sm:w-full max-w-[1242px] p-[30px]">

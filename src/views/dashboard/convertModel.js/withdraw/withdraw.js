@@ -22,7 +22,7 @@ const Withdraw = ({ activeCurrency, setOpenWithdrawInfo }) => {
     }
     return perc;
   };
-  console.log("activeCurrency", activeCurrency);
+
   return (
     <div className="flex flex-col md:flex-row mb-10 gap-[30px]">
       <div className="bg-brand-darkish px-7 pb-8 pt-10   rounded-[20px] min-w-[410px] ">
