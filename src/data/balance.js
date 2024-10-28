@@ -22,7 +22,7 @@ export const transactionsData = {
     {
       transaction_type: "withdraw",
       type: "Withdrawal - IOTA",
-      amount: "100",
+      amount: "10,000 i",
       date: "Mar 24, 2022, 12:12 AM",
       arrow: "arrow",
       transactionInfo: {
@@ -35,7 +35,7 @@ export const transactionsData = {
     {
       transaction_type: "withdraw",
       type: "Withdrawal - USD",
-      amount: "200",
+      amount: "$10.00",
       date: "Mar 24, 2022, 12:12 AM",
       arrow: "arrow",
       transactionInfo: {
@@ -48,7 +48,7 @@ export const transactionsData = {
     {
       transaction_type: "convert",
       type: "Instant Conversion - IOTA",
-      amount: "100",
+      amount: "40,555 i",
       date: "Mar 22, 2022, 12:12 AM",
       arrow: "downArrow",
       transactionInfo: {
@@ -61,7 +61,7 @@ export const transactionsData = {
     {
       transaction_type: "convert",
       type: "Auto Conversion - USD",
-      amount: "200",
+      amount: "$0.08",
       date: "Mar 24, 2022, 12:12 AM",
       arrow: "downArrow",
       transactionInfo: {
@@ -75,7 +75,7 @@ export const transactionsData = {
   bitcoin: [
     {
       type: "Auto Conversion - USD",
-      amount: "0.01",
+      amount: "$20.23",
       date: "Mar 24, 2022, 12:12 AM",
       arrow: "arrow",
       transactionInfo: {
@@ -87,7 +87,7 @@ export const transactionsData = {
     },
     {
       type: "Withdrawal - USD",
-      amount: "0.05",
+      amount: "$0.08",
       date: "Mar 25, 2022, 12:12 AM",
       arrow: "arrow",
       transactionInfo: {
@@ -99,7 +99,7 @@ export const transactionsData = {
     },
     {
       type: "Instant Conversion - IOTA",
-      amount: "100",
+      amount: "0.08 i",
       date: "Mar 22, 2022, 12:12 AM",
       arrow: "downArrow",
       transactionInfo: {
@@ -111,7 +111,7 @@ export const transactionsData = {
     },
     {
       type: "Withdrawal - USD",
-      amount: "200",
+      amount: "$0.08",
       date: "Mar 24, 2022, 12:12 AM",
       arrow: "downArrow",
       transactionInfo: {
@@ -125,7 +125,7 @@ export const transactionsData = {
   ethereum: [
     {
       type: "Withdrawal - IOTA",
-      amount: "1.2",
+      amount: "20,00 i",
       date: "Mar 24, 2023, 12:12 AM",
       arrow: "arrow",
       transactionInfo: {
@@ -137,7 +137,7 @@ export const transactionsData = {
     },
     {
       type: "Withdrawal - IOTA",
-      amount: "0.8",
+      amount: "2,00 i",
       date: "Mar 24, 2022, 12:12 AM",
       arrow: "arrow",
       transactionInfo: {
@@ -149,7 +149,7 @@ export const transactionsData = {
     },
     {
       type: "Auto Conversion - USD",
-      amount: "100",
+      amount: "#10",
       date: "Mar 22, 2022, 12:12 AM",
       arrow: "downArrow",
       transactionInfo: {
@@ -164,7 +164,7 @@ export const transactionsData = {
   solana: [
     {
       type: "Auto Conversion - USD",
-      amount: "50",
+      amount: "$50,00",
       date: "April 14, 2022, 12:12 PM",
       arrow: "arrow",
       transactionInfo: {
@@ -176,7 +176,7 @@ export const transactionsData = {
     },
     {
       type: "Withdrawal - USD",
-      amount: "30",
+      amount: "$30",
       date: "April 14, 2022, 12:12 PM",
       arrow: "arrow",
       transactionInfo: {
@@ -188,7 +188,7 @@ export const transactionsData = {
     },
     {
       type: "Auto Conversion - USD",
-      amount: "100",
+      amount: "$100",
       date: "Mar 22, 2022, 12:12 AM",
       arrow: "downArrow",
       transactionInfo: {
@@ -200,7 +200,7 @@ export const transactionsData = {
     },
     {
       type: "Withdrawal - USD",
-      amount: "200",
+      amount: "$200",
       date: "2024-10-21",
       arrow: "downArrow",
       transactionInfo: {
@@ -214,7 +214,7 @@ export const transactionsData = {
   usd: [
     {
       type: "Withdrawal - IOTA",
-      amount: "500",
+      amount: "500 i",
       date: "April 14, 2022, 12:12 PM",
       arrow: "arrow",
       transactionInfo: {
@@ -226,7 +226,7 @@ export const transactionsData = {
     },
     {
       type: "Withdrawal - USD",
-      amount: "600",
+      amount: "$600",
       date: "April 14, 2022, 12:12 PM",
       arrow: "arrow",
       transactionInfo: {
@@ -239,7 +239,7 @@ export const transactionsData = {
 
     {
       type: "Instant Conversion - IOTA",
-      amount: "100",
+      amount: "100 i",
       date: "Mar 22, 2022, 12:12 AM",
       arrow: "downArrow",
       transactionInfo: {
@@ -251,7 +251,7 @@ export const transactionsData = {
     },
     {
       type: "Auto Conversion - USD",
-      amount: "200",
+      amount: "$200",
       date: "April 14, 2022, 12:12 PM",
       arrow: "downArrow",
       transactionInfo: {

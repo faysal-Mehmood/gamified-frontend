@@ -27,7 +27,9 @@ export default function RootLayout({ children }) {
           </main>
         </body>
       ) : (
-        <body className={`${inter.className} relative bg-brand-black`}>
+        <body
+          className={`${inter.className} auth_body relative bg-brand-black`}
+        >
           <main className="w-full h-full relative">{children}</main>
         </body>
       )}

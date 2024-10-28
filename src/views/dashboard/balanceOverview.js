@@ -18,9 +18,9 @@ function BalanceOverview() {
   const [openWithdrawInfo, setOpenWithdrawInfo] = useState(false);
   const [isConverTransaction, setisConverTransaction] = useState("");
   const [isOpenModel, setisOpenModel] = useState("");
-  console.log("isConverTransaction", isConverTransaction);
+
   return (
-    <div className="relative flex flex-col items-center justify-center xxl-max-screen py-10 px-5 md:px-[99px]">
+    <div className="relative flex flex-col items-center justify-center xxl-max-screen pb-10 pt-20 px-5 md:px-[99px]">
       {/* Balance Title */}
       <div>
         <h1 className="font-Roboto text-brand-white-1 text-center  text-[15.63px] md:text-[28px] leading-5 md:leading-8  font-bold uppercase">
@@ -30,13 +30,13 @@ function BalanceOverview() {
           <Image
             src={logo}
             alt="logoImage"
-            className="w-[29px] md:w-[73px] h-[25px] md:h-[65px]"
+            className="w-[29px] md:w-[73px] h-[25px] md:h-[65px] pt-1"
           />
           <h1 className="font-Roboto text-[34px] md:text-[85px] text-brand-white-1 font-black leading-[100px]">
             12,150
           </h1>
         </div>
-        <p className="text-brand-white text-center text-[13px] md:text-[24px]  leading-7 font-black font-Roboto smx:text-[13px]">
+        <p className="text-brand-white-1 text-center text-[13px] md:text-[24px]  leading-7 font-black font-Roboto smx:text-[13px]">
           In 10 hours WINR automatically converts into:
         </p>
       </div>
@@ -47,7 +47,7 @@ function BalanceOverview() {
           return (
             <div key={index}>
               <div
-                className={`min-w-[230px] min-h-[140px] items-center justify-center cursor-pointer  hidden sm:flex rounded-[10px]
+                className={`relative min-w-[230px] min-h-[140px] items-center justify-center cursor-pointer  hidden sm:flex rounded-[10px]
                 ${
                   activeCurrency?.id === item?.id
                     ? "bg-balance-button-gradient shadow-custom-shadow z-10"
@@ -69,6 +69,11 @@ function BalanceOverview() {
                   width={item.width}
                   height={item.height}
                 />
+                {activeCurrency?.id !== index && (
+                  <p className="absolute text-xs font-semibold leading-3 text-brand-light-grey bottom-3 right-3">
+                    {item?.balance?.convertedAmount}
+                  </p>
+                )}
               </div>
               <div
                 key={index}
