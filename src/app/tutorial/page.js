@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -9,9 +9,9 @@ import Icon from "@/utils/icons";
 const data = [
   {
     id: 1,
-    src: "/images/play_gradient.svg",
+    src: "/images/play_gradient_1.svg",
     alt: "Play",
-    rotate: 0,
+    rotate: 25,
     heading: "PLAY",
     text: "Have fun playing our games, also collect WINR rewards (WINR)",
   },
@@ -35,7 +35,16 @@ const data = [
 
 export default function Tutorial() {
   const [activeSlide, setActiveSlide] = useState(0);
+  const [shouldRotate, setShouldRotate] = useState(false);
   const sliderRef = useRef(null);
+
+  // Check screen size for rotation
+  useEffect(() => {
+    const handleResize = () => setShouldRotate(window.innerWidth < 768);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const settings = {
     dots: false,
@@ -65,69 +74,69 @@ export default function Tutorial() {
       goToSlide(prevIndex);
     }
   };
-  console.log("activeSlide", activeSlide);
+
   return (
-    <div className="w-full h-full xxl-max-screen">
+    <div className="w-full h-full xxl-max-screen relative">
       <Slider ref={sliderRef} {...settings}>
         {data.map((item) => (
-          <div key={item.id} className="relative w-full !flex">
+          <div key={item.id} className="relative w-full !flex md:flex-nowrap flex-wrap">
             <Image
               src={item.src}
               alt={item.alt}
               width={700}
-              height={1100}
-              style={{ transform: `rotate(${item.rotate}deg)` }}
+              height={850}
+              style={{
+                transform: shouldRotate ? `rotate(${item.rotate}deg)` : "none",
+              }}
+              className="md:w-[50%] w-full md:h-[850px] h-[584px]"
             />
-            <div className="flex flex-col  items-center justify-end  ">
-              <div className="w-full flex flex-col justify-center pb-[104px]">
-                <h2 className="font-Roboto text-large-heading  bg-gradient-to-r from-[#4D89F0] to-[#4D89F0] bg-clip-text text-transparent font-bold capitalize mb-4">
+            <div className="flex flex-col items-start justify-end lg:pr-[135px] pr-[40px]">
+              <div className="flex flex-col justify-center pb-[146px] w-full md:px-0 px-5">
+                <h2 className="font-Roboto md:text-large-heading text-[44px] md:leading-[95px] leading-[52px] bg-gradient-to-r from-[#4D89F0] to-[#4D89F0] bg-clip-text text-transparent font-bold capitalize md:mb-4 z-10">
                   {item.heading}
                 </h2>
-                <p className="font-Roboto text-small-paragraph md:text-[45px] font-medium text-brand-white leading-[52px]">
+                <p className="font-Roboto text-small-paragraph md:text-[45px] md:leading-[52px] leading-[24px] font-medium text-brand-white z-10">
                   {item.text}
                 </p>
-              </div>
-              <div className="flex items-center">
-                <div className="flex space-x-2">
-                  {data.map((slide, index) => (
-                    <div
-                      key={slide.id}
-                      onClick={() => goToSlide(index)}
-                      className={`cursor-pointer h-5 rounded-full bg-gray-400 transition duration-300 ${
-                        index === activeSlide
-                          ? "bg-main-gradient w-[140px]"
-                          : "bg-brand-white w-5"
-                      }`}
-                    />
-                  ))}
-                </div>
-                <div className="flex space-x-4 pb-11">
-                  <Icon
-                    name="arrow-left"
-                    className={`cursor-pointer  ${
-                      activeSlide === 0
-                        ? "opacity-20 cursor-not-allowed"
-                        : "opacity-100 hover:opacity-80"
-                    }`}
-                    onClick={prevSlide}
-                  />
-                  {activeSlide === 2 ? (
-                    <button className="bg-main-gradient min-w-[209px] py-6 rounded-[35px]">
-                      Get startd
-                    </button>
-                  ) : (
-                    <Icon
-                      name="arrow-right-circular"
-                      onClick={nextSlide}
-                      className="cursor-pointer hover:opacity-80"
-                    />
-                  )}
-                </div>
               </div>
             </div>
           </div>
         ))}
       </Slider>
+
+      <div className="absolute lg:left-[40%] left-[6%] bottom-[3%] flex items-center">
+        <div className="flex space-x-2">
+          {data.map((slide, index) => (
+            <div
+              key={slide.id}
+              onClick={() => goToSlide(index)}
+              className={`cursor-pointer md:h-5 h-2 rounded-full transition duration-300 ${index === activeSlide ? "bg-main-gradient md:w-[140px] w-[43px]" : "bg-brand-white w-5"
+                }`}
+            />
+          ))}
+        </div>
+      </div>
+      <div className="absolute md:right-[80px] right-[6%] md:bottom-[-5%] bottom-[0%] flex space-x-4 md:pb-11">
+        <Icon
+          name="arrow-left"
+          className={`cursor-pointer md:w-[70px] w-[42px] ${activeSlide === 0 ? "opacity-20 cursor-not-allowed" : "opacity-100 hover:opacity-80"}`}
+          onClick={prevSlide}
+        />
+        {activeSlide === 2 ? (
+          <button className="bg-main-gradient flex items-center gap-5 md:text-caption text-[16px] md:leading-6 leading-4 px-10 text-white md:py-6 py-2 rounded-[35px]">
+            Get started
+          </button>
+        ) : (
+          <Icon
+            name="arrow-right-circular"
+            onClick={nextSlide}
+            className="cursor-pointer hover:opacity-80 md:w-[70px] w-[42px]"
+          />
+        )}
+      </div>
+      <div className="absolute right-[6%] top-[6%]">
+        <button className="text-white text-secondary-heading leading-default-title">Skip</button>
+      </div>
     </div>
   );
 }
