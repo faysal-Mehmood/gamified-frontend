@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Icon from "@/utils/icons";
+import Link from "next/link";
 
 const data = [
   {
@@ -138,10 +139,13 @@ export default function Tutorial() {
           onClick={prevSlide}
         />
         {activeSlide === 2 ? (
-          <button className="bg-main-gradient flex items-center gap-5 md:text-caption text-[16px] md:leading-6 leading-4 px-10 text-white md:py-6 py-2 rounded-[35px]">
+          <Link
+            href="/dashboard"
+            className="bg-main-gradient flex items-center gap-5 md:text-caption text-[16px] md:leading-6 leading-4 px-10 text-white md:py-6 py-2 rounded-[35px]"
+          >
             Get started
             <Icon name="white-arrow" />
-          </button>
+          </Link>
         ) : (
           <Icon
             name="arrow-right-circular"

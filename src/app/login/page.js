@@ -5,6 +5,7 @@ import centerLogin from "@/assets/Images/login-center-line.svg";
 import googleLogin from "@/assets/Images/google-login.svg";
 import appleLogin from "@/assets/Images/apple-login.svg";
 import emailLogin from "@/assets/Images/email-login.svg";
+import Link from "next/link";
 
 // detail of buttons for creating multiple buttons through map
 const loginOptions = [
@@ -63,12 +64,14 @@ const page = () => {
         {/* map for all three buttons */}
         <div className="flex flex-col gap-[10px] md:gap-4">
           {loginOptions.map((option, index) => (
-            <LoginButton
-              key={index}
-              imageSrc={option.imageSrc}
-              altText={option.altText}
-              label={option.label}
-            />
+            <Link href={"/tutorial"}>
+              <LoginButton
+                key={index}
+                imageSrc={option.imageSrc}
+                altText={option.altText}
+                label={option.label}
+              />
+            </Link>
           ))}
         </div>
       </div>
