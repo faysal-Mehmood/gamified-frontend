@@ -19,7 +19,7 @@ const data = [
     id: 2,
     src: "/images/earn_up.png",
     alt: "Earn",
-    rotate: 285,
+    rotate: 259,
     heading: "EARN",
     text: "WINR can then be converted to cash or crypto and withdrawn",
   },
@@ -79,14 +79,22 @@ export default function Tutorial() {
     <div className="w-full h-full xxl-max-screen relative">
       <Slider ref={sliderRef} {...settings}>
         {data.map((item) => (
-          <div key={item.id} className="relative w-full !flex md:flex-nowrap flex-wrap">
+          <div
+            key={item.id}
+            className="relative w-full !flex md:flex-nowrap flex-wrap"
+          >
             <Image
               src={item.src}
               alt={item.alt}
               width={700}
               height={850}
               style={{
-                transform: shouldRotate ? `rotate(${item.rotate}deg)` : "none",
+                transform:
+                  activeSlide === 1
+                    ? `rotate(259deg)`
+                    : shouldRotate
+                    ? `rotate(${item.rotate}deg)`
+                    : "none",
               }}
               className="md:w-[50%] w-full md:h-[850px] h-[584px]"
             />
@@ -110,8 +118,11 @@ export default function Tutorial() {
             <div
               key={slide.id}
               onClick={() => goToSlide(index)}
-              className={`cursor-pointer md:h-5 h-2 rounded-full transition duration-300 ${index === activeSlide ? "bg-main-gradient md:w-[140px] w-[43px]" : "bg-brand-white w-5"
-                }`}
+              className={`cursor-pointer md:h-5 h-2 rounded-full transition duration-300 ${
+                index === activeSlide
+                  ? "bg-main-gradient md:w-[140px] w-[43px]"
+                  : "bg-[#474B5E] w-5"
+              }`}
             />
           ))}
         </div>
@@ -119,12 +130,17 @@ export default function Tutorial() {
       <div className="absolute md:right-[80px] right-[6%] md:bottom-[-5%] bottom-[0%] flex space-x-4 md:pb-11">
         <Icon
           name="arrow-left"
-          className={`cursor-pointer md:w-[70px] w-[42px] ${activeSlide === 0 ? "opacity-20 cursor-not-allowed" : "opacity-100 hover:opacity-80"}`}
+          className={`cursor-pointer md:w-[70px] w-[42px] ${
+            activeSlide === 0
+              ? "opacity-20 cursor-not-allowed"
+              : "opacity-100 hover:opacity-80"
+          }`}
           onClick={prevSlide}
         />
         {activeSlide === 2 ? (
           <button className="bg-main-gradient flex items-center gap-5 md:text-caption text-[16px] md:leading-6 leading-4 px-10 text-white md:py-6 py-2 rounded-[35px]">
             Get started
+            <Icon name="white-arrow" />
           </button>
         ) : (
           <Icon
@@ -135,7 +151,9 @@ export default function Tutorial() {
         )}
       </div>
       <div className="absolute right-[6%] top-[6%]">
-        <button className="text-white text-secondary-heading leading-default-title">Skip</button>
+        <button className="font-Roboto text-white text-secondary-heading leading-default-title">
+          Skip
+        </button>
       </div>
     </div>
   );
