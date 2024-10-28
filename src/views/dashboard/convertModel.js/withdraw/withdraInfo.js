@@ -6,7 +6,6 @@ export const WithdraInfoModel = ({
   setOpenWithdrawInfo,
   activeCurrency,
 }) => {
-  console.log(activeCurrency);
   return (
     <div>
       {/* Modal */}

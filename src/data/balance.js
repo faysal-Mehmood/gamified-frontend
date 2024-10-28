@@ -312,6 +312,12 @@ export const currencyButtons = [
         "iota1qxttgnlnx7kezy8fv6kxhw3zns8wm08shmbdsrw4v5ztzrtt64yn5k07dz0",
       amount: "10,000 i",
     },
+    convertInfo: {
+      status: "Confirmed",
+      date: "December 22, 2021, 10:53 PM",
+      conversionRate: "1:3.33",
+      amount: "1,000 gwei",
+    },
   },
   {
     id: 1,
@@ -360,6 +366,12 @@ export const currencyButtons = [
         "iota1qxttgnlnx7kezy8fv6kxhw3zns8wm08shmbdsrw4v5ztzrtt64yn5k07dz0",
       amount: "1,000 sat",
     },
+    convertInfo: {
+      status: "Confirmed",
+      date: "December 22, 2021, 10:53 PM",
+      conversionRate: "1:3.33",
+      amount: "1,000 gwei",
+    },
   },
   {
     id: 2,
@@ -406,6 +418,12 @@ export const currencyButtons = [
         "iota1qxttgnlnx7kezy8fv6kxhw3zns8wm08shmbdsrw4v5ztzrtt64yn5k07dz0",
       recievingAddress:
         "iota1qxttgnlnx7kezy8fv6kxhw3zns8wm08shmbdsrw4v5ztzrtt64yn5k07dz0",
+      amount: "1,000 gwei",
+    },
+    convertInfo: {
+      status: "Confirmed",
+      date: "December 22, 2021, 10:53 PM",
+      conversionRate: "1:3.33",
       amount: "1,000 gwei",
     },
   },
@@ -456,6 +474,12 @@ export const currencyButtons = [
         "iota1qxttgnlnx7kezy8fv6kxhw3zns8wm08shmbdsrw4v5ztzrtt64yn5k07dz0",
       amount: "1,000 lamport",
     },
+    convertInfo: {
+      status: "Confirmed",
+      date: "December 22, 2021, 10:53 PM",
+      conversionRate: "1:3.33",
+      amount: "1,000 gwei",
+    },
   },
   {
     id: 4,
@@ -500,6 +524,12 @@ export const currencyButtons = [
       date: "December 22, 2021, 10:53 PM",
       recievingAddress: "email@email.com",
       amount: "1,000 lamport",
+    },
+    convertInfo: {
+      status: "Confirmed",
+      date: "December 22, 2021, 10:53 PM",
+      conversionRate: "1:3.33",
+      amount: "1,000 gwei",
     },
   },
 ];

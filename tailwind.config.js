@@ -84,6 +84,8 @@ module.exports = {
       boxShadow: {
         "custom-shadow":
           "rgba(133, 132, 235, 0.4) 0px 30px 60px -12px, rgba(133, 132, 235, 0.4) 0px 18px 36px -18px",
+        "custome-shadow2":
+          "0 0 20px 5px rgba(0, 85, 170, 0.3), 0 5px 10px rgba(0, 85, 170, 0.15)",
       },
 
       backgroundClip: {

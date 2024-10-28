@@ -56,7 +56,7 @@ const page = () => {
           <Image
             src={centerLogin}
             alt="centerLine"
-            className=" smx:rotate-90 md:rotate-0 smx:h-60 md:h-full  smx:w-full "
+            className=" smx:rotate-90 md:rotate-0 smx:h-60 md:h-full  smx:w-full shadow-custome-shadow2"
           />
         </div>
 
