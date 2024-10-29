@@ -21,19 +21,19 @@ function BalanceOverview() {
   const [isOpenModel, setisOpenModel] = useState("");
 
   return (
-    <div className="relative flex flex-col items-center justify-center xxl-max-screen pb-10 pt-20 px-5 md:px-[99px]">
+    <div className="relative flex flex-col items-center justify-center xxl-max-screen pb-10 pt-20 px-5 md:px-[40px] xl:px-[99px]">
       {/* Balance Title */}
       <div>
         <h1 className="font-Roboto text-brand-white-1 text-center  text-[15.63px] md:text-[28px] leading-5 md:leading-8  font-bold uppercase">
           Balance
         </h1>
-        <div className="flex justify-center items-center gap-4 mb-5">
+        <div className="flex justify-center items-center gap-4 mb-0 md:mb-5">
           <Image
             src={logo}
             alt="logoImage"
             className="w-[29px] md:w-[73px] h-[25px] md:h-[65px] pt-1"
           />
-          <h1 className="font-Roboto text-[34px] md:text-[85px] text-brand-white-1 font-black leading-[100px]">
+          <h1 className="font-Roboto text-[34px] md:text-[85px] text-brand-white-1 font-black leading-[60px] md:leading-[100px]">
             12,150
           </h1>
         </div>
@@ -107,13 +107,13 @@ function BalanceOverview() {
       <div className="w-full  flex items-center gap-2 md:gap-8 mb-6">
         <button
           onClick={() => setisOpenModel("convert")}
-          className="bg-button-gradient w-1/2   py-[21px]   rounded-lg lg:rounded-2xl text-base md:text-small-heading  text-brand-white-1 font-black font-Roboto"
+          className="bg-button-gradient w-1/2 py-[14px]  md:py-[21px]   rounded-lg lg:rounded-2xl text-base md:text-small-heading  text-brand-white-1 font-black font-Roboto"
         >
           Convert Now
         </button>
         <button
           onClick={() => setisOpenModel("withdraw")}
-          className=" w-1/2 bg-button-gradient  py-[21px]   rounded-lg lg:rounded-2xl text-base md:text-small-heading  text-brand-white-1 font-black font-Roboto "
+          className=" w-1/2 bg-button-gradient  py-[14px]  md:py-[21px]   rounded-lg lg:rounded-2xl text-base md:text-small-heading  text-brand-white-1 font-black font-Roboto "
         >
           Withdraw
         </button>
@@ -145,7 +145,7 @@ function BalanceOverview() {
               key={index}
               className="w-full bg-balance-items-bg flex justify-between items-center rounded-xl mb-3 md:mb-5 p-4 py-5"
             >
-              <div className="flex items-center gap-5">
+              <div className="flex items-center gap-4 md:gap-5">
                 <Image
                   src={
                     index === 2
@@ -162,8 +162,8 @@ function BalanceOverview() {
                 />
 
                 <div className="text-left">
-                  <h4 className="text-brand-white-1 font-bold  text-[14px] md:text-base leading-5 mb-1 font-Roboto">
-                    {transaction.type} - {transaction.amount}
+                  <h4 className="text-brand-white-1 font-bold  text-[13px] md:text-base leading-5 mb-1 font-Roboto">
+                    {transaction.type}
                   </h4>
                   <p className="text-brand-blue-1 font-medium  text-[10px] md:text-[12px] leading-4  font-Roboto">
                     {transaction.date}
@@ -171,7 +171,7 @@ function BalanceOverview() {
                 </div>
               </div>
               <div>
-                <p className="text-[20px] md:text-[23px] leading-6  font-bold text-brand-white-1 font-Roboto">
+                <p className="text-[13px] md:text-[23px] leading-6  font-bold text-brand-white-1 font-Roboto">
                   {transaction.amount}
                 </p>
               </div>

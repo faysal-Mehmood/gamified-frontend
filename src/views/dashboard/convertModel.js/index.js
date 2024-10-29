@@ -22,8 +22,8 @@ export const ConvertModel = ({
           aria-modal="true"
         >
           <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
-            <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-              <div className="relative transform overflow-hidden rounded-[20px] bg-brand-blue-dark text-left shadow-xl transition-all sm:my-8 sm:w-full max-w-[1242px] p-[30px]">
+            <div className="w-full flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+              <div className="w-full relative transform overflow-hidden rounded-[20px] bg-brand-blue-dark text-left shadow-xl transition-all sm:my-8 sm:w-full max-w-[1242px] p-[30px]">
                 <div className="w-full flex justify-between mb-4">
                   <h2 className="font-Roboto text-brand-white-1 text-base md:text-small-heading font-black leading-7">
                     {isOpenModel === "convert" ? "Convert Now" : "Withdraw"}
@@ -47,7 +47,7 @@ export const ConvertModel = ({
 
                 <button
                   onClick={() => setisConverTransaction(isOpenModel)}
-                  className="w-full font-Roboto bg-main-gradient font-black leading-7 text-base md:text-[26px] text-brand-white-1 py-5 rounded-2xl"
+                  className="w-full font-Roboto bg-main-gradient font-black leading-7 text-base md:text-[26px] text-brand-white-1 py-3 md:py-5 rounded-2xl"
                 >
                   {isOpenModel === "convert" ? "Convert" : "Withdraw"}
                 </button>
