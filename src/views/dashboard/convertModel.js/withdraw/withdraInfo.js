@@ -30,7 +30,7 @@ export const WithdraInfoModel = ({
             <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
               <div className="relative transform overflow-hidden rounded-[20px] bg-brand-blue-dark text-left shadow-xl transition-all sm:my-8 sm:w-full max-w-[825px] p-[30px]">
                 <div className="w-full flex justify-between mb-3 ">
-                  <div className="flex items-center justify-center">
+                  <div className="flex items-center justify-center gap-3">
                     <h2 className="font-Roboto text-brand-blue-dark-1 text-base md:text-small-heading lg:text-[46px] font-black ">
                       {activeCurrency?.withdrawInfo?.heading}
                     </h2>
@@ -49,7 +49,7 @@ export const WithdraInfoModel = ({
                   />
                 </div>
 
-                <div className=" bg-dark-blue p-8 rounded-[10px] flex flex-col gap-20 py-12">
+                <div className=" bg-dark-blue p-9 rounded-[10px] flex flex-col gap-20 py-12">
                   {activeCurrency?.withdrawInfo?.info.map((item, index) => (
                     <div key={index} className="flex items-center gap-3">
                       <Image src={item.icon} alt="bullet point icon" />

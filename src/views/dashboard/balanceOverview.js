@@ -9,6 +9,7 @@ import logo from "@/assets/Images/login-logo.svg";
 import refresh from "@/assets/Images/refresh.png";
 import arrow from "@/assets/Images/arrow.svg";
 import downArrow from "@/assets/Images/down-arrow.svg";
+import purpleDownArrow from "@/assets/Images/purple-down-arrow.svg";
 import { WithdraInfoModel } from "./convertModel.js/withdraw/withdraInfo.js";
 import { WithdrawTransactionModel } from "./convertModel.js/withdraw/withdrawTransactionModel.js";
 
@@ -133,20 +134,26 @@ function BalanceOverview() {
           <Image
             src={refresh}
             alt="refresh"
-            className="w-4 h-4 md:w-5 md:h-5"
+            className="w-4 h-4 md:w-5 md:h-5 cursor-pointer"
           />
         </div>
 
         {/* Mapping Over Transactions */}
-        <div className="w-full flex items-center justify-center flex-col gap-3 md:gap-5">
+        <div className="w-full flex items-center justify-start flex-col  h-[416px] overflow-x-clip overflow-scroll pr-4">
           {transactions.map((transaction, index) => (
             <div
               key={index}
-              className="w-full bg-balance-items-bg flex justify-between items-center rounded-xl p-4 py-5"
+              className="w-full bg-balance-items-bg flex justify-between items-center rounded-xl mb-3 md:mb-5 p-4 py-5"
             >
               <div className="flex items-center gap-5">
                 <Image
-                  src={transaction.arrow === "arrow" ? arrow : downArrow}
+                  src={
+                    index === 2
+                      ? purpleDownArrow
+                      : transaction.arrow === "arrow"
+                      ? arrow
+                      : downArrow
+                  }
                   alt="arrowImage"
                   className="cursor-pointer"
                   onClick={() => {

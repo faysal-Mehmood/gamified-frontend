@@ -5,7 +5,6 @@ import Iethereum from "@/assets/Images/i-etherieum-currency.svg";
 import iota from "@/assets/Images/iota-currency.svg";
 import Iiota from "@/assets/Images/i-iota-currency.svg";
 import solana from "@/assets/Images/solana-currency.svg";
-import Isolana from "@/assets/Images/i-solana-currency.svg";
 import USD from "@/assets/Images/USD-currency.svg";
 import IUSD from "@/assets/Images/i-USD-currency.svg";
 import IOTAcoin from "@/assets/Images/IOTAcoin.svg";
@@ -17,6 +16,7 @@ import icon3 from "@/assets/Images/icon3.svg";
 import icon4 from "@/assets/Images/icon4.svg";
 import catholdingcoin from "@/assets/Images/catholdingcoin.svg";
 import ghost from "@/assets/Images/ghost.svg";
+import WhiteSalona from "@/assets/Images/white-salona.svg";
 export const transactionsData = {
   iota: [
     {
@@ -433,7 +433,7 @@ export const currencyButtons = [
     altText: "solana currency",
     width: "166px",
     height: "41px",
-    whiteImageSrc: Isolana,
+    whiteImageSrc: WhiteSalona,
     text: "SOL",
     dataId: "solana",
     balance: {

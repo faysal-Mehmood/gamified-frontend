@@ -2,10 +2,10 @@ import React from "react";
 import Icon from "@/utils/icons";
 const Withdraw = ({ activeCurrency, setOpenWithdrawInfo }) => {
   const getFontSizes = (activeTab) => {
-    let perc = "80px";
+    let perc = "70px";
     switch (activeTab) {
       case "ioto":
-        perc = "80px";
+        perc = "70px";
         break;
       case "bitcoin":
         perc = "70px";
@@ -17,7 +17,7 @@ const Withdraw = ({ activeCurrency, setOpenWithdrawInfo }) => {
         perc = "45px";
         break;
       case "usd":
-        perc = "80px";
+        perc = "70px";
         break;
     }
     return perc;
@@ -61,7 +61,7 @@ const Withdraw = ({ activeCurrency, setOpenWithdrawInfo }) => {
         <div className="min-h-[159px] bg-brand-darkish p-6 border-2 border-brand-light-grey rounded-[20px]">
           <input
             placeholder="Recieve address IOTA..."
-            className=" bg-dark-blue text-paragraph leading-[30.47px] text-brand-light-grey focus:border-none focus:outline-none placeholder:text-brand-light-grey w-full "
+            className="font-Roboto bg-dark-blue text-paragraph font-bold leading-[30.47px] text-brand-light-grey focus:border-none focus:outline-none placeholder:text-brand-light-grey w-full "
           />
 
           <div className="flex items-end justify-end">
