@@ -58,8 +58,8 @@ export const WithdrawTransactionModel = ({
           ></div>
 
           <div className="fixed inset-0 z-10 w-screen overflow-y-auto ">
-            <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-              <div className="relative transform overflow-hidden rounded-[20px] bg-brand-blue-dark text-left shadow-xl transition-all sm:my-8 sm:w-full max-w-[825px] px-[29px] md:px-[40px] py-6">
+            <div className="w-full flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+              <div className="w-full relative transform overflow-hidden rounded-[20px] bg-brand-blue-dark text-left shadow-xl transition-all sm:my-8 sm:w-full max-w-[825px] px-[29px] md:px-[40px] py-6">
                 <div className=" flex items-center justify-end ">
                   <Icon
                     name="cross-icon"
@@ -69,33 +69,43 @@ export const WithdrawTransactionModel = ({
                   />
                 </div>
 
-                <div className=" bg-dark-blue flex items-center justify-between p-10 rounded-[20px] mt-5">
-                  {isConverTransaction === "withdraw" ? (
-                    <>
-                      <h2 className="text-base md:text-[48px] font-robot font-semibold text-brand-white-1 leading-[56px]">
-                        10,000 i
-                      </h2>
-                      <Image src={convert} alt="covert now" />
-                      <Image
-                        src={getHeaderImage(activeCurrency?.["dataId"])}
-                        alt="solona"
+                {isConverTransaction === "withdraw" ? (
+                  <div className=" bg-dark-blue flex items-center justify-between p-10 rounded-[20px] mt-5">
+                    <h2 className="text-base md:text-[48px] font-robot font-semibold text-brand-white-1 leading-[56px]">
+                      10,000 i
+                    </h2>
+                    <Image
+                      src={convert}
+                      alt="covert now"
+                      className="w-[20px] h-[20px]  md:w-auto md:h-auto"
+                    />
+                    <Image
+                      src={getHeaderImage(activeCurrency?.["dataId"])}
+                      alt="solona"
+                      className="w-[54px] h-[54px]  md:w-auto md:h-auto"
+                    />
+                  </div>
+                ) : (
+                  <div className=" bg-dark-blue flex flex-col xs:flex-row items-center justify-between p-10 rounded-[20px] mt-5">
+                    <div className="flex items-center justify-center gap-4">
+                      <Icon
+                        name="winr-icon"
+                        className="w-[20px] h-[20px] md:w-[50px] md:h-11"
                       />
-                    </>
-                  ) : (
-                    <>
-                      <div className="flex items-center justify-center gap-4">
-                        <Icon name="winr-icon" className="w-[50px]  w- h-11" />
-                        <h2 className="font-Roboto font-black leading-[65px] text-base md:text-[47px] text-brand-white-1">
-                          {activeCurrency?.balance?.winr}
-                        </h2>
-                      </div>
-                      <Image src={convert} alt="covert now" />
-                      <h2 className="text-[48px] font-robot font-semibold text-brand-white-1 leading-[56px]">
-                        {activeCurrency?.balance?.convertedAmount}
+                      <h2 className="font-Roboto font-black leading-[65px] text-base md:text-[47px] text-brand-white-1">
+                        {activeCurrency?.balance?.winr}
                       </h2>
-                    </>
-                  )}
-                </div>
+                    </div>
+                    <Image
+                      src={convert}
+                      alt="covert now"
+                      className="w-[20px] h-[20px]  md:w-auto md:h-auto rotate-90 xs:rotate-0"
+                    />
+                    <h2 className="text-base md:text-[48px] font-robot font-semibold text-brand-white-1 leading-[56px]">
+                      {activeCurrency?.balance?.convertedAmount}
+                    </h2>
+                  </div>
+                )}
 
                 <div className="w-3/4 flex flex-col gap-4 pl-2 my-3">
                   {activeCurrencyData?.status && (

@@ -27,7 +27,7 @@ const Withdraw = ({ activeCurrency, setOpenWithdrawInfo }) => {
     <div className="flex flex-col md:flex-row mb-10 gap-[30px]">
       <div className="w-full flex justify-between flex-col xs:flex-row  md:inline-block gap-5 bg-brand-darkish px-3 md:px-7 pb-4 md:pb-8 pt-4 md:pt-10   rounded-[20px] md:min-w-[410px] ">
         <h2
-          className={`font-Roboto text-brand-white-1 text-small-text md:text-[${getFontSizes(
+          className={`font-Roboto text-brand-white-1 text-small-text text-center md:text-left md:text-[${getFontSizes(
             activeCurrency?.["dataId"]
           )}] font-black leading-[82px]`}
         >
