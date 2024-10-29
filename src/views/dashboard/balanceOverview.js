@@ -20,6 +20,10 @@ function BalanceOverview() {
   const [isConverTransaction, setisConverTransaction] = useState("");
   const [isOpenModel, setisOpenModel] = useState("");
 
+  const handleCurrencyClick = (item) => {
+    setActiveCurrency(item); // Update active currency
+    setTransactions(transactionsData[item.dataId]); // Update transactions based on selected currency
+  };
   return (
     <div className="relative flex flex-col items-center justify-center xxl-max-screen pb-10 pt-20 px-5 md:px-[99px]">
       {/* Balance Title */}
@@ -43,64 +47,66 @@ function BalanceOverview() {
       </div>
 
       {/* Currency Selection Buttons */}
-      <div className="w-full flex flex-wrap items-center gap-[23px] my-6">
-        {currencyButtons?.map((item, index) => {
-          return (
-            <div key={index}>
-              <div
-                className={`relative min-w-[230px] min-h-[140px] items-center justify-center cursor-pointer  hidden sm:flex rounded-[10px]
-                ${
+      <div className="w-full flex sm:flex-wrap items-center  sm:gap-[23px] my-6">
+        {currencyButtons?.map((item, index) => (
+          <div key={index}>
+            {/* Large Screen View */}
+            <div
+              className={`relative min-w-[230px] min-h-[140px] items-center justify-center cursor-pointer hidden sm:flex rounded-[10px] 
+        ${
+          activeCurrency?.id === item?.id
+            ? "bg-balance-button-gradient shadow-custom-shadow z-10"
+            : "bg-custom-blue opacity-80 border-2 border-custom-border"
+        }
+      `}
+              onClick={() => {
+                setActiveCurrency(item);
+                setTransactions(transactionsData[item?.dataId]);
+              }}
+            >
+              <Image
+                src={
                   activeCurrency?.id === item?.id
-                    ? "bg-balance-button-gradient shadow-custom-shadow z-10"
-                    : "bg-custom-blue opacity-80 border-2  border-custom-border"
+                    ? item.whiteImageSrc
+                    : item.imageSrc
                 }
-              `}
-                onClick={() => {
-                  setActiveCurrency(item);
-                  setTransactions(transactionsData[item?.dataId]);
-                }}
-              >
-                <Image
-                  src={
-                    activeCurrency?.id === index
-                      ? item.whiteImageSrc
-                      : item.imageSrc
-                  }
-                  alt={item.altText}
-                  width={item.width}
-                  height={item.height}
-                />
-                {activeCurrency?.id !== index && (
-                  <p className="absolute text-xs font-semibold leading-3 text-brand-light-grey bottom-3 right-3">
-                    {item?.balance?.convertedAmount}
-                  </p>
-                )}
-              </div>
-              <div
-                key={index}
-                className={`flex  sm:hidden items-center justify-center    border-2 border-custom-border   mx-0 my-6 rounded-md
-                   ${
-                     activeCurrency?.id === item?.id
-                       ? "bg-balance-button-gradient shadow-custom-shadow z-10 px-5 py-7"
-                       : "bg-custom-blue opacity-80 p-1 py-7"
-                   }`}
-                onClick={() => handleCurrencyClick(index)}
-              >
-                {activeCurrency?.id === item?.id ? (
-                  <Image
-                    src={item.whiteImageSrc}
-                    alt={item.altText}
-                    className="smx:w-[120px] smx:h-[50px] sm:w-auto sm:h-auto"
-                  />
-                ) : (
-                  <span className="text-brand-white font-bold">
-                    {item.text}{" "}
-                  </span>
-                )}
-              </div>
+                alt={item.altText}
+                width={item.width}
+                height={item.height}
+              />
+              {activeCurrency?.id !== item?.id && (
+                <p className="absolute text-xs font-semibold leading-3 text-brand-light-grey bottom-3 right-3">
+                  {item?.balance?.convertedAmount}
+                </p>
+              )}
             </div>
-          );
-        })}
+
+            {/* Small Screen View (for smx devices) */}
+            <div
+              className={`flex sm:hidden items-center justify-center border-2 border-custom-border mx-0 my-6 rounded-md sm:w-auto sm:h-auto 
+        ${
+          activeCurrency?.id === item?.id
+            ? "bg-balance-button-gradient shadow-custom-shadow z-10 sm:px-7 sm:py-4 smx:py-3 xs:px-9 smx:px-8 px-3 py-3"
+            : "bg-custom-blue opacity-80 sm:p-1 sm:py-7 smx:py-6 xs:px-6 smx:px-2 py-4 "
+        }
+      `}
+              onClick={() => {
+                setActiveCurrency(item);
+                setTransactions(transactionsData[item?.dataId]);
+              }}
+            >
+              {activeCurrency?.id === item?.id ? (
+                <Image
+                  src={item.whiteImageSrc}
+                  alt={item.altText}
+                  className="smx:w-[120px] smx:h-[50px] sm:w-auto sm:h-auto"
+                />
+              ) : (
+                <span className="text-brand-white font-bold">{item.text}</span>
+              )}
+            </div>
+          </div>
+        ))}
       </div>
 
       {/* Convert and Withdraw Buttons */}
