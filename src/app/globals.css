@@ -66,6 +66,9 @@ p {
   } */
 }
 
+.safari-image-fix {
+  -webkit-backface-visibility: hidden;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;

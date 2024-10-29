@@ -36,7 +36,7 @@ const ConvertNow = ({ activeCurrency }) => {
         <div className="bg-circle-gradient flex items-center justify-center w-[48px] h-[48px] md:w-[91px] md:h-[91px] rounded-[10px] md:rounded-[20px]">
           <Icon
             name="arrow-right"
-            className="w-[20px] h-[20px] md:w-[45px] md:h-[45px]"
+            className="w-[20px] h-[20px] md:w-[45px] md:h-[45px] rotate-90 md:rotate-0"
           />
         </div>
         <div>
