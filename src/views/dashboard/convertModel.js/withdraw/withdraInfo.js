@@ -28,7 +28,7 @@ export const WithdraInfoModel = ({
 
           <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
             <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-              <div className="relative transform overflow-hidden rounded-[20px] bg-brand-blue-dark text-left shadow-xl transition-all sm:my-8 sm:w-full max-w-[825px] p-[30px]">
+              <div className="relative transform overflow-hidden rounded-[20px] bg-brand-blue-dark text-left shadow-xl transition-all sm:my-8 sm:w-full max-w-[825px] p-5 md:p-[30px]">
                 <div className="w-full flex justify-between mb-3 ">
                   <div className="flex items-center justify-center gap-3">
                     <h2 className="font-Roboto text-brand-blue-dark-1 text-base md:text-small-heading lg:text-[46px] font-black ">
@@ -38,6 +38,7 @@ export const WithdraInfoModel = ({
                       <Image
                         src={activeCurrency?.withdrawInfo?.currencyCoin}
                         alt="Coin"
+                        className="w-14 h-14 md:w-auto md:h-auto"
                       />
                     </div>
                   </div>
@@ -49,22 +50,22 @@ export const WithdraInfoModel = ({
                   />
                 </div>
 
-                <div className=" bg-dark-blue p-9 rounded-[10px] flex flex-col gap-20 py-12">
+                <div className=" bg-dark-blue p-4 md:p-9 rounded-[10px] flex flex-col gap-20 py-12">
                   {activeCurrency?.withdrawInfo?.info.map((item, index) => (
                     <div key={index} className="flex items-center gap-3">
                       <Image src={item.icon} alt="bullet point icon" />
-                      <span className=" text-paragraph font-Roboto text-brand-white-1  leading-[30px] font-black">
+                      <span className="text-base  md:text-paragraph font-Roboto text-brand-white-1  leading-[30px] font-black">
                         {item.text}
                       </span>
                     </div>
                   ))}
                 </div>
 
-                <div className="w-full flex gap-7 my-4 mt-10">
-                  <button className="w-1/2 font-Roboto bg-main-gradient font-black leading-7 text-base md:text-small-heading text-brand-white-1 py-3  rounded-[10px]">
+                <div className="w-full flex flex-col md:flex-row  gap-7 my-4 mt-10">
+                  <button className="w-full md:w-1/2 font-Roboto bg-main-gradient font-black leading-7 text-base md:text-small-heading text-brand-white-1 py-3  rounded-[10px]">
                     Download Phantom Wallet
                   </button>
-                  <button className="w-1/2 font-Roboto bg-dark-blue font-black leading-7 text-base md:text-small-heading text-brand-white-1 py-3  rounded-[10px]">
+                  <button className="w-full md:w-1/2 font-Roboto bg-dark-blue font-black leading-7 text-base md:text-small-heading text-brand-white-1 py-3  rounded-[10px]">
                     Learn more
                   </button>
                 </div>
