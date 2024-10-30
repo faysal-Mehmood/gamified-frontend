@@ -2,7 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/views/shared/layout/header";
 import Footer from "@/views/shared/layout/footer";
-import Image from "next/image";
+import { headers } from "next/headers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,19 +12,25 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const headersList = headers();
+  const fullUrl = headersList.get("x-full-url"); // Retrieve the full URL
+
+  const authPaths = ["/dashboard", "/tutorial", "/login"];
+  const isAuthPath = authPaths.some((path) => fullUrl?.includes(path));
+
+  console.log("Full URL:", fullUrl); // Should now log the full URL with domain
+
   return (
-    <html lang='en'>
-      <body className={`${inter.className} relative bg-brand-black `}>
-        {/* <Image
-          src={"/images/desktop-bg.png"}
-          fill
-          alt='background'
-          className='object-contain xxl:object-cover '
-        /> */}
-        <main className='w-full h-full relative'>
-          <Header />
+    <html lang="en">
+      <body
+        className={`${inter.className} ${
+          isAuthPath ? "auth_body" : " bg_body"
+        } relative bg-brand-black`}
+      >
+        <main className="w-full h-full relative">
+          {!isAuthPath && <Header />}
           {children}
-          <Footer />
+          {!isAuthPath && <Footer />}
         </main>
       </body>
     </html>

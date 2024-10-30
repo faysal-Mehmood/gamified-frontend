@@ -1,3 +1,5 @@
+const { Roboto } = require("next/font/google");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -11,6 +13,7 @@ module.exports = {
       fontFamily: {
         Oswald: ["Oswald", "sans-serif"],
         Inter: ["Inter", "sans-serif"],
+        Roboto: ["Roboto", "sans-serif"],
       },
 
       fontSize: {
@@ -34,14 +37,27 @@ module.exports = {
         "brand-black": "#000000",
         "brand-white": "rgba(255, 255, 255, 0.9)",
         "brand-white-grey": "rgba(255, 255, 255, 0.6)",
+        "brand-white-1": "#FAFAFB",
         "brand-blue": "#4D89F0",
+        "brand-blue-1": "#7D8FB4",
+        "brand-blue-2": "#3987EC",
+        "brand-blue-dark": "#28395C",
+        "brand-blue-dark-1": "#398AF2",
+        "custom-border": "rgba(72, 91, 131, 1)",
+        "custome-blue": "rgba(40, 57, 92, 0.4)",
         "brand-dark-blur": "#191D37",
+        "brand-darkish": "#1B2740",
+        "brand-light-grey": "#485B83",
         background: "var(--background)",
         foreground: "var(--foreground)",
         "light-grey": "rgba(255, 255, 255, 0.7)",
         "half-grey": "rgba(255, 255, 255, 0.05)",
         "half-grey1": "rgba(255, 255, 255, 0.20)",
         "half-grey2": "rgba(255, 255, 255, 0.40)",
+
+        "balance-sheet-background": "rgba(40, 57, 92, 1)",
+        "balance-items-bg": "rgba(27, 39, 64, 1)",
+        "dark-blue": "rgba(27, 39, 64, 1)",
       },
       textShadow: {
         custom: "0px 4px 4px rgba(0, 0, 0, 0.50)",
@@ -49,13 +65,29 @@ module.exports = {
       webkitTextStroke: {
         custom: "5px #000",
       },
+
       backgroundImage: {
         "main-gradient": "linear-gradient(90deg, #4D89F0 0%, #9184EA 100%)",
         "circle-gradient":
           "linear-gradient(90deg, rgba(77, 137, 240, 0.20) 0%, rgba(145, 132, 234, 0.20) 100%)",
         "game-hover-gradient":
           "linear-gradient(180deg, rgba(0, 0, 0, 0.00) 59.88%, rgba(0, 0, 0, 0.80) 75.78%)",
+        "button-gradient":
+          "linear-gradient(90deg, rgba(77, 137, 240, 0.2) 0%, rgba(145, 132, 234, 0.2) 100%)",
+        "balance-button-gradient":
+          "linear-gradient(112.36deg, #398AF2 0.55%, #A083E9 100%)",
+        "balance-background":
+          "radial-gradient(circle, rgba(26, 42, 108, 0.5) 10%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 1) 100%)",
+        "login-background":
+          "radial-gradient(circle, rgba(35, 37, 71, 0.8) 10%, rgba(20, 22, 53, 0.9) 50%, rgba(10, 10, 30, 1) 100%);",
       },
+      boxShadow: {
+        "custom-shadow":
+          "rgba(133, 132, 235, 0.4) 0px 30px 60px -12px, rgba(133, 132, 235, 0.4) 0px 18px 36px -18px",
+        "custome-shadow2":
+          "0 0 20px 5px rgba(0, 85, 170, 0.3), 0 5px 10px rgba(0, 85, 170, 0.15)",
+      },
+
       backgroundClip: {
         text: "text",
       },
@@ -72,7 +104,8 @@ module.exports = {
     },
 
     screens: {
-      smx: "375px",
+      ssmx: "320",
+      smx: "370px",
       xs: "497px",
       xsm: "530px",
       sm: "640px", //@media (min-width: 640px) { ... }

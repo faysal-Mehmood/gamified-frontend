@@ -50,7 +50,7 @@ const Hero = () => {
                       src="/images/googleplay.svg"
                       alt="App_Store"
                       fill
-                      className="object-contain transition-transform duration-300 ease-in-out group-hover:scale-105"
+                      className="object-contain transition-transform duration-300 ease-in-out group-hover:scale-105 safari-image-fix"
                     />
                   </Link>
                   <Link
@@ -61,7 +61,7 @@ const Hero = () => {
                       src="/images/App_Store.svg"
                       alt="googleplay"
                       fill
-                      className="object-contain transition-transform duration-300 ease-in-out group-hover:scale-105"
+                      className="object-contain transition-transform duration-300 ease-in-out group-hover:scale-105 safari-image-fix"
                     />
                   </Link>
                 </div>
