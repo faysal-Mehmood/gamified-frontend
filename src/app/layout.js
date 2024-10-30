@@ -13,26 +13,26 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   const headersList = headers();
-  const fullUrl = headersList.get("referer") || "";
-  const authPath = ["/dashboard", "/tutorial", "/login"];
-  const isAuthPath = authPath.some((path) => fullUrl.includes(path));
+  const fullUrl = headersList.get("x-full-url"); // Retrieve the full URL
+
+  const authPaths = ["/dashboard", "/tutorial", "/login"];
+  const isAuthPath = authPaths.some((path) => fullUrl?.includes(path));
+
+  console.log("Full URL:", fullUrl); // Should now log the full URL with domain
+
   return (
     <html lang="en">
-      {false ? (
-        <body className={`${inter.className} relative bg_body bg-brand-black`}>
-          <main className="w-full h-full relative">
-            <Header />
-            {children}
-            <Footer />
-          </main>
-        </body>
-      ) : (
-        <body
-          className={`${inter.className} auth_body relative bg-brand-black`}
-        >
-          <main className="w-full h-full relative">{children}</main>
-        </body>
-      )}
+      <body
+        className={`${inter.className} ${
+          isAuthPath ? "auth_body" : " bg_body"
+        } relative bg-brand-black`}
+      >
+        <main className="w-full h-full relative">
+          {!isAuthPath && <Header />}
+          {children}
+          {!isAuthPath && <Footer />}
+        </main>
+      </body>
     </html>
   );
 }

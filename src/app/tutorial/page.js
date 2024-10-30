@@ -11,24 +11,27 @@ const data = [
   {
     id: 1,
     src: "/images/play_gradient_1.svg",
+    mobileSrc: "/images/play_gradient1.svg",
     alt: "Play",
-    rotate: 25,
+
     heading: "PLAY",
     text: "Have fun playing our games, also collect WINR rewards (WINR)",
   },
   {
     id: 2,
     src: "/images/earn_up.png",
+    mobileSrc: "/images/earn_op_mobile.svg",
     alt: "Earn",
-    rotate: 259,
+
     heading: "EARN",
     text: "WINR can then be converted to cash or crypto and withdrawn",
   },
   {
     id: 3,
-    src: "/images/play_gradient.svg",
+    src: "/images/enjoy_op.png",
+    mobileSrc: "/images/enjoy_op_mobile.svg",
     alt: "Enjoy",
-    rotate: 0,
+
     heading: "ENJOY",
     text: "We are sharing back our revenue so everyone can participate in Web 3.0",
   },
@@ -36,16 +39,7 @@ const data = [
 
 export default function Tutorial() {
   const [activeSlide, setActiveSlide] = useState(0);
-  const [shouldRotate, setShouldRotate] = useState(false);
   const sliderRef = useRef(null);
-
-  // Check screen size for rotation
-  useEffect(() => {
-    const handleResize = () => setShouldRotate(window.innerWidth < 768);
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   const settings = {
     dots: false,
@@ -79,28 +73,35 @@ export default function Tutorial() {
   return (
     <div className="w-full h-full xxl-max-screen relative">
       <Slider ref={sliderRef} {...settings}>
-        {data.map((item) => (
+        {data.map((item, index) => (
           <div
             key={item.id}
-            className="relative w-full !flex md:flex-nowrap flex-wrap"
+            className="relative w-full !flex md:flex-nowrap flex-wrap tutorial-slides"
           >
             <Image
               src={item.src}
               alt={item.alt}
               width={700}
               height={850}
-              style={{
-                transform:
-                  activeSlide === 1
-                    ? `rotate(259deg)`
-                    : shouldRotate
-                    ? `rotate(${item.rotate}deg)`
-                    : "none",
-              }}
-              className="md:w-[50%] w-full md:h-[850px] h-[584px]"
+              className="md:w-[50%] w-full md:h-[850px] h-[584px] d_image"
             />
+            {/* mobile view */}
+            <Image
+              src={item.mobileSrc}
+              alt={item.alt}
+              width={700}
+              height={850}
+              className="w-full h-full m_image"
+            />
+
             <div className="flex flex-col items-start justify-end lg:pr-[135px] pr-[40px]">
-              <div className="flex flex-col justify-center pb-[146px] w-full md:px-0 px-5">
+              <div
+                className={`flex flex-col justify-center ${
+                  index === 0
+                    ? "absolute bottom-[120px] md:relative md:bottom-0"
+                    : "pb-0"
+                } md:pb-[146px] w-full md:px-0 px-5`}
+              >
                 <h2 className="font-Roboto md:text-large-heading text-[44px] md:leading-[95px] leading-[52px] bg-gradient-to-r from-[#4D89F0] to-[#4D89F0] bg-clip-text text-transparent font-bold capitalize md:mb-4 z-10">
                   {item.heading}
                 </h2>
@@ -128,7 +129,7 @@ export default function Tutorial() {
           ))}
         </div>
       </div>
-      <div className="absolute md:right-[80px] right-[6%] md:bottom-[-5%] bottom-[0%] flex space-x-4 md:pb-11">
+      <div className="flex items-center absolute md:right-[80px] right-[6%] md:bottom-[-5%] bottom-[0%]  space-x-4 md:pb-11">
         <Icon
           name="arrow-left"
           className={`cursor-pointer md:w-[70px] w-[42px] ${
@@ -141,10 +142,10 @@ export default function Tutorial() {
         {activeSlide === 2 ? (
           <Link
             href="/dashboard"
-            className="bg-main-gradient flex items-center gap-5 md:text-caption text-[16px] md:leading-6 leading-4 px-10 text-white md:py-6 py-2 rounded-[35px]"
+            className="bg-main-gradient flex justify-center items-center gap-5 md:text-caption text-[14px] md:leading-6 leading-4 text-white w-[125px] h-[42px] md:w-[209px] md:h-[70px]  rounded-[35px]"
           >
             Get started
-            <Icon name="white-arrow" />
+            <Icon name="white-arrow" className="w-4 h-4 md:w-auto md:h-auto" />
           </Link>
         ) : (
           <Icon
@@ -155,7 +156,7 @@ export default function Tutorial() {
         )}
       </div>
       <div className="absolute right-[6%] top-[6%]">
-        <button className="font-Roboto text-white text-secondary-heading leading-default-title">
+        <button className="font-Roboto text-white text-xl  md:text-secondary-heading leading-default-title">
           Skip
         </button>
       </div>

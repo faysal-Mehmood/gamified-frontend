@@ -106,3 +106,16 @@ p {
     background-image: none;
   }
 }
+
+.tutorial-slides .d_image {
+  display: block;
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+.tutorial-slides .m_image {
+  display: block;
+  @media (min-width: 768px) {
+    display: none;
+  }
+}

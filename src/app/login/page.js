@@ -30,7 +30,7 @@ const page = () => {
   return (
     // main div
     <div className="flex h-screen items-center  xxl-max-screen">
-      <div className="w-full flex flex-col lg:flex-row  items-center justify-center lg:justify-between gap-[100px] p-5 xmd:px-24">
+      <div className="w-full flex flex-col lg:flex-row  items-center justify-center lg:justify-between gap-0 md:gap-[100px] p-5 xmd:px-24">
         {/* left side image with heading */}
         <div className=" flex flex-col items-center justify-center text-center  gap-10 xl:gap-6 ">
           <Image
@@ -39,25 +39,25 @@ const page = () => {
             className=" md:w-[151px] md:h-[133px] smx:w-[98px] smx:h-[87px] "
           />
           <div>
-            <h1 className=" font-bold  text-transparent bg-gradient-to-r from-[#398AF2] to-[#A083E9] bg-clip-text text-stroke-custom gap-5  mb-4 lg:mb-2 md:mb-0">
+            <h1 className=" font-bold  text-transparent bg-gradient-to-r from-[#398AF2] to-[#A083E9] bg-clip-text text-stroke-custom gap-5  mb-4 lg:mb-2 md:mb-0 text-[36px] md:text-[56px] ">
               WINR Rewards
             </h1>
             <div>
-              <h2 className=" font-bold   text-transparent my-2 bg-gradient-to-r from-[#398AF2] to-[#A083E9] bg-clip-text text-stroke-custom">
+              <h2 className=" font-bold   text-transparent my-2 bg-gradient-to-r from-[#398AF2] to-[#A083E9] bg-clip-text text-stroke-custom text-[18px] md:text-[28px]">
                 Free instant withdrawals
               </h2>
-              <h2 className=" font-bold   leading-8 md:leading-5 lg3:leading-9 text-transparent bg-gradient-to-r from-[#398AF2] to-[#A083E9] bg-clip-text text-stroke-custom">
+              <h2 className=" font-bold   leading-8 md:leading-5 lg3:leading-9 text-transparent bg-gradient-to-r from-[#398AF2] to-[#A083E9] bg-clip-text text-stroke-custom text-[18px] md:text-[28px]">
                 {" "}
                 Over $1,000,000 already paid out
               </h2>
             </div>
           </div>
         </div>
-        <div className=" relative  ">
+        <div className="relative">
           <Image
             src={centerLogin}
             alt="centerLine"
-            className="rotate-90 lg:rotate-0 h-60 md:h-[669px]  shadow-custome-shadow2"
+            className="rotate-90 lg:rotate-0 h-60 lg:h-[669px]  shadow-custome-shadow2"
           />
         </div>
 
