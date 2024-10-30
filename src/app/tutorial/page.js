@@ -156,9 +156,12 @@ export default function Tutorial() {
         )}
       </div>
       <div className="absolute right-[6%] top-[6%]">
-        <button className="font-Roboto text-white text-xl  md:text-secondary-heading leading-default-title">
+        <Link
+          href="/dashboard"
+          className="font-Roboto text-white text-xl  md:text-secondary-heading leading-default-title"
+        >
           Skip
-        </button>
+        </Link>
       </div>
     </div>
   );
