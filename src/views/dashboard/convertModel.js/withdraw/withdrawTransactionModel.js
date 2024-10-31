@@ -60,12 +60,12 @@ export const WithdrawTransactionModel = ({
           <div className="fixed inset-0 z-10 w-screen overflow-y-auto ">
             <div className="w-full flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
               <div className="w-full relative transform overflow-hidden rounded-[20px] bg-brand-blue-dark text-left shadow-xl transition-all sm:my-8 sm:w-full max-w-[825px] px-[29px] md:px-[40px] py-6">
-                <div className=" flex items-center justify-end ">
+                <div className=" flex items-center justify-end  ">
                   <Icon
                     name="cross-icon"
                     onClick={() => setisConverTransaction("")}
                     mainClassName="cursor-pointer"
-                    className="w-[26px] h-[26px]"
+                    className=" w-4 h-4 md:w-[26px] md:h-[26px]"
                   />
                 </div>
 
@@ -86,7 +86,7 @@ export const WithdrawTransactionModel = ({
                     />
                   </div>
                 ) : (
-                  <div className=" bg-dark-blue flex flex-col xs:flex-row items-center justify-between p-10 rounded-[20px] mt-5">
+                  <div className=" bg-dark-blue flex flex-col xs:flex-row items-center md:justify-between justify-around md:p-10 p-4 rounded-[20px] mt-5">
                     <div className="flex items-center justify-center gap-4">
                       <Icon
                         name="winr-icon"
@@ -110,60 +110,60 @@ export const WithdrawTransactionModel = ({
                 <div className="w-3/4 flex flex-col gap-4 pl-2 my-3">
                   {activeCurrencyData?.status && (
                     <div>
-                      <h3 className="font-Roboto text-[14px] md:text-paragraph leading-[30.46px] font-normal opacity-[70%] text-brand-white-1 py-2">
+                      <h3 className="font-Roboto text-[14px] md:text-paragraph md:leading-[30.46px] font-normal opacity-[70%] text-brand-white-1 md:py-2">
                         Status
                       </h3>
-                      <p className="font-Roboto text-[14px] md:text-paragraph leading-[30.46px] font-normal text-brand-white-1">
+                      <p className="font-Roboto text-[14px] md:text-paragraph md:leading-[30.46px] font-normal text-brand-white-1">
                         {activeCurrencyData?.status}
                       </p>
                     </div>
                   )}
                   {activeCurrencyData?.date && (
                     <div>
-                      <h3 className="font-Roboto text-[14px] md:text-paragraph leading-[30.46px] font-normal opacity-[70%] text-brand-white-1 py-2">
+                      <h3 className="font-Roboto text-[14px] md:text-paragraph md:leading-[30.46px] font-normal opacity-[70%] text-brand-white-1 md:py-2">
                         Date
                       </h3>
-                      <p className="font-Roboto text-[14px] md:text-paragraph leading-[30.46px] font-normal  text-brand-white-1">
+                      <p className="font-Roboto text-[14px] md:text-paragraph md:leading-[30.46px] font-normal  text-brand-white-1">
                         {activeCurrencyData?.date}
                       </p>
                     </div>
                   )}
                   {activeCurrencyData?.messageID && (
                     <div className="w-full">
-                      <h3 className="font-Roboto text-[14px] md:text-paragraph leading-[30.46px] font-normal opacity-[70%] text-brand-white-1 py-2 ">
+                      <h3 className="font-Roboto text-[14px] md:text-paragraph md:leading-[30.46px] font-normal opacity-[70%] text-brand-white-1 md:py-2 ">
                         Message ID
                       </h3>
-                      <p className="font-Roboto text-[14px] md:text-paragraph leading-[30.46px] font-normal text-brand-blue-dark-1 underline break-words">
+                      <p className="font-Roboto text-[14px] md:text-paragraph md:leading-[30.46px] font-normal text-brand-blue-dark-1 underline break-words">
                         {activeCurrencyData?.messageID}
                       </p>
                     </div>
                   )}
                   {activeCurrencyData?.recievingAddress && (
                     <div>
-                      <h3 className="font-Roboto text-[14px] md:text-paragraph leading-[30.46px] font-normal opacity-[70%] text-brand-white-1 py-2">
+                      <h3 className="font-Roboto text-[14px] md:text-paragraph md:leading-[30.46px] font-normal opacity-[70%] text-brand-white-1 md:py-2">
                         Receive Address
                       </h3>
-                      <p className="font-Roboto text-[14px] md:text-paragraph leading-[30.46px] font-normal text-brand-white py-2 break-words">
+                      <p className="font-Roboto text-[14px] md:text-paragraph md:leading-[30.46px] font-normal text-brand-white py-2 break-words">
                         {activeCurrencyData?.recievingAddress}
                       </p>
                     </div>
                   )}
                   {activeCurrencyData?.conversionRate && (
                     <div>
-                      <h3 className="font-Roboto text-[14px] md:text-paragraph leading-[30.46px] font-normal opacity-[70%] text-brand-white-1 py-2">
+                      <h3 className="font-Roboto text-[14px] md:text-paragraph md:leading-[30.46px] font-normal opacity-[70%] text-brand-white-1 md:py-2">
                         Conversion Rate
                       </h3>
-                      <p className="font-Roboto text-[14px] md:text-paragraph leading-[30.46px] font-normal text-brand-white py-2 break-words">
+                      <p className="font-Roboto text-[14px] md:text-paragraph md:leading-[30.46px] font-normal text-brand-white md:py-2 break-words">
                         {activeCurrencyData?.conversionRate}
                       </p>
                     </div>
                   )}
                   {activeCurrencyData?.amount && (
                     <div>
-                      <h3 className="font-Roboto text-[14px] md:text-paragraph leading-[30.46px] font-normal opacity-[70%] text-brand-white py-2">
+                      <h3 className="font-Roboto text-[14px] md:text-paragraph md:leading-[30.46px] font-normal opacity-[70%] text-brand-white md:py-2">
                         Amount
                       </h3>
-                      <p className="font-Roboto text-[14px] md:text-paragraph leading-[30.46px] font-normal  text-brand-white">
+                      <p className="font-Roboto text-[14px] md:text-paragraph md:leading-[30.46px] font-normal  text-brand-white">
                         {activeCurrencyData?.amount}
                       </p>
                     </div>
