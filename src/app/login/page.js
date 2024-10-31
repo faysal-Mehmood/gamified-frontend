@@ -82,11 +82,13 @@ const page = () => {
 // seprate component for button
 const LoginButton = ({ imageSrc, altText, label }) => {
   return (
-    <button className="flex items-center justify-center w-[300px] smx:w-[335px] smx:h-49px] md:w-[520px] md:h-[75px] gap-4 text-base xmd:text-[24px] font-semibold  text-brand-white   py-2 rounded-[3rem] bg-button-gradient">
+    <button
+      className={`flex items-center justify-center w-[300px] smx:w-[335px] smx:h-49px] md:w-[504px] md:h-[75px] gap-4 text-base xmd:text-[24px] font-semibold  text-brand-white   py-2 rounded-[3rem] bg-button-gradient`}
+    >
       <Image
         src={imageSrc}
         alt={altText}
-        className=" lg3:w-[38px] lg3-h-[46px]"
+        className={`lg3:w-[38px] lg3-h-[46px] `}
       />
       <p>{label}</p>
     </button>
