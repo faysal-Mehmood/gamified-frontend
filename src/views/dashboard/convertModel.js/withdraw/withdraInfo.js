@@ -42,26 +42,32 @@ export const WithdraInfoModel = ({
                       />
                     </div>
                   </div>
-                  <Icon
-                    name="cross-icon"
-                    onClick={() => setOpenWithdrawInfo(false)}
-                    mainClassName="cursor-pointer"
-                    className="w-[26px] h-[26px]"
-                  />
+                  <div className=" flex items-center justify-center">
+                    <Icon
+                      name="cross-icon"
+                      onClick={() => setOpenWithdrawInfo(false)}
+                      mainClassName="cursor-pointer"
+                      className="w-[14.6px] h-[14.6px] md:w-[26px] md:h-[26px] "
+                    />
+                  </div>
                 </div>
 
-                <div className=" bg-dark-blue p-4 md:p-9 rounded-[10px] flex flex-col gap-20 py-12">
+                <div className=" bg-dark-blue p-4 md:p-9 rounded-[10px] flex flex-col md:gap-20 gap-8 py-12">
                   {activeCurrency?.withdrawInfo?.info.map((item, index) => (
                     <div key={index} className="flex items-center gap-3">
-                      <Image src={item.icon} alt="bullet point icon" />
-                      <span className="text-base  md:text-paragraph font-Roboto text-brand-white-1  leading-[30px] font-black">
+                      <Image
+                        src={item.icon}
+                        alt="bullet point icon"
+                        className=" w-[30px] h-[30px] md:w-[50px] md:h-[50px]"
+                      />
+                      <span className="text-base  md:text-paragraph font-Roboto text-brand-white-1  leading-[30px] md:font-black font-normal">
                         {item.text}
                       </span>
                     </div>
                   ))}
                 </div>
 
-                <div className="w-full flex flex-col md:flex-row  gap-7 my-4 mt-10">
+                <div className="w-full flex flex-col md:flex-row gap-4 md:gap-7 my-4 md:mt-10 mt-6">
                   <button className="w-full md:w-1/2 font-Roboto bg-main-gradient font-black leading-7 text-base md:text-small-heading text-brand-white-1 py-3  rounded-[10px]">
                     Download Phantom Wallet
                   </button>

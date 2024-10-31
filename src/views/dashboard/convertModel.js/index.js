@@ -28,12 +28,14 @@ export const ConvertModel = ({
                   <h2 className="font-Roboto text-brand-white-1 text-base md:text-small-heading font-black leading-7">
                     {isOpenModel === "convert" ? "Convert Now" : "Withdraw"}
                   </h2>
-                  <Icon
-                    name="cross-icon"
-                    onClick={toggleModal}
-                    mainClassName="cursor-pointer"
-                    className="w-[26px] h-[26px]"
-                  />
+                  <div className="flex items-center justify-center">
+                    <Icon
+                      name="cross-icon"
+                      onClick={toggleModal}
+                      mainClassName="cursor-pointer"
+                      className=" w-[14.6px] h-[14.6px] md:w-[26px] md:h-[26px] "
+                    />
+                  </div>
                 </div>
                 {isOpenModel === "convert" && (
                   <ConvertNow activeCurrency={activeCurrency} />
