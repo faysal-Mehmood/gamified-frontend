@@ -64,9 +64,8 @@ const page = () => {
         {/* map for all three buttons */}
         <div className="flex flex-col gap-[10px] md:gap-4">
           {loginOptions.map((option, index) => (
-            <Link href={"/tutorial"}>
+            <Link href={"/tutorial"} key={index}>
               <LoginButton
-                key={index}
                 imageSrc={option.imageSrc}
                 altText={option.altText}
                 label={option.label}
