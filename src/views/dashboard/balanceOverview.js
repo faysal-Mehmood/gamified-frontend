@@ -149,9 +149,9 @@ function BalanceOverview() {
           {transactions.map((transaction, index) => (
             <div
               key={index}
-              className="w-full bg-balance-items-bg flex justify-between items-center rounded-xl mb-3 md:mb-5 p-4 py-5"
+              className="w-full bg-balance-items-bg flex justify-between items-center rounded-xl mb-3 md:mb-5 p-2 smx:p-4 py-5"
             >
-              <div className="flex items-center gap-4 md:gap-5">
+              <div className="flex items-center gap-2 smx:gap-4 md:gap-5">
                 <Image
                   src={
                     index === 2
@@ -161,7 +161,7 @@ function BalanceOverview() {
                       : downArrow
                   }
                   alt="arrowImage"
-                  className="cursor-pointer"
+                  className="w-6 h-6 smx:w-auto smx:h-auto cursor-pointer"
                   onClick={() => {
                     setisConverTransaction(transaction?.transaction_type);
                   }}

@@ -57,9 +57,9 @@ export const WithdrawTransactionModel = ({
             }}
           ></div>
 
-          <div className="fixed inset-0 z-10 w-screen overflow-y-auto ">
-            <div className="w-full flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-              <div className="w-full relative transform overflow-hidden rounded-[20px] bg-brand-blue-dark text-left shadow-xl transition-all sm:my-8 sm:w-full max-w-[825px] px-[29px] md:px-[40px] py-6">
+          <div className="fixed inset-0 z-10 w-screen overflow-y-auto  ">
+            <div className="w-full flex min-h-full items-end justify-center md:p-4 text-center sm:items-center sm:p-0">
+              <div className="w-full relative transform overflow-hidden rounded-[20px] bg-brand-blue-dark text-left shadow-xl transition-all sm:my-8 sm:w-full max-w-[825px] sm:px-[29px] px-[10px] md:px-[40px] py-6">
                 <div className=" flex items-center justify-end  ">
                   <Icon
                     name="cross-icon"
