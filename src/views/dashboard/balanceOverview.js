@@ -83,11 +83,11 @@ function BalanceOverview() {
 
             {/* Small Screen View (for smx devices) */}
             <div
-              className={`flex sm:hidden items-center justify-center border-t-2 border-b-2 border-r-2 border-custom-border  mx-0 my-6 rounded-md sm:w-auto sm:h-auto 
+              className={`flex sm:hidden items-center justify-center border-t-2 border-b-2 border-r-2 border-custom-border  mx-0 my-6 rounded-md sm:w-auto sm:h-auto  
         ${
           activeCurrency?.id === item?.id
-            ? "bg-balance-button-gradient shadow-custom-shadow z-10 sm:px-7 sm:py-4 smx:py-2 xs:px-9 smx:px-10 px-3 py-3"
-            : "bg-custom-blue opacity-80 sm:p-1 sm:py-7 smx:py-6 xs:px-6 xs:py-6  smx:px-1 py-4 text-[12.5px]"
+            ? "bg-balance-button-gradient shadow-custom-shadow z-10 sm:px-7 sm:py-4 smx:py-2 xs:px-9 smx:px-10 px-3 py-3 "
+            : "bg-custom-blue opacity-80 sm:p-1 sm:py-7 smx:py-6 xs:px-6 xs:py-6  smx:px-1 py-6 text-[12.5px]"
         }
       `}
               onClick={() => {
