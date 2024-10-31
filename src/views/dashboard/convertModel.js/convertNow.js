@@ -24,11 +24,11 @@ const ConvertNow = ({ activeCurrency }) => {
     return perc;
   };
   return (
-    <div className="w-full min-h-[302px] flex flex-col justify-between items-center p-5   bg-brand-darkish rounded-[20px] mb-5">
+    <div className="w-full min-h-[302px] flex flex-col justify-between items-center p-5   bg-brand-darkish rounded-[20px] mb-5 ">
       <div />
       <div className="w-full flex flex-col md:flex-row gap-10 md:gap-0 items-center justify-around">
-        <div className="flex items-center justify-center">
-          <Icon name="winr-icon" className="w-[50px]  w- h-11" />
+        <div className="flex items-center justify-center ">
+          <Icon name="winr-icon" className="w-[50px]  w- h-11 " />
           <h2 className="font-Roboto font-black leading-[65px] text-[45px] md:text-[56px] text-brand-white-1">
             {activeCurrency?.balance?.winr}
           </h2>

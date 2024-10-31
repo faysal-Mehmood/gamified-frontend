@@ -28,7 +28,7 @@ function BalanceOverview() {
     <div className="relative flex flex-col items-center justify-center xxl-max-screen pb-10 pt-20 px-5 md:px-[40px] xl:px-[99px]">
       {/* Balance Title */}
       <div>
-        <h1 className="font-Roboto text-brand-white-1 text-center  text-[15.63px] md:text-[28px] leading-5 md:leading-8  font-bold uppercase">
+        <h1 className="font-Roboto text-brand-white-1 text-center  text-[15.63px] xs md:text-[28px] leading-5 md:leading-8  font-bold uppercase">
           Balance
         </h1>
         <div className="flex justify-center items-center gap-4 mb-0 md:mb-5">
@@ -48,65 +48,76 @@ function BalanceOverview() {
 
       {/* Currency Selection Buttons */}
       <div className="w-full flex sm:flex-wrap items-center sm:justify-normal justify-center  sm:gap-[23px] sm:my-6">
-        {currencyButtons?.map((item, index) => (
-          <div key={index}>
-            {/* Large Screen View */}
-            <div
-              className={`relative min-w-[230px] min-h-[140px] items-center justify-center cursor-pointer hidden sm:flex rounded-[10px] border-2 border-custom-border
-        ${
-          activeCurrency?.id === item?.id
-            ? "bg-balance-button-gradient shadow-custom-shadow z-10"
-            : "bg-custom-blue opacity-80 "
-        }
-      `}
-              onClick={() => {
-                setActiveCurrency(item);
-                setTransactions(transactionsData[item?.dataId]);
-              }}
-            >
-              <Image
-                src={
-                  activeCurrency?.id === item?.id
-                    ? item.whiteImageSrc
-                    : item.imageSrc
-                }
-                alt={item.altText}
-                width={item.width}
-                height={item.height}
-              />
-              {activeCurrency?.id !== item?.id && (
-                <p className="absolute text-xs font-semibold leading-3 text-brand-light-grey bottom-3 right-3">
-                  {item?.balance?.convertedAmount}
-                </p>
-              )}
-            </div>
-
-            {/* Small Screen View (for smx devices) */}
-            <div
-              className={`flex sm:hidden items-center justify-center border-t-2 border-b-2 border-r-2 border-custom-border  mx-0 my-6 rounded-md sm:w-auto sm:h-auto  
-        ${
-          activeCurrency?.id === item?.id
-            ? "bg-balance-button-gradient shadow-custom-shadow z-10 sm:px-7 sm:py-4 smx:py-2 xs:px-9 smx:px-10 px-3 py-3 "
-            : "bg-custom-blue opacity-80 sm:p-1 sm:py-7 smx:py-6 xs:px-6 xs:py-6  smx:px-1 py-6 text-[12.5px]"
-        }
-      `}
-              onClick={() => {
-                setActiveCurrency(item);
-                setTransactions(transactionsData[item?.dataId]);
-              }}
-            >
-              {activeCurrency?.id === item?.id ? (
+        {currencyButtons?.map((item, index) => {
+          const dataLen = currencyButtons?.length;
+          return (
+            <div key={index}>
+              {/* Large Screen View */}
+              <div
+                className={`relative min-w-[230px] min-h-[140px] items-center justify-center cursor-pointer hidden sm:flex rounded-[10px] border-2 border-custom-border
+               ${
+                 activeCurrency?.id === item?.id
+                   ? "bg-balance-button-gradient shadow-custom-shadow z-10"
+                   : "bg-custom-blue opacity-80 "
+               }
+                `}
+                onClick={() => {
+                  setActiveCurrency(item);
+                  setTransactions(transactionsData[item?.dataId]);
+                }}
+              >
                 <Image
-                  src={item.whiteImageSrc}
+                  src={
+                    activeCurrency?.id === item?.id
+                      ? item.whiteImageSrc
+                      : item.imageSrc
+                  }
                   alt={item.altText}
-                  className="smx:w-[120px] smx:h-[50px] sm:w-auto sm:h-auto"
+                  width={item.width}
+                  height={item.height}
                 />
-              ) : (
-                <span className="text-brand-white font-bold">{item.text}</span>
-              )}
+                {activeCurrency?.id !== item?.id && (
+                  <p className="absolute text-xs font-semibold leading-3 text-brand-light-grey bottom-3 right-3">
+                    {item?.balance?.convertedAmount}
+                  </p>
+                )}
+              </div>
+
+              {/* Small Screen View (for smx devices) */}
+              <div
+                className={`flex sm:hidden items-center justify-center border-t-2 border-b-2 ${
+                  activeCurrency?.id - 1 !== index && "border-r-2"
+                }  ${
+                  index === 0 && "border-l-2"
+                } border-custom-border  mx-0 my-6 rounded-[9px] sm:w-auto sm:h-auto mr-[-10px] 
+        ${
+          activeCurrency?.id === item?.id
+            ? "bg-balance-button-gradient shadow-custom-shadow text-brand-white  z-10 h-24 w-[140px] smx:w-[150px] xs:w-[198px] border-none transition-all duration-300 ease-out transform  opacity-100"
+            : `bg-custom-blue opacity-80  w-[46px] smx:w-[56px] xs:w-[70px] h-24  text-[12.5px] transition-all duration-300 ease-out transform   ${
+                index !== 0 && "rounded-l-[3px]"
+              }`
+        }
+      `}
+                onClick={() => {
+                  setActiveCurrency(item);
+                  setTransactions(transactionsData[item?.dataId]);
+                }}
+              >
+                {activeCurrency?.id === item?.id ? (
+                  <Image
+                    src={item.whiteImageSrc}
+                    alt={item.altText}
+                    className="smx:w-[120px] smx:h-[50px] sm:w-auto sm:h-auto"
+                  />
+                ) : (
+                  <span className="text-brand-light-grey font-semibold text-[12px] font-Roboto  leading-[14px] ml-2">
+                    {item.text}
+                  </span>
+                )}
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       {/* Convert and Withdraw Buttons */}
@@ -149,9 +160,9 @@ function BalanceOverview() {
           {transactions.map((transaction, index) => (
             <div
               key={index}
-              className="w-full bg-balance-items-bg flex justify-between items-center rounded-xl mb-3 md:mb-5 p-4 py-5"
+              className="w-full bg-balance-items-bg flex justify-between items-center rounded-xl mb-3 md:mb-5 p-2 smx:p-4 py-5"
             >
-              <div className="flex items-center gap-4 md:gap-5">
+              <div className="flex items-center gap-2 smx:gap-4 md:gap-5">
                 <Image
                   src={
                     index === 2
@@ -161,7 +172,7 @@ function BalanceOverview() {
                       : downArrow
                   }
                   alt="arrowImage"
-                  className="cursor-pointer"
+                  className="w-6 h-6 smx:w-auto smx:h-auto cursor-pointer"
                   onClick={() => {
                     setisConverTransaction(transaction?.transaction_type);
                   }}
