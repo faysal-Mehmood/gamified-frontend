@@ -2,7 +2,7 @@
 import { NextResponse } from "next/server";
 
 export function middleware(request) {
-  const fullUrl = request.nextUrl.href;
+  const fullUrl = request.url || request.nextUrl.href;
 
   // Create a response with the full URL added as a custom header
   const response = NextResponse.next();
