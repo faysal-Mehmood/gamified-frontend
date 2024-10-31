@@ -47,16 +47,16 @@ function BalanceOverview() {
       </div>
 
       {/* Currency Selection Buttons */}
-      <div className="w-full flex sm:flex-wrap items-center  sm:gap-[23px] my-6">
+      <div className="w-full flex sm:flex-wrap items-center sm:justify-normal justify-center  sm:gap-[23px] sm:my-6">
         {currencyButtons?.map((item, index) => (
           <div key={index}>
             {/* Large Screen View */}
             <div
-              className={`relative min-w-[230px] min-h-[140px] items-center justify-center cursor-pointer hidden sm:flex rounded-[10px] 
+              className={`relative min-w-[230px] min-h-[140px] items-center justify-center cursor-pointer hidden sm:flex rounded-[10px] border-2 border-custom-border
         ${
           activeCurrency?.id === item?.id
             ? "bg-balance-button-gradient shadow-custom-shadow z-10"
-            : "bg-custom-blue opacity-80 border-2 border-custom-border"
+            : "bg-custom-blue opacity-80 "
         }
       `}
               onClick={() => {
@@ -83,11 +83,11 @@ function BalanceOverview() {
 
             {/* Small Screen View (for smx devices) */}
             <div
-              className={`flex sm:hidden items-center justify-center border-2 border-custom-border mx-0 my-6 rounded-md sm:w-auto sm:h-auto 
+              className={`flex sm:hidden items-center justify-center border-t-2 border-b-2 border-r-2 border-custom-border  mx-0 my-6 rounded-md sm:w-auto sm:h-auto  
         ${
           activeCurrency?.id === item?.id
-            ? "bg-balance-button-gradient shadow-custom-shadow z-10 sm:px-7 sm:py-4 smx:py-3 xs:px-9 smx:px-8 px-3 py-3"
-            : "bg-custom-blue opacity-80 sm:p-1 sm:py-7 smx:py-6 xs:px-6 smx:px-2 py-4 "
+            ? "bg-balance-button-gradient shadow-custom-shadow z-10 sm:px-7 sm:py-4 smx:py-2 xs:px-9 smx:px-10 px-3 py-3 "
+            : "bg-custom-blue opacity-80 sm:p-1 sm:py-7 smx:py-6 xs:px-6 xs:py-6  smx:px-1 py-6 text-[12.5px]"
         }
       `}
               onClick={() => {
