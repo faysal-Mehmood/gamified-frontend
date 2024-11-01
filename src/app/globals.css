@@ -106,16 +106,19 @@ p {
     background-image: none;
   }
 }
-
-.tutorial-slides .d_image {
+.tutorial-slides .d_image,
+.tutorial-slides .m_image {
   display: block;
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
+  .tutorial-slides .d_image {
     display: none;
   }
 }
-.tutorial-slides .m_image {
-  display: block;
-  @media (min-width: 768px) {
+
+@media (min-width: 768px) {
+  .tutorial-slides .m_image {
     display: none;
   }
 }
