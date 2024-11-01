@@ -2,27 +2,7 @@ import Icon from "@/utils/icons";
 import React from "react";
 
 const ConvertNow = ({ activeCurrency }) => {
-  const getCompletedPerc = (activeTab) => {
-    let perc = "20%";
-    switch (activeTab) {
-      case "ioto":
-        perc = "20%";
-        break;
-      case "bitcoin":
-        perc = "40%";
-        break;
-      case "ethereum":
-        perc = "60%";
-        break;
-      case "solana":
-        perc = "80%";
-        break;
-      case "usd":
-        perc = "100%";
-        break;
-    }
-    return perc;
-  };
+  console.log("activeCurrency", activeCurrency);
   return (
     <div className="w-full min-h-[302px] flex flex-col justify-between items-center p-5   bg-brand-darkish rounded-[20px] mb-5 ">
       <div />
@@ -45,11 +25,19 @@ const ConvertNow = ({ activeCurrency }) => {
           </h2>
         </div>
       </div>
-      <div className="bg-black w-[175px] h-[8px] rounded-2xl mt-10">
-        <div
-          style={{ width: `${getCompletedPerc(activeCurrency?.["dataId"])}` }}
-          className={`bg-brand-blue-2 h-[8px]  rounded-2xl`}
-        ></div>
+      <div className="bg-black w-[175px] h-[8px] flex items-center rounded-2xl mt-10">
+        {["iota", "bitcoin", "ethereum", "solana", "usd"]?.map(
+          (item, index) => (
+            <div
+              key={index}
+              className={`${
+                activeCurrency?.["dataId"] === item
+                  ? "bg-brand-blue-2"
+                  : "bg-black"
+              } h-[8px] w-[35px]  rounded-2xl`}
+            />
+          )
+        )}
       </div>
     </div>
   );

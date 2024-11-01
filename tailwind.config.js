@@ -80,6 +80,8 @@ module.exports = {
           "radial-gradient(circle, rgba(26, 42, 108, 0.5) 10%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 1) 100%)",
         "login-background":
           "radial-gradient(circle, rgba(35, 37, 71, 0.8) 10%, rgba(20, 22, 53, 0.9) 50%, rgba(10, 10, 30, 1) 100%);",
+        "cards-hover-background":
+          "linear-gradient(90deg, rgba(77, 137, 240, 0.2) 0%, rgba(145, 132, 234, 0.2) 100%)",
       },
       boxShadow: {
         "custom-shadow":

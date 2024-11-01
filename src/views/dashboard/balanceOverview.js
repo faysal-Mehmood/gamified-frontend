@@ -19,23 +19,23 @@ function BalanceOverview() {
   const [openWithdrawInfo, setOpenWithdrawInfo] = useState(false);
   const [isConverTransaction, setisConverTransaction] = useState("");
   const [isOpenModel, setisOpenModel] = useState("");
-
-  const handleCurrencyClick = (item) => {
-    setActiveCurrency(item); // Update active currency
-    setTransactions(transactionsData[item.dataId]); // Update transactions based on selected currency
+  const getTabZindex = (index) => {
+    const zIndexes = ["z-40", "z-30", "z-20", "z-10", "z-0"];
+    return zIndexes[index] || null;
   };
+
   return (
-    <div className="relative flex flex-col items-center justify-center xxl-max-screen pb-10 pt-20 px-5 md:px-[40px] xl:px-[99px]">
+    <div className="relative flex flex-col items-center justify-center xxl-max-screen pb-0 md:pb-10 pt-20   md:px-[40px] xl:px-[99px]">
       {/* Balance Title */}
-      <div>
+      <div className="px-5 md:px-0">
         <h1 className="font-Roboto text-brand-white-1 text-center  text-[15.63px] xs md:text-[28px] leading-5 md:leading-8  font-bold uppercase">
           Balance
         </h1>
-        <div className="flex justify-center items-center gap-4 mb-0 md:mb-5">
+        <div className="flex justify-center items-center gap-2 md:gap-3 mb-0 md:mb-5">
           <Image
             src={logo}
             alt="logoImage"
-            className="w-[29px] md:w-[73px] h-[25px] md:h-[65px] pt-1"
+            className="w-[29px] md:w-[73px] h-[25px] md:h-[65px]"
           />
           <h1 className="font-Roboto text-[34px] md:text-[85px] text-brand-white-1 font-black leading-[60px] md:leading-[100px]">
             12,150
@@ -47,14 +47,14 @@ function BalanceOverview() {
       </div>
 
       {/* Currency Selection Buttons */}
-      <div className="w-full flex sm:flex-wrap items-center sm:justify-normal justify-center  sm:gap-[23px] sm:my-6">
+      <div className="w-full flex sm:flex-wrap items-center sm:justify-normal justify-center  sm:gap-[23px] sm:my-6 px-5 md:px-0">
         {currencyButtons?.map((item, index) => {
           const dataLen = currencyButtons?.length;
           return (
             <div key={index}>
               {/* Large Screen View */}
               <div
-                className={`relative min-w-[230px] min-h-[140px] items-center justify-center cursor-pointer hidden sm:flex rounded-[10px] border-2 border-custom-border
+                className={`relative min-w-[230px] min-h-[140px] items-center justify-center cursor-pointer hidden sm:flex rounded-[10px] border-2 border-custom-border hover:bg-cards-hover-background
                ${
                  activeCurrency?.id === item?.id
                    ? "bg-balance-button-gradient shadow-custom-shadow z-10"
@@ -76,11 +76,16 @@ function BalanceOverview() {
                   width={item.width}
                   height={item.height}
                 />
-                {activeCurrency?.id !== item?.id && (
-                  <p className="absolute text-xs font-semibold leading-3 text-brand-light-grey bottom-3 right-3">
-                    {item?.balance?.convertedAmount}
-                  </p>
-                )}
+
+                <p
+                  className={`absolute text-xs font-semibold leading-3 ${
+                    activeCurrency?.id === item?.id
+                      ? "text-brand-white"
+                      : "text-brand-light-grey"
+                  } bottom-3 right-3`}
+                >
+                  {item?.balance?.convertedAmount}
+                </p>
               </div>
 
               {/* Small Screen View (for smx devices) */}
@@ -92,8 +97,10 @@ function BalanceOverview() {
                 } border-custom-border  mx-0 my-6 rounded-[9px] sm:w-auto sm:h-auto mr-[-10px] 
         ${
           activeCurrency?.id === item?.id
-            ? "bg-balance-button-gradient shadow-custom-shadow text-brand-white  z-10 h-24 w-[140px] smx:w-[150px] xs:w-[198px] border-none transition-all duration-300 ease-out transform  opacity-100"
-            : `bg-custom-blue opacity-80  w-[46px] smx:w-[56px] xs:w-[70px] h-24  text-[12.5px] transition-all duration-300 ease-out transform   ${
+            ? "bg-balance-button-gradient shadow-custom-shadow text-brand-white relative  z-40 h-24 w-[140px] smx:w-[150px] xs:w-[198px] border-none transition-all duration-300 ease-out transform  opacity-100"
+            : `bg-brand-blue-dark opacity-80  w-[46px] smx:w-[56px] xs:w-[70px] relative ${getTabZindex(
+                index
+              )} h-24  text-[12.5px] transition-all duration-300 ease-out transform   ${
                 index !== 0 && "rounded-l-[3px]"
               }`
         }
@@ -104,11 +111,17 @@ function BalanceOverview() {
                 }}
               >
                 {activeCurrency?.id === item?.id ? (
-                  <Image
-                    src={item.whiteImageSrc}
-                    alt={item.altText}
-                    className="smx:w-[120px] smx:h-[50px] sm:w-auto sm:h-auto"
-                  />
+                  <>
+                    <Image
+                      src={item.whiteImageSrc}
+                      alt={item.altText}
+                      className="smx:w-[120px] smx:h-[50px] sm:w-auto sm:h-auto"
+                    />
+
+                    <p className="absolute text-xs font-semibold leading-3 text-brand-white bottom-3 right-3">
+                      {item?.balance?.convertedAmount}
+                    </p>
+                  </>
                 ) : (
                   <span className="text-brand-light-grey font-semibold text-[12px] font-Roboto  leading-[14px] ml-2">
                     {item.text}
@@ -121,7 +134,7 @@ function BalanceOverview() {
       </div>
 
       {/* Convert and Withdraw Buttons */}
-      <div className="w-full  flex items-center gap-2 md:gap-8 mb-6">
+      <div className="w-full  flex items-center gap-2 md:gap-8 mb-6 px-5 md:px-0">
         <button
           onClick={() => setisOpenModel("convert")}
           className="bg-button-gradient w-1/2 py-[14px]  md:py-[21px]   rounded-lg lg:rounded-2xl text-base md:text-small-heading  text-brand-white-1 font-black font-Roboto"
@@ -137,68 +150,62 @@ function BalanceOverview() {
       </div>
 
       {/* Latest Transactions Section */}
-      <div
-        className="w-full bg-balance-sheet-background p-[22px] md:p-7 rounded-[20px]"
-        style={{
-          scrollbarWidth: "thin", // For Firefox
-          scrollbarColor: "rgba(50, 70, 100, 1)  rgba(27, 39, 64, 1)", // For Firefox
-        }}
-      >
-        <div className="flex justify-between items-center pb-5">
-          <p className="font-Roboto text-brand-white-1  text-base leading-5  md:text-small-heading font-black">
-            Latest Transactions
-          </p>
-          <Image
-            src={refresh}
-            alt="refresh"
-            className="w-4 h-4 md:w-5 md:h-5 cursor-pointer"
-          />
-        </div>
+      {!(isOpenModel === "convert" || isOpenModel === "withdraw") ? (
+        <div className="w-full bg-balance-sheet-background p-[22px] pr-[14px] md:p-7 md:!pr-6 rounded-[20px] balance-overview-table">
+          <div className="flex justify-between items-center pb-5 pr-5">
+            <p className="font-Roboto text-brand-white-1  text-base leading-5  md:text-small-heading font-black">
+              Latest Transactions
+            </p>
+            <Image
+              src={refresh}
+              alt="refresh"
+              className="w-4 h-4 md:w-5 md:h-5 cursor-pointer"
+            />
+          </div>
 
-        {/* Mapping Over Transactions */}
-        <div className="w-full flex items-center justify-start flex-col  h-[416px] overflow-x-clip overflow-scroll pr-4">
-          {transactions.map((transaction, index) => (
-            <div
-              key={index}
-              className="w-full bg-balance-items-bg flex justify-between items-center rounded-xl mb-3 md:mb-5 p-2 smx:p-4 py-5"
-            >
-              <div className="flex items-center gap-2 smx:gap-4 md:gap-5">
-                <Image
-                  src={
-                    index === 2
-                      ? purpleDownArrow
-                      : transaction.arrow === "arrow"
-                      ? arrow
-                      : downArrow
-                  }
-                  alt="arrowImage"
-                  className="w-6 h-6 smx:w-auto smx:h-auto cursor-pointer"
-                  onClick={() => {
-                    setisConverTransaction(transaction?.transaction_type);
-                  }}
-                />
+          {/* Mapping Over Transactions */}
 
-                <div className="text-left">
-                  <h4 className="text-brand-white-1 font-bold  text-[13px] md:text-base leading-5 mb-1 font-Roboto">
-                    {transaction.type}
-                  </h4>
-                  <p className="text-brand-blue-1 font-medium  text-[10px] md:text-[12px] leading-4  font-Roboto">
-                    {transaction.date}
+          <div className="w-full flex items-center justify-start flex-col  max-h-[400px] overflow-x-clip overflow-scroll pr-3 thin-scrollbar">
+            {transactions.map((transaction, index) => (
+              <div
+                key={index}
+                className="w-full bg-balance-items-bg flex justify-between items-center rounded-xl mb-3 md:mb-5 p-2 smx:p-4 py-5"
+              >
+                <div className="flex items-center gap-2 smx:gap-4 md:gap-5">
+                  <Image
+                    src={
+                      index === 2
+                        ? purpleDownArrow
+                        : transaction.arrow === "arrow"
+                        ? arrow
+                        : downArrow
+                    }
+                    alt="arrowImage"
+                    className="w-6 h-6 smx:w-auto smx:h-auto cursor-pointer"
+                    onClick={() => {
+                      setisConverTransaction(transaction?.transaction_type);
+                    }}
+                  />
+
+                  <div className="text-left">
+                    <h4 className="text-brand-white-1 font-bold  text-[13px] md:text-base leading-5 mb-1 font-Roboto">
+                      {transaction.type}
+                    </h4>
+                    <p className="text-brand-blue-1 font-medium  text-[10px] md:text-[12px] leading-4  font-Roboto">
+                      {transaction.date}
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <p className="text-[13px] md:text-[23px] leading-6  font-bold text-brand-white-1 font-Roboto">
+                    {transaction.amount}
                   </p>
                 </div>
               </div>
-              <div>
-                <p className="text-[13px] md:text-[23px] leading-6  font-bold text-brand-white-1 font-Roboto">
-                  {transaction.amount}
-                </p>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-
-      {/* model */}
-      {(isOpenModel === "convert" || isOpenModel === "withdraw") && (
+      ) : (
         <ConvertModel
           setisOpenModel={setisOpenModel}
           isOpenModel={isOpenModel}
@@ -207,6 +214,17 @@ function BalanceOverview() {
           setisConverTransaction={setisConverTransaction}
         />
       )}
+
+      {/* model */}
+      {/* {(isOpenModel === "convert" || isOpenModel === "withdraw") && (
+        <ConvertModel
+          setisOpenModel={setisOpenModel}
+          isOpenModel={isOpenModel}
+          activeCurrency={activeCurrency}
+          setOpenWithdrawInfo={setOpenWithdrawInfo}
+          setisConverTransaction={setisConverTransaction}
+        />
+      )} */}
       {openWithdrawInfo && (
         <WithdraInfoModel
           setOpenWithdrawInfo={setOpenWithdrawInfo}
