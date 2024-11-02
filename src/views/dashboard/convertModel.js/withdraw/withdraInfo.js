@@ -27,11 +27,11 @@ export const WithdraInfoModel = ({
           ></div>
 
           <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
-            <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+            <div className="flex min-h-full items-center justify-center p-4 text-center sm:items-center">
               <div className="relative transform overflow-hidden rounded-[20px] bg-brand-blue-dark text-left shadow-xl transition-all sm:my-8 sm:w-full max-w-[825px] p-5 md:p-[30px]">
                 <div className="w-full flex justify-between mb-3 ">
                   <div className="flex items-center justify-center gap-3">
-                    <h2 className="font-Roboto text-brand-blue-dark-1 text-base md:text-small-heading lg:text-[46px] font-black ">
+                    <h2 className="font-Roboto text-brand-blue-dark-1 text-[20px] md:text-small-heading lg:text-[46px] font-black ">
                       {activeCurrency?.withdrawInfo?.heading}
                     </h2>
                     <div>
@@ -68,10 +68,10 @@ export const WithdraInfoModel = ({
                 </div>
 
                 <div className="w-full flex flex-col md:flex-row gap-4 md:gap-7 my-4 md:mt-10 mt-6">
-                  <button className="w-full md:w-1/2 font-Roboto bg-main-gradient font-black leading-7 text-base md:text-small-heading text-brand-white-1 py-3  rounded-[10px]">
+                  <button className="w-full md:w-1/2 font-Roboto bg-main-gradient font-black leading-7 text-[13px] md:text-small-heading text-brand-white-1 py-3  rounded-[10px]">
                     Download Phantom Wallet
                   </button>
-                  <button className="w-full md:w-1/2 font-Roboto bg-dark-blue font-black leading-7 text-base md:text-small-heading text-brand-white-1 py-3  rounded-[10px]">
+                  <button className="w-full md:w-1/2 font-Roboto bg-dark-blue font-black leading-7 text-[13px] md:text-small-heading text-brand-white-1 py-3  rounded-[10px]">
                     Learn more
                   </button>
                 </div>

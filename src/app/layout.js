@@ -28,9 +28,9 @@ export default function RootLayout({ children }) {
         } relative bg-brand-black`}
       >
         <main className="w-full h-full relative">
-          {/* {!isAuthPath && <Header />} */}
+          {!isAuthPath && <Header />}
           {children}
-          {/* {!isAuthPath && <Footer />} */}
+          {!isAuthPath && <Footer />}
         </main>
       </body>
     </html>

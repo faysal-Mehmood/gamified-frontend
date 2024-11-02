@@ -58,8 +58,8 @@ export const WithdrawTransactionModel = ({
           ></div>
 
           <div className="fixed inset-0 z-10 w-screen overflow-y-auto  ">
-            <div className="w-full flex min-h-full items-end justify-center md:p-4 text-center sm:items-center sm:p-0">
-              <div className="w-full relative transform overflow-hidden rounded-[20px] bg-brand-blue-dark text-left shadow-xl transition-all sm:my-8 sm:w-full max-w-[825px] sm:px-[29px] px-[10px] md:px-[40px] py-6">
+            <div className="w-full flex min-h-full items-center justify-center p-4 text-center sm:items-center ">
+              <div className="w-full relative transform overflow-hidden border border-[#FFFFFF4D] rounded-[20px] bg-brand-blue-dark text-left shadow-xl transition-all sm:my-8 sm:w-full max-w-[825px] sm:px-[29px] px-[10px] md:px-[40px] py-6">
                 <div className=" flex items-center justify-end  ">
                   <Icon
                     name="cross-icon"
@@ -70,7 +70,7 @@ export const WithdrawTransactionModel = ({
                 </div>
 
                 {isConverTransaction === "withdraw" ? (
-                  <div className=" bg-dark-blue flex items-center justify-between p-10 rounded-[20px] mt-5">
+                  <div className=" bg-dark-blue flex items-center justify-between p-5 px-10 md:p-10 rounded-[20px] mt-5">
                     <h2 className="text-base md:text-[48px] font-robot font-semibold text-brand-white-1 leading-[56px]">
                       10,000 i
                     </h2>
@@ -87,10 +87,10 @@ export const WithdrawTransactionModel = ({
                   </div>
                 ) : (
                   <div className=" bg-dark-blue flex flex-col xs:flex-row items-center md:justify-between justify-around md:p-10 p-4 rounded-[20px] mt-5">
-                    <div className="flex items-center justify-center gap-4">
+                    <div className="flex items-center justify-center gap-1 md:gap-4">
                       <Icon
                         name="winr-icon"
-                        className="w-[20px] h-[20px] md:w-[50px] md:h-11"
+                        className="w-[14px] h-[14px] md:w-[50px] md:h-10"
                       />
                       <h2 className="font-Roboto font-black leading-[65px] text-base md:text-[47px] text-brand-white-1">
                         {activeCurrency?.balance?.winr}
@@ -99,7 +99,7 @@ export const WithdrawTransactionModel = ({
                     <Image
                       src={convert}
                       alt="covert now"
-                      className="w-[20px] h-[20px]  md:w-auto md:h-auto rotate-90 xs:rotate-0"
+                      className="w-[19px] h-[19px]  md:w-auto md:h-auto rotate-90 xs:rotate-0"
                     />
                     <h2 className="text-base md:text-[48px] font-robot font-semibold text-brand-white-1 leading-[56px]">
                       {activeCurrency?.balance?.convertedAmount}

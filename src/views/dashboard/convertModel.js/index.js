@@ -16,7 +16,7 @@ export const ConvertModel = ({
       {/* Modal */}
       {!!isOpenModel && (
         <div className="w-full flex min-h-full items-end justify-center  p-0  text-center sm:items-center sm:p-0">
-          <div className="w-full relative transform overflow-hidden rounded-[20px] bg-brand-blue-dark text-left shadow-xl transition-all sm:mb-8  p-[30px]">
+          <div className="w-full relative transform overflow-hidden rounded-b-none rounded-t-[20px]  md:rounded-[20px]  bg-brand-blue-dark text-left shadow-xl transition-all sm:mb-8  p-[30px]">
             <div className="w-full flex justify-between mb-4">
               <h2 className="font-Roboto text-brand-white-1 text-base md:text-small-heading font-black leading-7">
                 {isOpenModel === "convert" ? "Convert Now" : "Withdraw"}

@@ -61,17 +61,19 @@ const Withdraw = ({ activeCurrency, setOpenWithdrawInfo }) => {
         <div className=" min-h-[110px] md:min-h-[159px] bg-brand-darkish md:p-6 p-2 border-2 border-brand-light-grey md:rounded-[20px] rounded-[9px]">
           <input
             placeholder="Recieve address IOTA..."
-            className="font-Roboto bg-dark-blue text-[14px] md:text-paragraph font-bold leading-[30.47px] text-brand-light-grey focus:border-none focus:outline-none placeholder:text-brand-light-grey w-full "
+            className="font-Roboto bg-dark-blue text-[14px] md:text-paragraph font-black leading-[30.47px] text-brand-light-grey focus:border-none focus:outline-none placeholder:text-brand-light-grey w-full "
           />
 
-          <div className="flex items-end justify-end">
-            <Icon
-              name="info-icon"
-              mainClassName="cursor-pointer"
-              onClick={() => setOpenWithdrawInfo(true)}
-              className="w-[30px]  h-[30px] md:w-[50px] md:h-[50px]"
-            />
-          </div>
+          {activeCurrency?.["dataId"] !== "usd" && (
+            <div className="flex items-end justify-end">
+              <Icon
+                name="info-icon"
+                mainClassName="cursor-pointer"
+                onClick={() => setOpenWithdrawInfo(true)}
+                className="w-[30px]  h-[30px] md:w-[50px] md:h-[50px]"
+              />
+            </div>
+          )}
         </div>
         <div className="bg-brand-darkish md:p-7 p-3 flex items-center justify-between border-2 border-brand-light-grey md:rounded-[20px] rounded-[9px]">
           <input

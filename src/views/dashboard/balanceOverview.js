@@ -47,11 +47,11 @@ function BalanceOverview() {
       </div>
 
       {/* Currency Selection Buttons */}
-      <div className="w-full flex sm:flex-wrap items-center sm:justify-normal justify-center  sm:gap-[23px] sm:my-6 px-5 md:px-0">
+      <div className="w-full flex sm:flex-wrap items-center sm:justify-normal justify-center  sm:gap-[23px] sm:my-6 px-5 md:px-0 z-0">
         {currencyButtons?.map((item, index) => {
           const dataLen = currencyButtons?.length;
           return (
-            <div key={index}>
+            <div key={index} className={`${index === 0 ? "ml-[-10px]" : ""}`}>
               {/* Large Screen View */}
               <div
                 className={`relative min-w-[230px] min-h-[140px] items-center justify-center cursor-pointer hidden sm:flex rounded-[10px] border-2 border-custom-border hover:bg-cards-hover-background
@@ -90,7 +90,7 @@ function BalanceOverview() {
 
               {/* Small Screen View (for smx devices) */}
               <div
-                className={`flex sm:hidden items-center justify-center border-t-2 border-b-2 ${
+                className={`flex sm:hidden items-center justify-center border-t-2 border-b-2 p-2 ${
                   activeCurrency?.id - 1 !== index && "border-r-2"
                 }  ${
                   index === 0 && "border-l-2"
@@ -151,7 +151,7 @@ function BalanceOverview() {
 
       {/* Latest Transactions Section */}
       {!(isOpenModel === "convert" || isOpenModel === "withdraw") ? (
-        <div className="w-full bg-balance-sheet-background p-[22px] pr-[14px] md:p-7 md:!pr-6 rounded-[20px] balance-overview-table">
+        <div className="w-full bg-balance-sheet-background p-[22px] pr-[14px] md:p-7 md:!pr-6 rounded-b-none rounded-t-[20px] md:rounded-[20px] balance-overview-table">
           <div className="flex justify-between items-center pb-5 pr-5">
             <p className="font-Roboto text-brand-white-1  text-base leading-5  md:text-small-heading font-black">
               Latest Transactions
@@ -216,15 +216,6 @@ function BalanceOverview() {
       )}
 
       {/* model */}
-      {/* {(isOpenModel === "convert" || isOpenModel === "withdraw") && (
-        <ConvertModel
-          setisOpenModel={setisOpenModel}
-          isOpenModel={isOpenModel}
-          activeCurrency={activeCurrency}
-          setOpenWithdrawInfo={setOpenWithdrawInfo}
-          setisConverTransaction={setisConverTransaction}
-        />
-      )} */}
       {openWithdrawInfo && (
         <WithdraInfoModel
           setOpenWithdrawInfo={setOpenWithdrawInfo}
