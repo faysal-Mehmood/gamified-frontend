@@ -123,7 +123,7 @@ const Circle = ({ fitBackColor, currentSlide, index }) => {
     <div className={`w-fit h-fit relative  `}>
       {/* Top circle */}
       <div
-        className={`absolute z-[-1] rounded-full border-2 border-brand-blue backdrop-blur-[10px]
+        className={`absolute z-0 rounded-full border-2 border-brand-blue backdrop-blur-[10px]
           bg-circle-gradient ${
             fitBackColor
               ? "transform translate-y-[90px] translate-x-[200px]"
@@ -201,7 +201,7 @@ const Circle = ({ fitBackColor, currentSlide, index }) => {
 
       {/* Bottom circle */}
       <div
-        className={`absolute z-[-1] rounded-full border-2 border-brand-blue backdrop-blur-[10px] 
+        className={`absolute z-0 rounded-full border-2 border-brand-blue backdrop-blur-[10px] 
           bg-circle-gradient ${
             fitBackColor
               ? "transform translate-y-[-170px] translate-x-[5rem]"
