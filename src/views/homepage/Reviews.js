@@ -138,6 +138,10 @@ const Circle = ({ fitBackColor, currentSlide, index }) => {
           }`}
         style={{
           transition: "all 0.5s ease-in-out",
+          transform: "translateZ(0)", // Adds stacking context
+          WebkitTransform: "translateZ(0)", // Safari-specific
+          WebkitBackfaceVisibility: "hidden", // Hides back face in Safari
+          backfaceVisibility: "hidden",
         }}
       />
 
@@ -216,6 +220,10 @@ const Circle = ({ fitBackColor, currentSlide, index }) => {
           }`}
         style={{
           transition: "all 0.5s ease-in-out",
+          transform: "translateZ(0)", // Adds stacking context
+          WebkitTransform: "translateZ(0)", // Safari-specific
+          WebkitBackfaceVisibility: "hidden", // Hides back face in Safari
+          backfaceVisibility: "hidden",
         }}
       />
     </div>
