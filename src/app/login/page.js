@@ -11,21 +11,18 @@ import Link from "next/link";
 const loginOptions = [
   {
     src: appleLogin,
-    alt: "sign in with apple",
     label: "Sign in with Apple",
     width: "38px",
     height: "46px",
   },
   {
     src: googleLogin,
-    alt: "sign in with google",
     label: "Sign in with Google",
     width: "46px",
     height: "46px",
   },
   {
     src: emailLogin,
-    alt: "sign in with email",
     label: "Sign in with Email",
     width: "22px",
     height: "31px",
@@ -85,7 +82,7 @@ const LoginButton = ({ item, buttonIndex }) => {
         className={`w-[50px] flex justify-start
          items-center`}
       >
-        <Image {...item} />
+        <Image {...item} alt={item.label} />
       </div>
 
       <p>{item.label}</p>

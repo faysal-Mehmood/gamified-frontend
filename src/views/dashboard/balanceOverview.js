@@ -135,8 +135,9 @@ function BalanceOverview() {
 
       {/* Convert and Withdraw Buttons */}
       <div className="w-full  flex items-center gap-2 md:gap-8 mb-6 px-5 md:px-0">
-        {["Convert Now", "Withdraw"]?.map((item) => (
+        {["Convert Now", "Withdraw"]?.map((item, index) => (
           <button
+            key={index}
             onClick={() =>
               setisOpenModel(item === "convert Now" ? "convert" : "withdraw")
             }
