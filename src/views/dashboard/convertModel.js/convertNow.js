@@ -21,7 +21,7 @@ const ConvertNow = ({ activeCurrency }) => {
         </div>
 
         <div className="flex items-center justify-center text-center">
-          <h2 className="font-Roboto font-black leading-[65px] text-[45px] md:text-[56px] text-brand-white-1">
+          <h2 className="font-Roboto font-black leading-[52px] md:leading-[65px] text-[45px] md:text-[56px] text-brand-white-1">
             {activeCurrency?.balance?.convertedAmount}
           </h2>
         </div>

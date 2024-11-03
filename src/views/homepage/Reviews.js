@@ -142,7 +142,7 @@ const Circle = ({ fitBackColor, currentSlide, index }) => {
       />
 
       <div
-        className={`${"w-[451px] md:w-[752px] h-[451px] md:h-[752px]"} flex flex-col justify-start gap-3 md:gap-[46px] items-center rounded-full pt-[53px] md:pt-[70px] px-20 md:px-[129px] pb-16 md:pb-[170px] border-2 blur-bg border-brand-blue flex-shrink-0
+        className={`${"w-[451px] relative z-10 md:w-[752px] h-[451px] md:h-[752px]"} flex flex-col justify-start gap-3 md:gap-[46px] items-center rounded-full pt-[53px] md:pt-[70px] px-20 md:px-[129px] pb-16 md:pb-[170px] border-2 blur-bg border-brand-blue flex-shrink-0
          bg-circle-gradient
         `}
         style={{
@@ -201,7 +201,7 @@ const Circle = ({ fitBackColor, currentSlide, index }) => {
 
       {/* Bottom circle */}
       <div
-        className={`absolute z-[-1] rounded-full border-2 border-brand-blue backdrop-blur-[10px] z-index-layer
+        className={`absolute z-[-1] rounded-full border-2 border-brand-blue backdrop-blur-[10px] 
           bg-circle-gradient ${
             fitBackColor
               ? "transform translate-y-[-170px] translate-x-[5rem]"

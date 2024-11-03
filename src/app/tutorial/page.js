@@ -142,7 +142,7 @@ export default function Tutorial() {
         {activeSlide === 2 ? (
           <Link
             href="/dashboard"
-            className="bg-main-gradient flex justify-center items-center gap-5 md:text-caption text-[14px] md:leading-6 leading-4 text-white w-[125px] h-[42px] md:w-[209px] md:h-[70px]  rounded-[35px]"
+            className="bg-main-gradient flex justify-center items-center gap-5 md:text-caption text-[14px] md:leading-6 leading-4 text-white w-[125px] h-[42px] md:w-[209px] md:h-[70px]  rounded-[35px] "
           >
             Get started
             <Icon name="white-arrow" className="w-4 h-4 md:w-auto md:h-auto" />

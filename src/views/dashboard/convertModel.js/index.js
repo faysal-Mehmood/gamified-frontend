@@ -42,9 +42,11 @@ export const ConvertModel = ({
 
             <button
               onClick={() => setisConverTransaction(isOpenModel)}
-              className="w-full font-Roboto bg-main-gradient font-black leading-7 text-base md:text-[26px] text-brand-white-1 py-3 md:py-5 rounded-2xl"
+              className="w-full group font-Roboto bg-main-gradient font-black leading-7 text-base md:text-[26px] text-brand-white-1 py-3 md:py-5 rounded-2xl  transition-colors ease-in-out hover:bg-[linear-gradient(90deg,rgba(77,137,240,0.3)_0%,rgba(145,132,234,0.3)_100%)] btn-hover-1"
             >
-              {isOpenModel === "convert" ? "Convert" : "Withdraw"}
+              <span className="xmd:block hidden text-white group-hover:text-brand-blue transition-colors ease-in-out">
+                {isOpenModel === "convert" ? "Convert" : "Withdraw"}
+              </span>
             </button>
           </div>
         </div>

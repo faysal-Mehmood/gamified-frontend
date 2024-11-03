@@ -135,18 +135,16 @@ function BalanceOverview() {
 
       {/* Convert and Withdraw Buttons */}
       <div className="w-full  flex items-center gap-2 md:gap-8 mb-6 px-5 md:px-0">
-        <button
-          onClick={() => setisOpenModel("convert")}
-          className="bg-button-gradient w-1/2 py-[14px]  md:py-[21px]   rounded-lg lg:rounded-2xl text-base md:text-small-heading  text-brand-white-1 font-black font-Roboto"
-        >
-          Convert Now
-        </button>
-        <button
-          onClick={() => setisOpenModel("withdraw")}
-          className=" w-1/2 bg-button-gradient  py-[14px]  md:py-[21px]   rounded-lg lg:rounded-2xl text-base md:text-small-heading  text-brand-white-1 font-black font-Roboto "
-        >
-          Withdraw
-        </button>
+        {["Convert Now", "Withdraw"]?.map((item) => (
+          <button
+            onClick={() =>
+              setisOpenModel(item === "convert Now" ? "convert" : "withdraw")
+            }
+            className="bg-button-gradient w-1/2 py-[14px]  md:py-[21px]   rounded-lg lg:rounded-2xl text-base md:text-small-heading  text-brand-white-1 font-black font-Roboto transition-colors ease-in-out hover:bg-[linear-gradient(90deg,rgba(77,137,240,0.3)_0%,rgba(145,132,234,0.3)_100%)]"
+          >
+            Convert Now
+          </button>
+        ))}
       </div>
 
       {/* Latest Transactions Section */}
