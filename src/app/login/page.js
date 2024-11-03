@@ -10,27 +10,32 @@ import Link from "next/link";
 // detail of buttons for creating multiple buttons through map
 const loginOptions = [
   {
-    imageSrc: appleLogin,
-    altText: "sign in with apple",
+    src: appleLogin,
+    alt: "sign in with apple",
     label: "Sign in with Apple",
+    width: "38px",
+    height: "46px",
   },
   {
-    imageSrc: googleLogin,
-    altText: "sign in with google",
+    src: googleLogin,
+    alt: "sign in with google",
     label: "Sign in with Google",
+    width: "46px",
+    height: "46px",
   },
   {
-    imageSrc: emailLogin,
-    altText: "sign in with email",
+    src: emailLogin,
+    alt: "sign in with email",
     label: "Sign in with Email",
+    width: "22px",
+    height: "31px",
   },
 ];
 
 const page = () => {
   return (
-    // main div
     <div className="flex h-screen items-center  xxl-max-screen">
-      <div className="w-full flex flex-col lg:flex-row  items-center justify-center lg:justify-between gap-0 md:gap-[100px] p-5 xmd:px-24">
+      <div className="w-full flex flex-col lg:flex-row  items-center justify-center lg:justify-between gap-0 md:gap-5 xl:gap-[100px] p-5 xl:px-24">
         {/* left side image with heading */}
         <div className=" flex flex-col items-center justify-center text-center  gap-10 xl:gap-6 ">
           <Image
@@ -46,7 +51,7 @@ const page = () => {
               <h2 className=" font-bold   text-transparent my-2 bg-gradient-to-r from-[#398AF2] to-[#A083E9] bg-clip-text text-stroke-custom text-[18px] md:text-[28px]">
                 Free instant withdrawals
               </h2>
-              <h2 className=" font-bold   leading-8 md:leading-5 lg3:leading-9 text-transparent bg-gradient-to-r from-[#398AF2] to-[#A083E9] bg-clip-text text-stroke-custom text-[18px] md:text-[28px]">
+              <h2 className=" font-bold   leading-8  lg3:leading-9 text-transparent bg-gradient-to-r from-[#398AF2] to-[#A083E9] bg-clip-text text-stroke-custom text-[18px] md:text-[28px]">
                 {" "}
                 Over $1,000,000 already paid out
               </h2>
@@ -57,40 +62,34 @@ const page = () => {
           <Image
             src={centerLogin}
             alt="centerLine"
-            className="rotate-90 lg:rotate-0 h-60 lg:h-[669px]  shadow-custome-shadow2"
+            className="rotate-90 lg:rotate-0 h-60 lg:h-[669px]"
           />
         </div>
-
-        {/* map for all three buttons */}
-        <div className="flex flex-col gap-[10px] md:gap-4">
-          {loginOptions.map((option, index) => (
-            <Link href={"/tutorial"} key={index}>
-              <LoginButton
-                imageSrc={option.imageSrc}
-                altText={option.altText}
-                label={option.label}
-              />
-            </Link>
+        <Link href={"/tutorial"} className="flex flex-col gap-[10px] md:gap-4">
+          {loginOptions.map((item, index) => (
+            <LoginButton item={item} buttonIndex={index} key={index} />
           ))}
-        </div>
+        </Link>
       </div>
     </div>
   );
 };
 
 // seprate component for button
-const LoginButton = ({ imageSrc, altText, label }) => {
+const LoginButton = ({ item, buttonIndex }) => {
   return (
-    <button
-      className={`flex items-center justify-center w-[300px] smx:w-[335px] smx:h-49px] md:w-[504px] md:h-[75px] gap-4 text-base xmd:text-[24px] font-semibold  text-brand-white   py-2 rounded-[3rem] bg-button-gradient`}
+    <div
+      className={`flex items-center justify-center w-[300px] smx:w-[335px] smx:h-49px] md:w-[504px] md:h-[75px] gap-2  text-base xmd:text-[24px] font-semibold  text-brand-white   py-2 rounded-[3rem] bg-button-gradient`}
     >
-      <Image
-        src={imageSrc}
-        alt={altText}
-        className={`lg3:w-[38px] lg3-h-[46px] `}
-      />
-      <p>{label}</p>
-    </button>
+      <div
+        className={`w-[50px] flex justify-start
+         items-center`}
+      >
+        <Image {...item} />
+      </div>
+
+      <p>{item.label}</p>
+    </div>
   );
 };
 

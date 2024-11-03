@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         className={`${inter.className} ${
-          isAuthPath ? "auth_body" : " bg_body"
+          isAuthPath ? "dashboard_body" : " bg_body"
         } relative bg-brand-black`}
       >
         <main className="w-full h-full relative">
