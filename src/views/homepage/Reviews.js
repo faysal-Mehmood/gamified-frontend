@@ -146,7 +146,7 @@ const Circle = ({ fitBackColor, currentSlide, index }) => {
       />
 
       <div
-        className={`${"w-[451px] relative z-10 md:w-[752px] h-[451px] md:h-[752px]"} flex flex-col justify-start gap-3 md:gap-[46px] items-center rounded-full pt-[53px] md:pt-[70px] px-20 md:px-[129px] pb-16 md:pb-[170px] border-2 blur-bg border-brand-blue flex-shrink-0
+        className={`${"w-[451px] relative z-10 md:w-[752px] h-[451px] md:h-[752px]"} flex flex-col justify-start gap-3 md:gap-[46px] items-center rounded-full pt-[53px] md:pt-[70px] px-20 md:px-[129px] pb-16 md:pb-[170px] border-2 blur-bg border-brand-blue flex-shrink-0 z-50
          bg-circle-gradient
         `}
         style={{
