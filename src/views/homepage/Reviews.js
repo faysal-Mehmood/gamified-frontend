@@ -142,6 +142,8 @@ const Circle = ({ fitBackColor, currentSlide, index }) => {
           WebkitTransform: "translateZ(0)", // Safari-specific
           WebkitBackfaceVisibility: "hidden", // Hides back face in Safari
           backfaceVisibility: "hidden",
+          position: "absolute",
+          zIndex: -20,
         }}
       />
 
@@ -224,6 +226,8 @@ const Circle = ({ fitBackColor, currentSlide, index }) => {
           WebkitTransform: "translateZ(0)", // Safari-specific
           WebkitBackfaceVisibility: "hidden", // Hides back face in Safari
           backfaceVisibility: "hidden",
+          position: "absolute",
+          zIndex: -20,
         }}
       />
     </div>
