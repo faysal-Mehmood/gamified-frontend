@@ -49,6 +49,7 @@ const Hero = () => {
                     <Image
                       src="/images/googleplay.svg"
                       alt="App_Store"
+                      srcset="image-1x.png 1x, image-2x.png 2x"
                       fill
                       className="object-contain transition-transform duration-300 ease-in-out group-hover:scale-105 safari-image-fix"
                     />
@@ -59,6 +60,7 @@ const Hero = () => {
                   >
                     <Image
                       src="/images/App_Store.svg"
+                      srcset="image-1x.png 1x, image-2x.png 2x"
                       alt="googleplay"
                       fill
                       className="object-contain transition-transform duration-300 ease-in-out group-hover:scale-105 safari-image-fix"
