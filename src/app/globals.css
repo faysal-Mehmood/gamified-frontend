@@ -72,6 +72,7 @@ p {
 .z-index-layer {
   -webkit-transform: translate3d(0, 0, 0);
   z-index: 1;
+  -webkit-transform-origin-z: 1;
 }
 .upper-index-layer {
   z-index: 9999;
