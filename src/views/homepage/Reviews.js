@@ -64,7 +64,7 @@ const Reviews = () => {
           {Array(1, 2, 3, 4, 5, 6, 7, 8, 10).map((item, index) => (
             <div
               key={index}
-              className={`w-max h-max px-5  md:px-[87.2px] relative z-10  `}
+              className={`w-max h-max px-5  md:px-[87.2px] relative   `}
             >
               <Circle
                 fitBackColor={fitBackColor}
