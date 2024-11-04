@@ -123,16 +123,15 @@ const Circle = ({ fitBackColor, currentSlide, index }) => {
     <div className={`w-fit h-fit relative  `}>
       {/* Top circle */}
       <div
-        className={`absolute z-1 rounded-full border-2 border-brand-blue backdrop-blur-[10px]
+        className={`absolute rounded-full border-2 border-brand-blue backdrop-blur-[10px]
       bg-circle-gradient ${
         fitBackColor ? "translate-y-[90px] translate-x-[200px]" : ""
       }
       ${
         currentSlide === index
-          ? `md:w-[222px] w-[101px] h-[101px] md:h-[222px] xs:left-[-68px] xs:top-[9px] left-[0px] top-[10px] transition-all duration-500 ease-in-out`
-          : `w-[82px] h-[82px] left-[15px] top-[173px] transition-all duration-500 ease-in-out`
+          ? `md:w-[222px] w-[101px] h-[101px] md:h-[222px] xs:left-[-68px] xs:top-[9px] left-[0px] top-[10px] transition-all duration-500 ease-in-out z-0`
+          : `w-[82px] h-[82px] left-[15px] top-[173px] transition-all duration-500 ease-in-out z-0`
       }`}
-        style={{ position: "absolute" }}
       />
 
       <div
@@ -195,16 +194,15 @@ const Circle = ({ fitBackColor, currentSlide, index }) => {
 
       {/* Bottom circle */}
       <div
-        className={`absolute z-1 rounded-full border-2 border-brand-blue backdrop-blur-[10px]
+        className={`absolute rounded-full border-2 border-brand-blue backdrop-blur-[10px]
       bg-circle-gradient ${
         fitBackColor ? "translate-y-[-170px] translate-x-[5rem]" : ""
       }
       ${
         currentSlide === index
-          ? `md:w-[102px] w-10 h-10 md:h-[102px] xs:right-[18px] xs:bottom-[108px] right-[20px] bottom-[70px] transition-all duration-500 ease-in-out`
-          : `w-[82px] h-[82px] right-[44px] bottom-[107px] transition-all duration-500 ease-in-out`
+          ? `md:w-[102px] w-10 h-10 md:h-[102px] xs:right-[18px] xs:bottom-[108px] right-[20px] bottom-[70px] transition-all duration-500 ease-in-out z-0`
+          : `w-[82px] h-[82px] right-[44px] bottom-[107px] transition-all duration-500 ease-in-out z-0`
       }`}
-        style={{ position: "absolute" }}
       />
     </div>
   );
