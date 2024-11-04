@@ -4,7 +4,7 @@ import React from "react";
 import { useState } from "react";
 import Image from "next/image";
 import { ConvertModel } from "./convertModel.js";
-import { currencyButtons, transactionsData } from "@/data/balance"; // Import transactions data
+import { currencyButtons, transactionsData } from "@/data/balance";
 import logo from "@/assets/Images/login-logo.svg";
 import refresh from "@/assets/Images/refresh.png";
 import arrow from "@/assets/Images/arrow.svg";

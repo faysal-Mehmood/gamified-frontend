@@ -131,7 +131,7 @@ const Circle = ({ fitBackColor, currentSlide, index }) => {
           }
           ${
             currentSlide === index
-              ? `md:w-[222px] w-[101px] h-[101px] md:h-[222px] left-[-68px] top-[9px] transition-all duration-500 ease-in-out
+              ? `md:w-[222px] w-[101px] h-[101px] md:h-[222px] xs:left-[-68px] xs:top-[9px]  left-[0px] top-[10px] z-[-20] transition-all duration-500 ease-in-out
               `
               : `w-[82px] h-[82px] left-[15px] top-[173px] transition-all duration-500 ease-in-out
               `
@@ -139,7 +139,7 @@ const Circle = ({ fitBackColor, currentSlide, index }) => {
       />
 
       <div
-        className={`${"w-[451px] relative z-10 md:w-[752px] h-[451px] md:h-[752px]"} flex flex-col justify-start gap-3 md:gap-[46px] items-center rounded-full pt-[53px] md:pt-[70px] px-20 md:px-[129px] pb-16 md:pb-[170px] border-2 blur-bg border-brand-blue flex-shrink-0
+        className={`${"w-[451px] relative z-10 md:w-[752px] h-[451px] md:h-[752px]"} flex flex-col justify-start gap-3 md:gap-[46px] items-center rounded-full pt-[53px] md:pt-[70px] px-20 md:px-[129px] pb-16 md:pb-[170px] border-2 blur-bg border-brand-blue flex-shrink-0 z-50
          bg-circle-gradient
         `}
         style={{
@@ -206,7 +206,7 @@ const Circle = ({ fitBackColor, currentSlide, index }) => {
           }
           ${
             currentSlide === index
-              ? `md:w-[102px] w-10 h-10 md:h-[102px] right-[18px] bottom-[108px] transition-all duration-500 ease-in-out
+              ? `md:w-[102px] w-10 h-10 md:h-[102px] xs:right-[18px] xs:bottom-[108px] right-[20px] bottom-[70px] transition-all duration-500 ease-in-out  z-[-20]
              `
               : `w-[82px] h-[82px] right-[44px] bottom-[107px] transition-all duration-500 ease-in-out
               `
