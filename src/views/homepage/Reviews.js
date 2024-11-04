@@ -198,7 +198,7 @@ const Circle = ({ fitBackColor, currentSlide, index }) => {
 
       {/* Bottom circle */}
       <div
-        className={`absolute z-0 rounded-full border-2 border-brand-blue backdrop-blur-[10px] 
+        className={`absolute z-0 rounded-full border-2 border-brand-blue backdrop-blur-[10px]  z-index-layer
           bg-circle-gradient ${
             fitBackColor
               ? "transform translate-y-[-170px] translate-x-[5rem]"
