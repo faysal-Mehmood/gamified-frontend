@@ -136,6 +136,9 @@ const Circle = ({ fitBackColor, currentSlide, index }) => {
               : `w-[82px] h-[82px] left-[15px] top-[173px] transition-all duration-500 ease-in-out
               `
           }`}
+        style={{
+          transform: "translateZ(0)",
+        }}
       />
 
       <div
@@ -211,6 +214,9 @@ const Circle = ({ fitBackColor, currentSlide, index }) => {
               : `w-[82px] h-[82px] right-[44px] bottom-[107px] transition-all duration-500 ease-in-out
               `
           }`}
+        style={{
+          transform: "translateZ(0)",
+        }}
       />
     </div>
   );
