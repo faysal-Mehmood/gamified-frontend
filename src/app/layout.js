@@ -1,7 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "@/views/shared/layout/header";
-import Footer from "@/views/shared/layout/footer";
+
 import { headers } from "next/headers";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -13,12 +12,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   const headersList = headers();
-  const fullUrl = headersList.get("x-full-url"); // Retrieve the full URL
+  const fullUrl = headersList.get("x-full-url");
 
   const authPaths = ["/dashboard", "/tutorial", "/login"];
   const isAuthPath = authPaths.some((path) => fullUrl?.includes(path));
 
-  console.log("Full URL:", fullUrl); // Should now log the full URL with domain
+  console.log("Full URL:", fullUrl);
 
   return (
     <html lang="en">
@@ -27,11 +26,7 @@ export default function RootLayout({ children }) {
           isAuthPath ? "dashboard_body" : " bg_body"
         } relative bg-brand-black`}
       >
-        <main className="w-full h-full relative">
-          {!isAuthPath && <Header />}
-          {children}
-          {!isAuthPath && <Footer />}
-        </main>
+        <main className="w-full h-full relative">{children}</main>
       </body>
     </html>
   );

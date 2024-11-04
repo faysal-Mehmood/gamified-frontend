@@ -5,9 +5,12 @@ import StartEarning from "@/views/homepage/startEarning";
 import Ourgames from "@/views/homepage/ourgames";
 import Reviews from "@/views/homepage/Reviews";
 import HowItWorks from "@/views/homepage/HowItWorks";
+import Header from "@/views/shared/layout/header";
+import Footer from "@/views/shared/layout/footer";
 export default function Home() {
   return (
     <main className="w-full  overflow-hidden xxl:overflow-visible">
+      <Header />
       <Hero />
       <PerformanceStats />
       <HowItWorks />
@@ -15,6 +18,7 @@ export default function Home() {
       <Ourgames />
       <WorkWithUsSection />
       <StartEarning />
+      <Footer />
     </main>
   );
 }
