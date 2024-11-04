@@ -131,7 +131,7 @@ const Circle = ({ fitBackColor, currentSlide, index }) => {
           }
           ${
             currentSlide === index
-              ? `md:w-[222px] w-[101px] h-[101px] md:h-[222px] left-[-68px] top-[9px] transition-all duration-500 ease-in-out
+              ? `md:w-[222px] w-[101px] h-[101px] md:h-[222px] xs:left-[-68px] xs:top-[9px]  left-[0px] top-[10px] transition-all duration-500 ease-in-out
               `
               : `w-[82px] h-[82px] left-[15px] top-[173px] transition-all duration-500 ease-in-out
               `
@@ -213,7 +213,7 @@ const Circle = ({ fitBackColor, currentSlide, index }) => {
           }
           ${
             currentSlide === index
-              ? `md:w-[102px] w-10 h-10 md:h-[102px] right-[18px] bottom-[108px] transition-all duration-500 ease-in-out
+              ? `md:w-[102px] w-10 h-10 md:h-[102px] xs:right-[18px] xs:bottom-[108px] right-[20px] bottom-[70px] transition-all duration-500 ease-in-out
              `
               : `w-[82px] h-[82px] right-[44px] bottom-[107px] transition-all duration-500 ease-in-out
               `
