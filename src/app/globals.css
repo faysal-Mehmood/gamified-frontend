@@ -74,10 +74,10 @@ p {
   z-index: 1;
 }
 .upper-index-layer {
-  -webkit-transform: translate3d(0, 0, 0);
   z-index: 9999;
+  -webkit-transform: translate3d(0, 0, 0);
+  will-change: transform;
 }
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
